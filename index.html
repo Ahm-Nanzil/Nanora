@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>NanoRa - Technology with Care</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCROLL LINE SYSTEM — CSS
+    ═══════════════════════════════════════════════════════ -->
+    <style>
+        /* The section must be position:relative to anchor the SVGs */
+        .scroll-line-section {
+            position: relative;
+        }
+
+        /* ── Line SVG wrapper ── */
+        .vline-svg {
+            position: absolute;
+            top: 0;
+            width: 6px;          /* wider hit area, line drawn inside */
+            pointer-events: none;
+            z-index: 10;
+            overflow: visible;
+        }
+
+        .vline-svg.vline-left  { left:  var(--vline-left,  0px); }
+        .vline-svg.vline-right { right: var(--vline-right, 0px); }
+
+        /* Track — dashed guide, thicker */
+        .vl-track {
+            fill: none;
+            stroke-width: 2.5;
+            stroke-dasharray: 5 8;
+        }
+
+        /* Progress line — thick, glowing */
+        .vl-progress {
+            fill: none;
+            stroke-width: 3.5;
+            stroke-linecap: round;
+        }
+
+        /* Dot */
+        .vl-dot {
+            /* glow applied inline per color */
+        }
+
+        /* Pulse ring */
+        .vl-ring {
+            fill: none;
+            stroke-width: 2;
+            opacity: 0;
+        }
+
+        /* Resting dot shown at section bottom when section is passed */
+        .vl-rest-dot {
+            opacity: 1;
+        }
+
+        /* Hide on small screens — no white margin space */
+        @media (max-width: 991px) {
+            .vline-svg { display: none; }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0 scroll-line-section" data-vline-color="99,102,241" data-vline-target="container-xxl">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0"><img src="img/logo.png" alt="Logo"></h1>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="project.html" class="nav-item nav-link">Project</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+                </div>
+            </nav>
+
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5 align-items-end">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">
+                                Building Scalable Digital Solutions That Drive Real Business Growth
+                            </h1>
+                            <p class="text-white pb-3 animated slideInDown">
+                                We design and develop high-performance web applications, intelligent automation, and
+                                secure cloud-ready systems. From custom software and modern web platforms to API
+                                integrations and DevOps solutions — we help businesses streamline operations, scale
+                                faster, and stay ahead in a digital-first world.
+                            </p>
+                            <a href="service.html"
+                                class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">
+                                Explore Our Services
+                            </a>
+                            <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+                                Start a Project
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="img/hero.png" alt="Creative Digital Services">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Feature Start -->
+        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+
+                    <!-- Custom Web & Software Development -->
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-code text-primary mb-4"></i>
+                            <h5 class="mb-3">Web & Software Development</h5>
+                            <p class="m-0">
+                                Build powerful, responsive, and scalable websites or custom software tailored to your
+                                business goals — from CRM, ERP to SaaS platforms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- API & System Integration -->
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-network-wired text-primary mb-4"></i>
+                            <h5 class="mb-3">API Integration & Backend Systems</h5>
+                            <p class="m-0">
+                                Seamlessly connect systems and third-party platforms with secure, scalable RESTful APIs
+                                & backend logic that boosts performance and harmony.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- App Development & Support -->
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded text-center p-4">
+                            <i class="fa fa-3x fa-mobile-alt text-primary mb-4"></i>
+                            <h5 class="mb-3">Development & 24/7 Support</h5>
+                            <p class="m-0">
+                                Expert web, cloud, and development — plus reliable maintenance, optimization, and bug
+                                fixing to keep your business running smoothly.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title text-secondary">
+                            About Us<span></span>
+                        </p>
+
+                        <h1 class="mb-5">
+                            Trusted Digital Solutions Built on Proven Engineering Experience
+                        </h1>
+
+                        <p class="mb-4">
+                            We are a technology-driven digital solutions company delivering custom web applications,
+                            scalable software systems, secure API integrations, and high-performance e-commerce
+                            platforms.
+                            Our focus is on building reliable, future-ready solutions that solve real business
+                            challenges
+                            and support long-term growth.
+                        </p>
+
+                        <p class="mb-4">
+                            Backed by years of hands-on project experience, we follow a structured development approach
+                            —
+                            from strategic planning and system architecture to clean, maintainable code and ongoing
+                            support.
+                            We work as a technical partner, ensuring transparency, quality, and measurable results at
+                            every stage.
+                        </p>
+
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Web & Software Development</p>
+                                <p class="mb-2">95%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">API Integration & System Optimization</p>
+                                <p class="mb-2">92%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="92"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">E-Commerce & Payment Solutions</p>
+                                <p class="mb-2">90%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#services" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">
+                            Discover What We Do
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.png"
+                            alt="About Our Digital Agency">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Facts Start -->
+        <div class="container-xxl bg-primary fact py-5 wow fadeInUp scroll-line-section" data-vline-color="255,255,255" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+
+                    <!-- Experience -->
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                        <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2">5+ Years</h1>
+                        <p class="text-white mb-0">
+                            Professional Development Experience
+                        </p>
+                    </div>
+
+                    <!-- Websites Delivered -->
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                        <i class="fa fa-globe fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2">50+ Sites</h1>
+                        <p class="text-white mb-0">
+                            Websites & Web Applications Delivered
+                        </p>
+                    </div>
+
+                    <!-- Client Satisfaction -->
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                        <i class="fa fa-smile-beam fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2">Client Focused</h1>
+                        <p class="text-white mb-0">
+                            Clear Communication & On-Time Delivery
+                        </p>
+                    </div>
+
+                    <!-- Quality & Reliability -->
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <i class="fa fa-shield-alt fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2">Reliable</h1>
+                        <p class="text-white mb-0">
+                            Secure, Scalable & Maintainable Solutions
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Facts End -->
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center">
+                        <span></span>Our Services<span></span>
+                    </p>
+                    <h1 class="text-center mb-5">
+                        Digital Solutions Designed for Growth & Performance
+                    </h1>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Custom Web Development -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-laptop-code fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Custom Web Development</h5>
+                            <p class="m-0">
+                                High-performance, secure, and scalable websites and web applications tailored to your
+                                business needs using modern technologies.
+                            </p>
+                            <a class="btn btn-square" href="#contact">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Software & SaaS Development -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-code fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Software & SaaS Development</h5>
+                            <p class="m-0">
+                                Custom software solutions including CRM, ERP, dashboards, and SaaS platforms built for
+                                scalability, reliability, and long-term success.
+                            </p>
+                            <a class="btn btn-square" href="#contact">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- API & System Integration -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-network-wired fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">API & System Integration</h5>
+                            <p class="m-0">
+                                Secure RESTful API development and third-party integrations to connect systems, automate
+                                workflows, and improve efficiency.
+                            </p>
+                            <a class="btn btn-square" href="#contact">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce Solutions -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-shopping-cart fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">E-Commerce Solutions</h5>
+                            <p class="m-0">
+                                Scalable e-commerce platforms with secure payment gateways, inventory management, and
+                                optimized checkout experiences.
+                            </p>
+                            <a class="btn btn-square" href="#contact">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-cloud fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Cloud & DevOps Services</h5>
+                            <p class="m-0">
+                                Cloud deployment, CI/CD pipelines, performance optimization, and infrastructure setup
+                                for reliable and scalable systems.
+                            </p>
+                            <a class="btn btn-square" href="#contact">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Maintenance & Support -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-tools fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Maintenance & Support</h5>
+                            <p class="m-0">
+                                Ongoing maintenance, bug fixing, security updates, and performance monitoring to keep
+                                your systems running smoothly.
+                            </p>
+                            <a class="btn btn-square" href="#contact">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Projects Start -->
+        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span>Our
+                        Projects<span></span></p>
+                    <h1 class="text-center mb-5">Recently Completed Projects</h1>
+                </div>
+                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-12 text-center">
+                        <ul class="list-inline mb-5" id="portfolio-flters">
+                            <li class="mx-2 active" data-filter="*">All</li>
+                            <li class="mx-2" data-filter=".first">Web Design</li>
+                            <li class="mx-2" data-filter=".second">Graphic Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row g-4 portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/portfolio/NbsFront1.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio/NbsFront1.png"
+                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                            class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">ERP SOFTWARE</p>
+                                <h5 class="lh-base mb-0">
+                                    Designed and developed a responsive corporate website for a Saudi digital
+                                    transformation company, focusing on performance and user experience.
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/portfolio/RitcoFront1.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1"
+                                        href="img/portfolio/RitcoFront1.png" data-lightbox="portfolio"><i
+                                            class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                            class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">CRM SOFTWARE</p>
+                                <h5 class="lh-base mb-0">
+                                    Developed a professional corporate website for RITCO, a Riyadh-based IT solutions
+                                    provider, highlighting their services, infrastructure offerings, and responsive
+                                    design.
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/portfolio/VoipFront1.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio/VoipFront1.png"
+                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                            class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">VOIP WEBSITE</p>
+                                <h5 class="lh-base mb-0">Developed and designed the AudioPhone VOIP services website,
+                                    featuring responsive layout, clear service information, and seamless navigation for
+                                    telecom offerings.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/portfolio/JobFront1.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio/JobFront1.png"
+                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                            class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">JOB MANAGEMENT SYSTEM</p>
+                                <h5 class="lh-base mb-0">
+                                    Created a user-centric Job Management System to streamline job applications and
+                                    enhance the overall hiring experience.
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/portfolio/FlowerFront1.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1"
+                                        href="img/portfolio/FlowerFront1.png" data-lightbox="portfolio"><i
+                                            class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                            class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">ARTIFICIAL FLOWER</p>
+                                <h5 class="lh-base mb-0">
+                                    Developed a creative website for the Artificial Flower project to showcase products
+                                    with a clean and visually appealing design.
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/portfolio/DialerFront1.png" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1"
+                                        href="img/portfolio/DialerFront1.png" data-lightbox="portfolio"><i
+                                            class="fa fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                            class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <p class="text-primary fw-medium mb-2">VOIP WEBSITE</p>
+                                <h5 class="lh-base mb-0">
+                                    Designed a modern Dialer-themed website with a clean layout, intuitive navigation,
+                                    and engaging visual presentation.
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Projects End -->
+
+
+        <!-- Newsletter Start -->
+        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp scroll-line-section" data-vline-color="255,255,255" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span>
+                        </p>
+                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
+                        <p class="text-white mb-4">
+                            Subscribe to receive occasional updates on web development, software best practices,
+                            performance optimization tips, and real-world insights from building scalable digital
+                            solutions.
+                            No spam — only valuable, actionable content. </p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Enter Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1989f979eb19489909c819d94df929e9c">[email&#160;protected]</a></p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="service.html">Services</a>
+                        <a class="btn btn-link" href="project.html">Projects</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                      
+                       
+                       
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
+                            non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Nanora</a>, All Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCROLL LINE SYSTEM — JavaScript (Chained Relay Dots)
+    ═══════════════════════════════════════════════════════ -->
+    <script>
+    (function () {
+        'use strict';
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        /*
+         * RELAY CHAIN LOGIC
+         * ─────────────────
+         * Each section has its own line (top → bottom).
+         * A moving dot starts at top-of-section and travels to bottom-of-section
+         * exactly synced to scroll progress for THAT section.
+         *
+         * The bottom of section N sits at the same pixel as the top of section N+1,
+         * so the resting dot of section N visually "touches" the starting dot
+         * of section N+1 — creating a seamless relay chain.
+         *
+         * Trigger window:
+         *   start: 'top bottom'    → dot begins moving when section enters viewport
+         *   end:   'bottom bottom' → dot stops when section bottom hits viewport bottom
+         *
+         * This makes the dot travel the full section height as you scroll through it.
+         */
+
+        var VB_H = 1000;  // viewBox height (SVG stretches to real px via preserveAspectRatio:none)
+        var CX   = 3;     // center x in viewBox (viewBox width = 6)
+
+        // ── Build one SVG for one side of one section
+        function buildSVG(colorRgb, side) {
+            var ns  = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(ns, 'svg');
+            svg.classList.add('vline-svg', 'vline-' + side);
+            svg.setAttribute('aria-hidden', 'true');
+            svg.setAttribute('viewBox', '0 0 6 ' + VB_H);
+            svg.setAttribute('preserveAspectRatio', 'none');
+
+            // Per-SVG unique gradient id
+            var uid   = 'vlg-' + Math.random().toString(36).slice(2, 8);
+            var isWht = colorRgb.indexOf('255,255,255') !== -1;
+            var cFull = isWht ? 'rgba(255,255,255,0.9)' : 'rgba(' + colorRgb + ',0.9)';
+            var cZero = isWht ? 'rgba(255,255,255,0)'   : 'rgba(' + colorRgb + ',0)';
+
+            var defs = document.createElementNS(ns, 'defs');
+            defs.innerHTML =
+                '<linearGradient id="' + uid + '" x1="0" y1="0" x2="0" y2="1">' +
+                  '<stop offset="0%"   stop-color="' + cZero + '"/>' +
+                  '<stop offset="20%"  stop-color="' + cFull + '"/>' +
+                  '<stop offset="80%"  stop-color="' + cFull + '"/>' +
+                  '<stop offset="100%" stop-color="' + cZero + '"/>' +
+                '</linearGradient>';
+
+            // Track (dashed guide)
+            var track = document.createElementNS(ns, 'line');
+            track.classList.add('vl-track');
+            track.setAttribute('x1', CX); track.setAttribute('y1', 0);
+            track.setAttribute('x2', CX); track.setAttribute('y2', VB_H);
+            track.setAttribute('vector-effect', 'non-scaling-stroke');
+            track.style.stroke = 'rgba(' + colorRgb + ',0.18)';
+
+            // Progress line (drawn by dashoffset, full gradient)
+            var prog = document.createElementNS(ns, 'line');
+            prog.classList.add('vl-progress');
+            prog.setAttribute('x1', CX); prog.setAttribute('y1', 0);
+            prog.setAttribute('x2', CX); prog.setAttribute('y2', VB_H);
+            prog.setAttribute('vector-effect', 'non-scaling-stroke');
+            prog.setAttribute('stroke', 'url(#' + uid + ')');
+            prog.style.filter = 'drop-shadow(0 0 4px rgba(' + colorRgb + ',0.55))';
+
+            // Static resting dot at TOP of section
+            // (shows the connection point where previous section's dot handed off)
+            var topDot = document.createElementNS(ns, 'circle');
+            topDot.setAttribute('cx', CX); topDot.setAttribute('cy', 0); topDot.setAttribute('r', 4);
+            topDot.setAttribute('vector-effect', 'non-scaling-stroke');
+            topDot.style.fill    = 'rgba(' + colorRgb + ',0.4)';
+            topDot.style.filter  = 'drop-shadow(0 0 4px rgba(' + colorRgb + ',0.4))';
+
+            // Static resting dot at BOTTOM of section
+            // (appears when moving dot arrives, stays as handoff point for next section)
+            var botDot = document.createElementNS(ns, 'circle');
+            botDot.classList.add('vl-rest-dot');
+            botDot.setAttribute('cx', CX); botDot.setAttribute('cy', VB_H); botDot.setAttribute('r', 5.5);
+            botDot.setAttribute('vector-effect', 'non-scaling-stroke');
+            botDot.style.fill    = 'rgb(' + colorRgb + ')';
+            botDot.style.filter  = 'drop-shadow(0 0 8px rgba(' + colorRgb + ',0.8)) drop-shadow(0 0 16px rgba(' + colorRgb + ',0.4))';
+            botDot.style.opacity = '0';
+
+            // Pulse ring (travels with moving dot)
+            var ring = document.createElementNS(ns, 'circle');
+            ring.classList.add('vl-ring');
+            ring.setAttribute('cx', CX); ring.setAttribute('cy', 0); ring.setAttribute('r', 8);
+            ring.setAttribute('vector-effect', 'non-scaling-stroke');
+            ring.style.stroke = 'rgba(' + colorRgb + ',0.55)';
+
+            // Moving dot (the star of the show)
+            var dot = document.createElementNS(ns, 'circle');
+            dot.classList.add('vl-dot');
+            dot.setAttribute('cx', CX); dot.setAttribute('cy', 0); dot.setAttribute('r', 6);
+            dot.setAttribute('vector-effect', 'non-scaling-stroke');
+            dot.style.fill   = 'rgb(' + colorRgb + ')';
+            dot.style.filter = 'drop-shadow(0 0 8px rgba(' + colorRgb + ',1)) drop-shadow(0 0 18px rgba(' + colorRgb + ',0.6))';
+
+            svg.appendChild(defs);
+            svg.appendChild(track);
+            svg.appendChild(prog);
+            svg.appendChild(topDot);
+            svg.appendChild(botDot);
+            svg.appendChild(ring);
+            svg.appendChild(dot);
+
+            return { svg: svg, prog: prog, dot: dot, ring: ring, botDot: botDot };
+        }
+
+        /*
+         * KEY FIX — LINE POSITION
+         * ────────────────────────
+         * We measure the ACTUAL left edge of the first .container inside
+         * each .scroll-line-section using getBoundingClientRect().
+         * This gives us the exact pixel where the colored background ends
+         * and the white outer space begins — regardless of Bootstrap breakpoints
+         * or custom padding.
+         *
+         * The SVGs are absolutely positioned inside .scroll-line-section
+         * (which is position:relative). We convert the container's page-relative
+         * left/right to offsets relative to the section's own left edge.
+         */
+        function getContainerEdges(section) {
+            /*
+             * The section element itself IS the boundary.
+             * Every section is a `container-xxl` which sits inside
+             * `div.container-xxl.bg-white` — the white outer wrapper.
+             * The section's own left/right edges are exactly where
+             * the white space ends and the section content begins.
+             *
+             * So we measure the section's left edge relative to itself = 0.
+             * But we need the offset relative to the viewport to find
+             * how much white space is on each side.
+             *
+             * The outer bg-white wrapper fills 100vw.
+             * The section (container-xxl) is max 1400px centered inside it.
+             * We just need: how far is the section's left edge from viewport left?
+             */
+            var sRect = section.getBoundingClientRect();
+            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            // Distance from left of page to left edge of section
+            var leftFromPage  = sRect.left + scrollLeft;
+            // Distance from right edge of section to right of viewport
+            var rightFromPage = window.innerWidth - sRect.right + scrollLeft;
+
+            return {
+                left:  Math.max(0, sRect.left),   // px from section's own left to viewport left
+                right: Math.max(0, window.innerWidth - sRect.right)  // px from section's right to viewport right
+            };
+        }
+
+        // ── Set SVG position + height for a section
+        function positionSection(section) {
+            var edges = getContainerEdges(section);
+            var h     = section.offsetHeight;
+            section.querySelectorAll('.vline-svg').forEach(function (svg) {
+                svg.style.height = h + 'px';
+                if (svg.classList.contains('vline-left')) {
+                    /*
+                     * The SVG is position:absolute inside the section.
+                     * section.getBoundingClientRect().left tells us how far
+                     * the section is from the viewport left.
+                     * We want the line at the section's own left edge = left:0
+                     * relative to the section, but shifted by -half-linewidth
+                     * so it straddles the boundary (half inside, half outside).
+                     */
+                    svg.style.left  = '-1px';
+                    svg.style.right = '';
+                } else {
+                    svg.style.right = '-1px';
+                    svg.style.left  = '';
+                }
+            });
+        }
+
+        // ── Attach ScrollTrigger to one SVG
+        function wireScroll(d, section) {
+            var DASH = VB_H;
+
+            /*
+             * CORRECT RELAY LOGIC
+             * ════════════════════
+             * Each section has TWO dots:
+             *
+             *  • botDot  — STATIC, always visible at the BOTTOM of the section.
+             *              Never moves. Acts as the "target" and also the same pixel
+             *              as the next section's topDot waiting position.
+             *
+             *  • dot     — the MOVING dot. Starts at the TOP (cy=0).
+             *              Travels DOWN toward botDot (cy=VB_H) as you scroll.
+             *              When it reaches botDot, they visually merge/touch.
+             *              The next section's dot then begins its own journey.
+             *
+             * The progress line draws behind the moving dot as it travels.
+             *
+             * Scroll window:
+             *   start: 'top bottom'   → dot begins the moment section scrolls into view
+             *   end:   'bottom top'   → dot finishes when section fully exits the top
+             *
+             * This feels like the dot is "attached" to the scroll and travels
+             * exactly with your finger/wheel through each section.
+             */
+
+            // Initial state: line undrawn, moving dot at top, botDot always visible
+            gsap.set(d.prog,   { strokeDasharray: DASH, strokeDashoffset: DASH });
+            gsap.set(d.dot,    { attr: { cy: 0 }, opacity: 1 });
+            gsap.set(d.ring,   { attr: { cy: 0, r: 6 }, opacity: 0 });
+            gsap.set(d.botDot, { opacity: 1 }); // ← always visible, never changes
+
+            // Pulse timeline on the moving dot
+            var pulse = gsap.timeline({ repeat: -1, paused: true });
+            pulse
+                .set(d.ring, { attr: { r: 6 }, opacity: 0.7 })
+                .to(d.ring,  { attr: { r: 15 }, opacity: 0, duration: 1.0, ease: 'power2.out' });
+
+            ScrollTrigger.create({
+                trigger : section,
+                start   : 'top bottom',   // dot starts moving as section enters viewport
+                end     : 'bottom top',   // dot stops when section fully leaves top of viewport
+                scrub   : 0.4,            // tight scrub so dot feels glued to scroll
+                onUpdate: function (self) {
+                    var p  = Math.max(0, Math.min(1, self.progress));
+                    var cy = p * VB_H;
+
+                    // Draw the progress line behind the moving dot
+                    gsap.set(d.prog, { strokeDashoffset: DASH - (DASH * p) });
+
+                    // Move the dot + ring downward
+                    gsap.set(d.dot,  { attr: { cy: cy } });
+                    gsap.set(d.ring, { attr: { cy: cy } });
+
+                    // Pulse while moving (not at rest at top or bottom)
+                    if (p > 0.02 && p < 0.98) {
+                        if (!pulse.isActive()) pulse.restart();
+                    } else {
+                        pulse.pause();
+                        gsap.set(d.ring, { opacity: 0 });
+                    }
+
+                    // When moving dot reaches botDot, hide the moving dot
+                    // (they visually merge — the static botDot takes over)
+                    if (p >= 0.97) {
+                        gsap.set(d.dot, { opacity: 0 });
+                    } else {
+                        gsap.set(d.dot, { opacity: 1 });
+                    }
+                }
+            });
+        }
+
+        // ── Main
+        function init() {
+            document.querySelectorAll('.scroll-line-section').forEach(function (section) {
+                var color = section.dataset.vlineColor || '13,110,253';
+                ['left', 'right'].forEach(function (side) {
+                    var d = buildSVG(color, side);
+                    section.appendChild(d.svg);
+                    positionSection(section);
+                    wireScroll(d, section);
+                });
+            });
+        }
+
+        // ── Resize
+        var t;
+        window.addEventListener('resize', function () {
+            clearTimeout(t);
+            t = setTimeout(function () {
+                document.querySelectorAll('.scroll-line-section').forEach(positionSection);
+                ScrollTrigger.refresh();
+            }, 200);
+        });
+
+        window.addEventListener('load', init);
+
+    })();
+    </script>
+
+</body>
+</html>
