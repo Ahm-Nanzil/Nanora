@@ -26,21 +26,31 @@ export default async function handler(req, res) {
 
     const result = await resend.emails.send({
 
-      from: "onboarding@resend.dev",
+      from: email,
 
       to: ["nanrevesoft@gmail.com"],
 
-      subject: subject || "Test email",
+      reply_to: email, // user's email from form
+
+      subject: subject || `New contact from ${name}`,
 
       html: `
-        <h2>Test Email</h2>
-        <p>Name: ${name}</p>
-        <p>Email: ${email}</p>
-        <p>Message: ${message}</p>
+        <h2>New Contact Form Submission</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+
+        <p><strong>Email:</strong> ${email}</p>
+
+        <p><strong>Subject:</strong> ${subject}</p>
+
+        <hr>
+
+        <p><strong>Message:</strong></p>
+
+        <p>${message}</p>
       `
 
     });
-
     console.log("Resend SUCCESS:", result);
 
     return res.status(200).json({ success: true });

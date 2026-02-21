@@ -255,6 +255,7 @@
 console.log("Script loaded");
 
 const form = document.getElementById("contactForm");
+const statusDiv = document.getElementById("formStatus");
 
 if (!form) {
     console.error("Form not found!");
@@ -263,9 +264,13 @@ if (!form) {
 
     form.addEventListener("submit", async function(e) {
 
+        e.preventDefault();
+
         console.log("Form submit triggered");
 
-        e.preventDefault();
+        // Show sending message
+        statusDiv.innerHTML = "⏳ Sending message...";
+        statusDiv.style.color = "blue";
 
         const formData = new FormData(this);
 
@@ -294,9 +299,26 @@ if (!form) {
 
             console.log("Response result:", result);
 
+            if (response.ok && result.success) {
+
+                statusDiv.innerHTML = "✅ Message sent successfully!";
+                statusDiv.style.color = "green";
+
+                form.reset();
+
+            } else {
+
+                statusDiv.innerHTML = "❌ Failed to send message.";
+                statusDiv.style.color = "red";
+
+            }
+
         } catch (error) {
 
             console.error("Fetch error:", error);
+
+            statusDiv.innerHTML = "❌ Network error. Please try again.";
+            statusDiv.style.color = "red";
 
         }
 
