@@ -252,63 +252,56 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 <script>
-document.getElementById("contactForm")
-.addEventListener("submit", async function(e) {
+console.log("Script loaded");
 
-    e.preventDefault();
+const form = document.getElementById("contactForm");
 
-    const statusDiv = document.getElementById("formStatus");
+if (!form) {
+    console.error("Form not found!");
+} else {
+    console.log("Form found");
 
-    statusDiv.innerHTML = "Sending...";
-    statusDiv.style.color = "blue";
+    form.addEventListener("submit", async function(e) {
 
-    const formData = new FormData(this);
+        console.log("Form submit triggered");
 
-    const data = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        subject: formData.get("subject"),
-        message: formData.get("message")
-    };
+        e.preventDefault();
 
-    try {
+        const formData = new FormData(this);
 
-        const response = await fetch("/api/contact", {
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            subject: formData.get("subject"),
+            message: formData.get("message")
+        };
 
-            method: "POST",
+        console.log("Sending data:", data);
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+        try {
 
-            body: JSON.stringify(data)
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
 
-        });
+            console.log("Response status:", response.status);
 
-        const result = await response.json();
+            const result = await response.json();
 
-        if (response.ok) {
+            console.log("Response result:", result);
 
-            statusDiv.innerHTML = "✅ Message sent successfully!";
-            statusDiv.style.color = "green";
+        } catch (error) {
 
-            document.getElementById("contactForm").reset();
-
-        } else {
-
-            statusDiv.innerHTML = "❌ Failed to send message: " + result.error;
-            statusDiv.style.color = "red";
+            console.error("Fetch error:", error);
 
         }
 
-    } catch (error) {
-
-        statusDiv.innerHTML = "❌ Network error. Please try again.";
-        statusDiv.style.color = "red";
-
-    }
-
-});
+    });
+}
 </script>
 </body>
 
