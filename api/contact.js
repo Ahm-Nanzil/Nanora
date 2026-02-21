@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
     const result = await resend.emails.send({
 
-      from: email,
+      from: 'contact@nanoratech.com',
 
       to: ["nanrevesoft@gmail.com"],
 
