@@ -152,9 +152,14 @@
         <!-- Contact Start -->
         <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Contact Us<span></span></p>
-                    <h1 class="text-center mb-5">Contact For Any Query</h1>
+                 <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center">
+                        <span></span>Free Consultation<span></span>
+                    </p>
+                    <h1 class="text-center mb-3">Book Your Free Strategy Consultation</h1>
+                    <p class="text-center mb-5">
+                        Tell us about your project and we’ll provide expert guidance to turn your ideas into reality.
+                    </p>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
@@ -164,41 +169,49 @@
 
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                                            <label>Your Name</label>
+                                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                                            <label>Full Name</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                                            <label>Your Email</label>
+                                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                                            <label>Email Address</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                                            <label>Subject</label>
+                                            <input type="text" name="company" class="form-control" placeholder="Company Name (Optional)">
+                                            <label>Company Name (Optional)</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="service" class="form-control" placeholder="Service Needed" required>
+                                            <label>Service Needed (Web, SaaS, Cloud, etc.)</label>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <textarea name="message" class="form-control" style="height:150px" required></textarea>
-                                            <label>Message</label>
+                                            <label>Tell Us About Your Project</label>
                                         </div>
                                     </div>
+
                                     <div id="formStatus" class="mt-3 text-center"></div>
+
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">
-                                            Send Message
+                                            Get Our Free Consultation
                                         </button>
                                     </div>
 
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -215,6 +228,19 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8801234567890?text=Hello%20NanoRa,%20I%20am%20interested%20in%20your%20services."
+    target="_blank"
+    class="nr-whatsapp-btn"
+    aria-label="Chat on WhatsApp">
+
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+        <path d="M19.11 17.57c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.34-.81-.72-1.35-1.61-1.51-1.88-.16-.27-.02-.41.12-.54.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.65 1.12 2.83c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        <path d="M16.02 3C9.39 3 4 8.39 4 15.02c0 2.65.87 5.1 2.34 7.08L4 29l7.06-2.3c1.9 1.04 4.08 1.63 6.33 1.63 6.63 0 12.02-5.39 12.02-12.02S22.65 3 16.02 3zm0 21.84c-2.03 0-3.94-.61-5.54-1.65l-.4-.25-4.19 1.37 1.37-4.09-.26-.42a9.83 9.83 0 01-1.53-5.27c0-5.45 4.44-9.89 9.89-9.89s9.89 4.44 9.89 9.89-4.44 9.89-9.89 9.89z"/>
+    </svg>
+
+    </a>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -255,7 +281,8 @@ if (!form) {
         const data = {
             name: formData.get("name"),
             email: formData.get("email"),
-            subject: formData.get("subject"),
+            company: formData.get("company"),
+            service: formData.get("service"),
             message: formData.get("message")
         };
 
@@ -286,7 +313,7 @@ if (!form) {
 
             } else {
 
-                statusDiv.innerHTML = "❌ Failed to send message.";
+                statusDiv.innerHTML =  result.error || "❌ Failed to send message. Please try again.";
                 statusDiv.style.color = "red";
 
             }
@@ -304,6 +331,7 @@ if (!form) {
 }
 </script>
     <script src="js/include.js"></script>
+    <script src="//code.tidio.co/rvjtgdaqyamfzmt3oyyxhyhxix0ka51q.js" async></script>
 </body>
 
 </html>

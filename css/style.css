@@ -589,3 +589,26 @@ h6,
 .footer .footer-menu a:hover {
     color: var(--secondary);
 }
+
+
+.nr-whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999999;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nr-whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+}
