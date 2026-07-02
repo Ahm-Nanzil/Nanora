@@ -1,688 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>NanoRa | Custom Software, Web Development & Cloud Solutions</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="language" content="English">
-    <meta name="keywords"
-    content="NanoRa, nanora, Nanora Tech, Nanoratech, Nanora Technology , software development company, web development, website, custom software, SaaS development, cloud solutions, automation, API integration, DevOps">
-    <meta name="description"
-    content="NanoRa is a software development company specializing in scalable web applications, custom software, SaaS platforms, cloud solutions, and DevOps automation. We build secure, high-performance technology that helps businesses grow.">    <meta name="robots" content="index, follow">
-    <meta name="author" content="NanoRa">
-    <meta property="og:site_name" content="NanoRa">
-    <link rel="canonical" href="https://nanoratech.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
 
-    <meta property="og:title" content="NanoRa | Scalable Software & Cloud Solutions">
-    <meta property="og:description" content="We build modern web apps, automation systems, and cloud solutions.">
-    <meta property="og:image" content="https://nanoratech.com/img/og-image.jpg">
-    <meta property="og:url" content="https://nanoratech.com">
-    <meta property="og:type" content="website">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NanoRa | Custom Software & Web Development">
-    <meta name="twitter:description" content="Professional software development and cloud solutions.">
-    <meta name="twitter:image" content="https://nanoratech.com/img/og-image.jpg">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NanoRa",
-    "url": "https://nanoratech.com",
-    "logo": "https://nanoratech.com/img/logo.png"
-    }
-    </script>
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-    <!-- ═══════════════════════════════════════════════════════
-         SCROLL LINE SYSTEM — CSS
-    ═══════════════════════════════════════════════════════ -->
-    <style>
-        /* The section must be position:relative to anchor the SVGs */
-        .scroll-line-section {
-            position: relative;
-        }
-
-        /* ── Line SVG wrapper ── */
-        .vline-svg {
-            position: absolute;
-            top: 0;
-            width: 6px;          /* wider hit area, line drawn inside */
-            pointer-events: none;
-            z-index: 10;
-            overflow: visible;
-        }
-
-        .vline-svg.vline-left  { left:  var(--vline-left,  0px); }
-        .vline-svg.vline-right { right: var(--vline-right, 0px); }
-
-        /* Track — dashed guide, thicker */
-        .vl-track {
-            fill: none;
-            stroke-width: 2.5;
-            stroke-dasharray: 5 8;
-        }
-
-        /* Progress line — thick, glowing */
-        .vl-progress {
-            fill: none;
-            stroke-width: 3.5;
-            stroke-linecap: round;
-        }
-
-        /* Dot */
-        .vl-dot {
-            /* glow applied inline per color */
-        }
-
-        /* Pulse ring */
-        .vl-ring {
-            fill: none;
-            stroke-width: 2;
-            opacity: 0;
-        }
-
-        /* Resting dot shown at section bottom when section is passed */
-        .vl-rest-dot {
-            opacity: 1;
-        }
-
-        /* Hide on small screens — no white margin space */
-        @media (max-width: 991px) {
-            .vline-svg { display: none; }
-        }
-    </style>
-
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
 
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0 scroll-line-section" data-vline-color="99,102,241" data-vline-target="container-xxl">
-            
-            <div id="header"></div>
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
 
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
 
-
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-end">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">
-                                Building Scalable Digital Solutions That Drive Real Business Growth
-                            </h1>
-                            <p class="text-white pb-3 animated slideInDown">
-                                We design and develop high-performance web applications, intelligent automation, and
-                                secure cloud-ready systems. From custom software and modern web platforms to API
-                                integrations and DevOps solutions — we help businesses streamline operations, scale
-                                faster, and stay ahead in a digital-first world.
-                            </p>
-                            <a href="service.html"
-                                class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">
-                                Explore Our Services
-                            </a>
-                            <a href="contact.html" 
-                            class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
-                            Get Free Consultation
-                            </a>
-                        </div>
-
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="img/hero.png" alt="Creative Digital Services">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-
-        <!-- Feature Start -->
-        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-
-                    <!-- Custom Web & Software Development -->
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-code text-primary mb-4"></i>
-                            <h5 class="mb-3">Web & Software Development</h5>
-                            <p class="m-0">
-                                Build powerful, responsive, and scalable websites or custom software tailored to your
-                                business goals — from CRM, ERP to SaaS platforms.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- API & System Integration -->
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-network-wired text-primary mb-4"></i>
-                            <h5 class="mb-3">API Integration & Backend Systems</h5>
-                            <p class="m-0">
-                                Seamlessly connect systems and third-party platforms with secure, scalable RESTful APIs
-                                & backend logic that boosts performance and harmony.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- App Development & Support -->
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-mobile-alt text-primary mb-4"></i>
-                            <h5 class="mb-3">Development & 24/7 Support</h5>
-                            <p class="m-0">
-                                Expert web, cloud, and development — plus reliable maintenance, optimization, and bug
-                                fixing to keep your business running smoothly.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Feature End -->
-
-
-        <!-- About Start -->
-        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="section-title text-secondary">
-                            About Us<span></span>
-                        </p>
-
-                        <h1 class="mb-5">
-                            Trusted Digital Solutions Built on Proven Engineering Experience
-                        </h1>
-
-                        <p class="mb-4">
-                            We are a technology-driven digital solutions company delivering custom web applications,
-                            scalable software systems, secure API integrations, and high-performance e-commerce
-                            platforms.
-                            Our focus is on building reliable, future-ready solutions that solve real business
-                            challenges
-                            and support long-term growth.
-                        </p>
-
-                        <p class="mb-4">
-                            Backed by years of hands-on project experience, we follow a structured development approach
-                            —
-                            from strategic planning and system architecture to clean, maintainable code and ongoing
-                            support.
-                            We work as a technical partner, ensuring transparency, quality, and measurable results at
-                            every stage.
-                        </p>
-
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Web & Software Development</p>
-                                <p class="mb-2">95%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">API Integration & System Optimization</p>
-                                <p class="mb-2">92%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="92"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">E-Commerce & Payment Solutions</p>
-                                <p class="mb-2">90%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="service.html" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">
-                            Discover What We Do
-                        </a>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.png"
-                            alt="About Our Digital Agency">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Facts Start -->
-        <div class="container-xxl bg-primary fact py-5 wow fadeInUp scroll-line-section" data-vline-color="255,255,255" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-
-                    <!-- Experience -->
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                        <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2">5+ Years</h1>
-                        <p class="text-white mb-0">
-                            Professional Development Experience
-                        </p>
-                    </div>
-
-                    <!-- Websites Delivered -->
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-globe fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2">50+ Sites</h1>
-                        <p class="text-white mb-0">
-                            Websites & Web Applications Delivered
-                        </p>
-                    </div>
-
-                    <!-- Client Satisfaction -->
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-smile-beam fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2">Client Focused</h1>
-                        <p class="text-white mb-0">
-                            Clear Communication & On-Time Delivery
-                        </p>
-                    </div>
-
-                    <!-- Quality & Reliability -->
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                        <i class="fa fa-shield-alt fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2">Reliable</h1>
-                        <p class="text-white mb-0">
-                            Secure, Scalable & Maintainable Solutions
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Facts End -->
-
-
-        <!-- Service Start -->
-        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center">
-                        <span></span>Our Services<span></span>
-                    </p>
-                    <h1 class="text-center mb-5">
-                        Digital Solutions Designed for Growth & Performance
-                    </h1>
-                </div>
-
-                <div class="row g-4">
-
-                    <!-- Custom Web Development -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Custom Web Development</h5>
-                            <p class="m-0">
-                                High-performance, secure, and scalable websites and web applications tailored to your
-                                business needs using modern technologies.
-                            </p>
-                            <a class="btn btn-square" href="#contact">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Software & SaaS Development -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-code fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Software & SaaS Development</h5>
-                            <p class="m-0">
-                                Custom software solutions including CRM, ERP, dashboards, and SaaS platforms built for
-                                scalability, reliability, and long-term success.
-                            </p>
-                            <a class="btn btn-square" href="#contact">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- API & System Integration -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-network-wired fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">API & System Integration</h5>
-                            <p class="m-0">
-                                Secure RESTful API development and third-party integrations to connect systems, automate
-                                workflows, and improve efficiency.
-                            </p>
-                            <a class="btn btn-square" href="#contact">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- E-Commerce Solutions -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-shopping-cart fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">E-Commerce Solutions</h5>
-                            <p class="m-0">
-                                Scalable e-commerce platforms with secure payment gateways, inventory management, and
-                                optimized checkout experiences.
-                            </p>
-                            <a class="btn btn-square" href="#contact">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Cloud & DevOps -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-cloud fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Cloud & DevOps Services</h5>
-                            <p class="m-0">
-                                Cloud deployment, CI/CD pipelines, performance optimization, and infrastructure setup
-                                for reliable and scalable systems.
-                            </p>
-                            <a class="btn btn-square" href="#contact">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Maintenance & Support -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-tools fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Maintenance & Support</h5>
-                            <p class="m-0">
-                                Ongoing maintenance, bug fixing, security updates, and performance monitoring to keep
-                                your systems running smoothly.
-                            </p>
-                            <a class="btn btn-square" href="#contact">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-
-        <!-- Projects Start -->
-        <div class="container-xxl py-5 scroll-line-section" data-vline-color="13,110,253">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our
-                        Projects<span></span></p>
-                    <h1 class="text-center mb-5">Recently Completed Projects</h1>
-                </div>
-                <!-- <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-12 text-center">
-                        <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="mx-2 active" data-filter="*">All</li>
-                            <li class="mx-2" data-filter=".first">Web Design</li>
-                            <li class="mx-2" data-filter=".second">Graphic Design</li>
-                        </ul>
-                    </div>
-                </div> -->
-                <div class="row g-4 portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio/NbsFront1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio/NbsFront1.png"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">ERP SOFTWARE</p>
-                                <h5 class="lh-base mb-0">
-                                    Designed and developed a responsive corporate website for a Saudi digital
-                                    transformation company, focusing on performance and user experience.
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio/RitcoFront1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1"
-                                        href="img/portfolio/RitcoFront1.png" data-lightbox="portfolio"><i
-                                            class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">CRM SOFTWARE</p>
-                                <h5 class="lh-base mb-0">
-                                    Developed a professional corporate website for RITCO, a Riyadh-based IT solutions
-                                    provider, highlighting their services, infrastructure offerings, and responsive
-                                    design.
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio/VoipFront1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio/VoipFront1.png"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">VOIP WEBSITE</p>
-                                <h5 class="lh-base mb-0">Developed and designed the AudioPhone VOIP services website,
-                                    featuring responsive layout, clear service information, and seamless navigation for
-                                    telecom offerings.</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio/JobFront1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio/JobFront1.png"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">JOB MANAGEMENT SYSTEM</p>
-                                <h5 class="lh-base mb-0">
-                                    Created a user-centric Job Management System to streamline job applications and
-                                    enhance the overall hiring experience.
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio/FlowerFront1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1"
-                                        href="img/portfolio/FlowerFront1.png" data-lightbox="portfolio"><i
-                                            class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">ARTIFICIAL FLOWER</p>
-                                <h5 class="lh-base mb-0">
-                                    Developed a creative website for the Artificial Flower project to showcase products
-                                    with a clean and visually appealing design.
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio/DialerFront1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1"
-                                        href="img/portfolio/DialerFront1.png" data-lightbox="portfolio"><i
-                                            class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">VOIP WEBSITE</p>
-                                <h5 class="lh-base mb-0">
-                                    Designed a modern Dialer-themed website with a clean layout, intuitive navigation,
-                                    and engaging visual presentation.
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Projects End -->
-
-
-        <!-- Newsletter Start -->
-        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp scroll-line-section" data-vline-color="255,255,255" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span>
-                        </p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
-                        <p class="text-white mb-4">
-                            Subscribe to receive occasional updates on web development, software best practices,
-                            performance optimization tips, and real-world insights from building scalable digital
-                            solutions.
-                            No spam — only valuable, actionable content. </p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                placeholder="Enter Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter End -->
-
-
-        <div id="footer"></div>
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/8801636306932?text=Hello%20NanoRa,%20I%20am%20interested%20in%20your%20services."
-    target="_blank"
-    class="nr-whatsapp-btn"
-    aria-label="Chat on WhatsApp">
-
-    <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
-        <path d="M19.11 17.57c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.34-.81-.72-1.35-1.61-1.51-1.88-.16-.27-.02-.41.12-.54.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.65 1.12 2.83c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-        <path d="M16.02 3C9.39 3 4 8.39 4 15.02c0 2.65.87 5.1 2.34 7.08L4 29l7.06-2.3c1.9 1.04 4.08 1.63 6.33 1.63 6.63 0 12.02-5.39 12.02-12.02S22.65 3 16.02 3zm0 21.84c-2.03 0-3.94-.61-5.54-1.65l-.4-.25-4.19 1.37 1.37-4.09-.26-.42a9.83 9.83 0 01-1.53-5.27c0-5.45 4.44-9.89 9.89-9.89s9.89 4.44 9.89 9.89-4.44 9.89-9.89 9.89z"/>
-    </svg>
-
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+      <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
     </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#technologies">Technologies</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="navbar-actions">
+      <a href="#contact" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
+<main>
 
-    <!-- JavaScript Libraries -->        
-    </script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-left" data-reveal="fade-right">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Trusted Software Development Partner
+      </div>
+      <h1 class="hero-title">
+        Building Scalable Digital Solutions<br>
+        for <span class="gradient-text-anim">Modern Businesses</span>
+      </h1>
+      <p class="hero-desc">
+        NanoRa Technologies engineers custom software, cloud infrastructure and AI-driven products
+        that help ambitious companies ship faster, scale confidently, and outpace the competition.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-magnetic btn-lg">
+          <span>Get Free Consultation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#services" class="btn btn-outline btn-magnetic btn-lg">
+          <span>Explore Services</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3 class="counter" data-target="100">0</h3>
+          <p>Projects</p>
+        </div>
+        <div class="hero-stat">
+          <h3 class="counter" data-target="50">0</h3>
+          <p>Clients</p>
+        </div>
+        <div class="hero-stat">
+          <h3><span class="counter" data-target="99">0</span>%</h3>
+          <p>Uptime</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <div class="hero-right" data-reveal="fade-left">
+      <div class="hero-visual">
+        <div class="hero-image-wrap float-anim">
+          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=80" alt="Software developer working on dashboard" class="hero-image">
+        </div>
 
+        <div class="floating-card fc-1 float-anim-slow">
+          <i class="fa-solid fa-cloud"></i>
+          <div><strong>Cloud Native</strong><span>99.9% Uptime</span></div>
+        </div>
+        <div class="floating-card fc-2 float-anim">
+          <i class="fa-solid fa-microchip"></i>
+          <div><strong>AI Powered</strong><span>Smart Automation</span></div>
+        </div>
+        <div class="floating-card fc-3 float-anim-slow">
+          <i class="fa-solid fa-code-branch"></i>
+          <div><strong>API Ready</strong><span>Seamless Integration</span></div>
+        </div>
+        <div class="code-block float-anim">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <p><span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
 
-    <script src="js/include.js"></script>
+<!-- ============ TRUST BAR ============ -->
+<section class="trust-bar">
+  <div class="trust-track">
+    <div class="trust-slide">
+      <span><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+      <span><i class="fa-brands fa-aws"></i> AWS</span>
+      <span><i class="fa-brands fa-google"></i> Google Cloud</span>
+      <span><i class="fa-brands fa-docker"></i> Docker</span>
+      <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+      <span><i class="fa-brands fa-react"></i> React</span>
+      <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span><i class="fa-brands fa-shopify"></i> Shopify</span>
+      <span><i class="fa-brands fa-microsoft"></i> Azure</span>
+    </div>
+    <div class="trust-slide" aria-hidden="true">
+      <span><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+      <span><i class="fa-brands fa-aws"></i> AWS</span>
+      <span><i class="fa-brands fa-google"></i> Google Cloud</span>
+      <span><i class="fa-brands fa-docker"></i> Docker</span>
+      <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+      <span><i class="fa-brands fa-react"></i> React</span>
+      <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span><i class="fa-brands fa-shopify"></i> Shopify</span>
+      <span><i class="fa-brands fa-microsoft"></i> Azure</span>
+    </div>
+  </div>
+</section>
 
-<script src="//code.tidio.co/rvjtgdaqyamfzmt3oyyxhyhxix0ka51q.js" async></script>
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container about-inner">
+    <div class="about-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="NanoRa Technologies engineering team collaborating" class="about-img-main">
+      <div class="glass-card about-glass">
+        <h4>Delivery Excellence</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>On-Time Delivery</span><span>95%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="95"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Code Quality</span><span>92%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="92"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Client Retention</span><span>90%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="90"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content" data-reveal="fade-left">
+      <div class="section-tag">About NanoRa</div>
+      <h2 class="section-title">We Engineer Software That Moves Business Forward</h2>
+      <p class="section-desc">
+        For over five years, NanoRa Technologies has partnered with startups and enterprises to design,
+        build and scale digital products. Our multidisciplinary team blends deep engineering expertise
+        with product thinking to ship solutions that are fast, secure and built to last.
+      </p>
+      <div class="about-counters">
+        <div class="about-counter">
+          <h3><span class="counter" data-target="5">0</span>+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="about-counter">
+          <h3><span class="counter" data-target="100">0</span>+</h3>
+          <p>Projects</p>
+        </div>
+        <div class="about-counter">
+          <h3><span class="counter" data-target="50">0</span>+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="about-counter">
+          <h3>24/7</h3>
+          <p>Support</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-magnetic">
+        <span>Work With Us</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Do</div>
+      <h2 class="section-title center">Services Built for Growth</h2>
+      <p class="section-desc center">End-to-end engineering services that take your product from idea to scale.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Custom Software Development</h3>
+        <p>Tailored software engineered around your exact workflows and business logic.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Web Development</h3>
+        <p>Fast, accessible, SEO-friendly websites and web apps built on modern frameworks.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="200">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Mobile App Development</h3>
+        <p>Native and cross-platform mobile apps with polished, intuitive experiences.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>SaaS Development</h3>
+        <p>Multi-tenant SaaS platforms designed for reliability and rapid iteration.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>API Integration</h3>
+        <p>Secure, well-documented APIs that connect your systems and partners seamlessly.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="200">
+        <div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Cloud Solutions</h3>
+        <p>Cloud architecture on AWS, Azure and GCP built for scale and cost efficiency.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-infinity"></i></div>
+        <h3>DevOps</h3>
+        <p>CI/CD pipelines, infrastructure as code, and observability from day one.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>AI Solutions</h3>
+        <p>Practical AI and machine learning features that create real business value.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="200">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Research-driven design systems that make complex products feel simple.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>E-Commerce Development</h3>
+        <p>High-converting storefronts with robust checkout, inventory and payments.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Maintenance &amp; Support</h3>
+        <p>Proactive monitoring, updates and 24/7 support that keeps you running.</p>
+        <a href="#contact" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-us">
+  <div class="container why-inner">
+    <div class="why-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Team reviewing product roadmap" class="why-img">
+    </div>
+    <div class="why-content" data-reveal="fade-left">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">A Partner Invested in Your Outcome</h2>
+      <ul class="why-list">
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Senior Engineering Talent</strong><p>Every project is staffed with experienced, vetted engineers.</p></div>
+        </li>
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Transparent Communication</strong><p>Weekly demos, shared roadmaps, and no black boxes.</p></div>
+        </li>
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Security First Approach</strong><p>Best-practice security baked into every layer of the stack.</p></div>
+        </li>
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Scalable Architecture</strong><p>Systems designed to grow from first users to millions.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our Delivery Process</h2>
+      <p class="section-desc center">A proven seven-stage process that keeps every project on time and on budget.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>We learn your business, users and goals.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>We define scope, architecture and milestones.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h4>03. Design</h4>
+        <p>We craft intuitive, on-brand interfaces.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>We build in agile sprints with continuous review.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>We validate quality through rigorous QA.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Deployment</h4>
+        <p>We ship with zero-downtime release pipelines.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Support</h4>
+        <p>We monitor and improve long after launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGIES ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Stack</div>
+      <h2 class="section-title center">Technologies We Master</h2>
+      <p class="section-desc center">Modern, battle-tested tools chosen for performance and longevity.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-vuejs"></i><span>Vue</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-dharmachakra"></i><span>Kubernetes</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-microsoft"></i><span>Azure</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-google"></i><span>Google Cloud</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-elephant"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-bolt"></i><span>Redis</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Portfolio</div>
+      <h2 class="section-title center">Featured Projects</h2>
+      <p class="section-desc center">A glimpse at the products we've helped bring to life.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-reveal="fade-up" data-delay="0">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Analytics dashboard project">
+          <div class="project-overlay">
+            <span class="project-badge">SaaS</span>
+            <a href="#" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Fintech Analytics Platform</h4><p>Real-time dashboards for a payments company.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="100">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="Mobile app project">
+          <div class="project-overlay">
+            <span class="project-badge">Mobile</span>
+            <a href="#" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>On-Demand Logistics App</h4><p>iOS and Android app for fleet management.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="200">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="E-commerce project">
+          <div class="project-overlay">
+            <span class="project-badge">E-Commerce</span>
+            <a href="#" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Global Retail Storefront</h4><p>Headless commerce for a DTC apparel brand.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Testimonials</div>
+      <h2 class="section-title center">What Clients Say</h2>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"NanoRa rebuilt our platform architecture and cut our load times in half. Communication was flawless throughout."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&q=80" alt="Client avatar">
+            <div><strong>Sarah Whitfield</strong><span>VP Engineering, Fintra</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Their DevOps team gave us zero-downtime deployments and a CI/CD pipeline we finally trust."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Client avatar">
+            <div><strong>Daniel Osei</strong><span>CTO, Loop Logistics</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"From discovery to launch, NanoRa felt like an extension of our own product team."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Client avatar">
+            <div><strong>Elena Marquez</strong><span>Founder, Studio Verve</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATISTICS ============ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-box" data-reveal="scale">
+      <h3><span class="counter" data-target="100">0</span>+</h3>
+      <p>Projects</p>
+    </div>
+    <div class="stat-box" data-reveal="scale">
+      <h3><span class="counter" data-target="98">0</span>%</h3>
+      <p>Client Satisfaction</p>
+    </div>
+    <div class="stat-box" data-reveal="scale">
+      <h3>24/7</h3>
+      <p>Support</p>
+    </div>
+    <div class="stat-box" data-reveal="scale">
+      <h3><span class="counter" data-target="10">0</span>+</h3>
+      <p>Countries</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>What industries do you work with?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We work across fintech, logistics, healthtech, e-commerce and B2B SaaS, adapting our process to each industry's compliance and scale needs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a typical project take?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Most MVPs take 8-12 weeks, while larger platform builds run 4-6 months. We'll give you a firm estimate after discovery.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you offer ongoing support after launch?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes, every engagement includes an optional support and maintenance plan with 24/7 monitoring.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you work with our existing engineering team?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We regularly embed with in-house teams, following your conventions and tooling.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What is your pricing model?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We offer both fixed-scope and dedicated-team pricing depending on project shape. We'll recommend the right fit after our first call.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Need a Technology Partner?</h2>
+    <h3>Let's Build Something Amazing Together.</h3>
+    <a href="mailto:hello@nanora.tech" class="btn btn-white btn-magnetic btn-lg">
+      <span>Start a Conversation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+      <p>Building scalable digital solutions for modern businesses since day one.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Custom Software</a>
+      <a href="#services">Web Development</a>
+      <a href="#services">Mobile Apps</a>
+      <a href="#services">Cloud Solutions</a>
+      <a href="#services">AI Solutions</a>
+    </div>
+    <div class="footer-col">
+      <h4>Technologies</h4>
+      <a href="#technologies">React &amp; Vue</a>
+      <a href="#technologies">Node &amp; Laravel</a>
+      <a href="#technologies">AWS &amp; Azure</a>
+      <a href="#technologies">Docker &amp; K8s</a>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 NanoRa Technologies. All rights reserved.</p>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="assets/js/particles.js" defer></script>
+<script src="assets/js/animation.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
