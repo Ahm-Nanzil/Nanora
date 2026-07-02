@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initBackToTop();
   initScrollProgress();
+  initUnifiedScrollHandler();
   initCounters();
   initFaqAccordion();
   initTestimonialSlider();
@@ -18,18 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   Sticky / blurred navbar on scroll
+   Sticky / blurred navbar — element is cached here, updated by the
+   unified scroll handler below
    -------------------------------------------------------------------------- */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
   if (!navbar) return;
-
-  const toggle = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  };
-
-  toggle();
-  window.addEventListener('scroll', toggle, { passive: true });
+  window.__navbarEl = navbar;
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
 }
 
 /* --------------------------------------------------------------------------
@@ -75,15 +72,12 @@ function initSmoothScroll() {
 }
 
 /* --------------------------------------------------------------------------
-   Back-to-top button
+   Back-to-top button — visibility handled by the unified scroll handler
    -------------------------------------------------------------------------- */
 function initBackToTop() {
   const btn = document.getElementById('backToTop');
   if (!btn) return;
-
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 500);
-  }, { passive: true });
+  window.__backToTopBtn = btn;
 
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -91,21 +85,46 @@ function initBackToTop() {
 }
 
 /* --------------------------------------------------------------------------
-   Scroll progress bar
+   Scroll progress bar — element cached here, updated by the unified
+   scroll handler below
    -------------------------------------------------------------------------- */
 function initScrollProgress() {
   const bar = document.getElementById('scrollProgressBar');
   if (!bar) return;
+  window.__scrollProgressBar = bar;
+}
+
+/* --------------------------------------------------------------------------
+   Single rAF-throttled scroll listener drives the navbar, back-to-top
+   button and progress bar together, instead of three independent scroll
+   listeners each forcing their own read/write per event — smoother on
+   mobile where scroll events fire densely.
+   -------------------------------------------------------------------------- */
+function initUnifiedScrollHandler() {
+  let ticking = false;
 
   const update = () => {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = `${progress}%`;
+    const navbar = window.__navbarEl;
+    const btn = window.__backToTopBtn;
+    const bar = window.__scrollProgressBar;
+
+    if (navbar) navbar.classList.toggle('scrolled', scrollTop > 40);
+    if (btn) btn.classList.toggle('visible', scrollTop > 500);
+    if (bar) {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = `${docHeight > 0 ? (scrollTop / docHeight) * 100 : 0}%`;
+    }
+    ticking = false;
   };
 
   update();
-  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
   window.addEventListener('resize', update);
 }
 

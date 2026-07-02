@@ -9,14 +9,15 @@
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const isMobile = matchMedia('(max-width: 768px)').matches;
+  const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1.5 : 2);
 
   const config = {
     particleColor: 'rgba(182, 194, 207, 0.6)',
     lineColor: 'rgba(79, 70, 229, 0.18)',
-    particleCount: 70,
-    maxParticleCount: 140,
-    connectDistance: 140,
+    particleCount: isMobile ? 34 : 70,
+    maxParticleCount: isMobile ? 55 : 140,
+    connectDistance: isMobile ? 100 : 140,
     mouseConnectDistance: 180,
     speed: 0.25
   };
@@ -41,10 +42,11 @@
   }
 
   function particleCountForViewport() {
-    const area = width * height;
-    const scaled = Math.round(area / 14000);
-    return Math.max(30, Math.min(config.maxParticleCount, scaled || config.particleCount));
-  }
+      const area = width * height;
+      const divisor = isMobile ? 22000 : 14000;
+      const scaled = Math.round(area / divisor);
+      return Math.max(isMobile ? 18 : 30, Math.min(config.maxParticleCount, scaled || config.particleCount));
+    }
 
   function createParticle() {
     return {
