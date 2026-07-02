@@ -823,3 +823,7 @@ section { padding: 120px 0; position: relative; }
 }
 .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { transform: translateY(-4px); }
+
+/* Mobile-only elements — hidden by default, shown via responsive.css breakpoints */
+.hero-mobile { display: none; }
+.service-modal { display: none; }

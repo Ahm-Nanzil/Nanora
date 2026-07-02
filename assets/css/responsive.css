@@ -193,3 +193,152 @@
   .tech-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .about-counters { grid-template-columns: 1fr 1fr; gap: 18px; }
 }
+
+
+/* --------------------------------------------------------------------------
+   Mobile-first redesign (hero, services, process, tech, spacing)
+   Appended last so it wins over earlier ≤992/≤768/≤576/≤420/≤320 rules.
+   Desktop (>768px) is untouched.
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* ---- General spacing tightening ---- */
+  section { padding: 56px 0; }
+  .section-header { margin-bottom: 36px; }
+  .section-desc { font-size: 15px; }
+  .about-inner, .why-inner { gap: 34px; }
+  .about-img-main, .why-img { height: 300px; }
+  .about-counters { gap: 18px; margin: 22px 0; }
+  .stats-grid { gap: 12px; }
+  .stat-box { padding: 22px 12px; }
+  .stat-box h3 { font-size: 28px; }
+  .faq-list { gap: 10px; }
+  .testimonial-card { padding: 26px 20px; }
+  .projects-grid { gap: 16px; }
+  .cta-inner { padding: 46px 20px; }
+  .footer { padding: 56px 0 0; }
+  .footer-inner { gap: 30px; padding-bottom: 40px; }
+
+  /* ---- Hero: full-bleed image cover, title over image, no scroll needed ---- */
+  .hero { padding-top: 0; align-items: stretch; }
+  .hero-inner { display: none; }
+  .scroll-indicator { display: none; }
+
+  .hero-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-mobile-bg { position: absolute; inset: 0; }
+  .hero-mobile-img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-mobile-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(6,8,22,0.25) 0%, rgba(6,8,22,0.55) 50%, rgba(6,8,22,0.97) 94%);
+  }
+  .hero-mobile-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px 20px calc(30px + env(safe-area-inset-bottom, 0px));
+  }
+  .hero-mobile-content .badge { margin-bottom: 14px; }
+  .hero-mobile-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(28px, 8vw, 36px);
+    letter-spacing: -0.02em;
+    line-height: 1.16;
+    margin-bottom: 12px;
+  }
+  .hero-mobile-desc {
+    color: var(--subtext);
+    font-size: 15px;
+    margin-bottom: 20px;
+    max-width: 440px;
+  }
+  .hero-mobile-cta .btn { width: 100%; justify-content: center; }
+
+  /* ---- Services: compact 3-col icon+title cards, tap opens bottom sheet ---- */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: none;
+    margin: 0;
+  }
+  .service-card {
+    padding: 18px 10px;
+    text-align: center;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+  }
+  .service-card p,
+  .service-card .card-link { display: none; }
+  .service-icon {
+    width: 44px; height: 44px;
+    margin: 0 auto 10px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+  .service-card h3 { font-size: 12.5px; margin-bottom: 0; line-height: 1.3; }
+  .service-card:hover { transform: none; box-shadow: none; }
+  .service-card:active { transform: scale(0.96); }
+
+  .service-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease);
+  }
+  .service-modal.active { opacity: 1; visibility: visible; pointer-events: auto; }
+  .service-modal-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(6,8,22,0.7);
+    backdrop-filter: blur(4px);
+  }
+  .service-modal-sheet {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    background: var(--card-solid);
+    border: 1px solid var(--border);
+    border-radius: 24px 24px 0 0;
+    padding: 14px 26px calc(30px + env(safe-area-inset-bottom, 0px));
+    transform: translateY(100%);
+    transition: transform 0.35s var(--ease);
+  }
+  .service-modal.active .service-modal-sheet { transform: translateY(0); }
+  .service-modal-handle { width: 40px; height: 4px; background: var(--border); border-radius: 4px; margin: 0 auto 20px; }
+  .service-modal-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    background: var(--grad-primary);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .service-modal-sheet h3 { font-size: 19px; margin-bottom: 10px; }
+  .service-modal-sheet p { color: var(--subtext); font-size: 14.5px; margin-bottom: 22px; }
+
+  /* ---- Process: compact 3-col grid, icon+title only ---- */
+  .timeline { grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: none; margin: 0; }
+  .timeline-item { padding: 14px 8px; }
+  .timeline-icon { width: 38px; height: 38px; font-size: 15px; margin: 0 auto 10px; }
+  .timeline-item h4 { font-size: 11px; margin-bottom: 0; }
+  .timeline-item p { display: none; }
+
+  /* ---- Technology stack: 3-col, slightly tighter padding ---- */
+  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .tech-item { padding: 18px 8px; }
+  .tech-item i { font-size: 24px; margin-bottom: 6px; }
+  .tech-item span { font-size: 11px; }
+}

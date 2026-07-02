@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialSlider();
   initRippleButtons();
   initNewsletterForm();
+  initServiceModal();
 });
 
 /* --------------------------------------------------------------------------
@@ -268,5 +269,51 @@ function initNewsletterForm() {
     setTimeout(() => {
       button.innerHTML = original;
     }, 2200);
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Mobile service cards → bottom sheet modal (icon + title on card,
+   full description revealed on tap). Desktop cards keep their own
+   hover/link behaviour untouched.
+   -------------------------------------------------------------------------- */
+function initServiceModal() {
+  const modal = document.getElementById('serviceModal');
+  if (!modal) return;
+
+  const backdrop = document.getElementById('serviceModalBackdrop');
+  const iconEl = document.getElementById('serviceModalIcon');
+  const titleEl = document.getElementById('serviceModalTitle');
+  const descEl = document.getElementById('serviceModalDesc');
+  const cta = document.getElementById('serviceModalCta');
+  const cards = document.querySelectorAll('.service-card');
+
+  const open = (card) => {
+    const icon = card.querySelector('.service-icon i');
+    const title = card.querySelector('h3');
+    const desc = card.querySelector('p');
+    iconEl.innerHTML = icon ? icon.outerHTML : '';
+    titleEl.textContent = title ? title.textContent : '';
+    descEl.textContent = desc ? desc.textContent : '';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      if (!matchMedia('(max-width: 768px)').matches) return;
+      open(card);
+    });
+  });
+
+  backdrop?.addEventListener('click', close);
+  cta?.addEventListener('click', close);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
   });
 }
