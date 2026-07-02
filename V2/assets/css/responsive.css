@@ -1,0 +1,178 @@
+/* ==========================================================================
+   NanoRa Technologies — Responsive Stylesheet
+   Contains ONLY breakpoint-specific overrides. Base styles live in style.css.
+   Breakpoints: 1600 / 1400 / 1200 / 992 / 768 / 576 / 420 / 320
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   ≤1600px — Large desktop
+   -------------------------------------------------------------------------- */
+@media (max-width: 1600px) {
+  .container { max-width: 1140px; }
+}
+
+/* --------------------------------------------------------------------------
+   ≤1400px — Small desktop / large laptop
+   -------------------------------------------------------------------------- */
+@media (max-width: 1400px) {
+  .container { max-width: 1020px; }
+  .tech-grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* --------------------------------------------------------------------------
+   ≤1200px — Laptop
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .container { max-width: 920px; padding: 0 24px; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+  .tech-grid { grid-template-columns: repeat(4, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   ≤992px — Tablet: nav collapses, hero stacks
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  section { padding: 90px 0; }
+
+  /* Navbar */
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 12px 24px 24px;
+    background: rgba(6, 8, 22, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.35s var(--ease);
+  }
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav-links a { width: 100%; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .navbar-actions .btn-sm { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-right { margin-top: 60px; }
+  .hero-visual { max-width: 420px; }
+  .fc-1, .fc-2, .fc-3 { left: 0; right: 0; }
+  .fc-1 { top: 4%; left: 4%; }
+  .fc-2 { bottom: 18%; right: 4%; }
+  .fc-3 { display: none; }
+  .code-block { right: 4%; }
+
+  /* About / Why Us */
+  .about-inner, .why-inner { grid-template-columns: 1fr; gap: 50px; }
+  .about-image, .why-image { order: 1; }
+  .about-content, .why-content { order: 2; text-align: center; }
+  .why-list li { text-align: left; }
+  .about-glass { position: static; margin-top: 24px; width: 100%; }
+  .about-counters { justify-content: center; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+  .tech-grid { grid-template-columns: repeat(4, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --------------------------------------------------------------------------
+   ≤768px — Tablet portrait / phablet
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+
+  .hero { padding-top: 110px; }
+  .hero-image { height: 400px; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+
+  .services-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .timeline { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .tech-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; }
+  .social-links { justify-content: center; }
+  .footer-col a:hover { transform: none; }
+  .newsletter-form { max-width: 340px; margin: 0 auto; }
+
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  .cta-inner { padding: 60px 24px; }
+}
+
+/* --------------------------------------------------------------------------
+   ≤576px — Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+  section { padding: 70px 0; }
+
+  .hero-cta { flex-direction: column; width: 100%; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+  .hero-visual { max-width: 320px; }
+  .hero-image { height: 320px; }
+  .floating-card { padding: 10px 14px; }
+  .floating-card strong { font-size: 12px; }
+  .floating-card span { font-size: 10px; }
+  .code-block { width: 190px; }
+
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-counters { grid-template-columns: repeat(2, auto); }
+
+  .testimonial-card { padding: 30px 22px; }
+  .testimonial-card p { font-size: 16px; }
+
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stat-box { padding: 30px 14px; }
+  .stat-box h3 { font-size: 32px; }
+}
+
+/* --------------------------------------------------------------------------
+   ≤420px — Small mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 420px) {
+  .logo-text { font-size: 18px; }
+  .badge { font-size: 12px; padding: 8px 14px; }
+
+  .fc-1, .fc-2 { position: static; display: inline-flex; margin: 8px auto 0; }
+  .hero-visual { display: flex; flex-direction: column; align-items: center; }
+
+  .faq-question { padding: 18px 20px; font-size: 14.5px; }
+  .faq-answer p { padding: 0 20px 18px; }
+
+  .back-to-top { width: 42px; height: 42px; bottom: 20px; right: 20px; }
+}
+
+/* --------------------------------------------------------------------------
+   ≤320px — Extra small mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 320px) {
+  .container { padding: 0 16px; }
+  .hero-title { font-size: 30px; }
+  .section-title { font-size: 26px; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .about-counters { grid-template-columns: 1fr 1fr; gap: 18px; }
+}

@@ -1,0 +1,130 @@
+/* ==========================================================================
+   NanoRa Technologies — Animation Definitions
+   Only keyframes + animation-driven utility classes live here.
+   All classes use transform/opacity for GPU-accelerated, 60fps animation.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Status / attention
+   -------------------------------------------------------------------------- */
+@keyframes pulse-dot {
+  0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   Text / gradient
+   -------------------------------------------------------------------------- */
+@keyframes gradient-flow {
+  to { background-position: 300% center; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll indicator
+   -------------------------------------------------------------------------- */
+@keyframes scroll-dot {
+  0%   { opacity: 1; top: 8px; }
+  70%  { opacity: 0; top: 22px; }
+  100% { opacity: 0; top: 8px; }
+}
+
+/* --------------------------------------------------------------------------
+   Trust bar infinite marquee
+   -------------------------------------------------------------------------- */
+@keyframes scroll-left {
+  to { transform: translateX(-50%); }
+}
+
+/* --------------------------------------------------------------------------
+   Button micro-interactions (shine sweep + ripple)
+   -------------------------------------------------------------------------- */
+@keyframes shine {
+  to { left: 125%; }
+}
+
+@keyframes ripple-effect {
+  to { transform: scale(3); opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Floating elements (hero visuals, cards, blobs)
+   -------------------------------------------------------------------------- */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+
+@keyframes float-y-slow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(12px); }
+}
+
+@keyframes blob-move {
+  0%, 100%  { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(40px, -30px) scale(1.08); }
+  66%       { transform: translate(-30px, 30px) scale(0.94); }
+}
+
+/* --------------------------------------------------------------------------
+   Utility classes — applied in HTML, driven by keyframes above.
+   will-change hints keep these on the compositor thread.
+   -------------------------------------------------------------------------- */
+.float-anim {
+  animation: float-y 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-anim-slow {
+  animation: float-y-slow 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.blob-1 { animation: blob-move 16s ease-in-out infinite; }
+.blob-2 { animation: blob-move 20s ease-in-out infinite reverse; }
+.blob-3 { animation: blob-move 18s ease-in-out infinite; }
+.blob-1, .blob-2, .blob-3 { will-change: transform; }
+
+/* --------------------------------------------------------------------------
+   Scroll reveal (triggered by IntersectionObserver in js/animation.js)
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade-up"]    { transform: translateY(40px); }
+[data-reveal="fade-left"]  { transform: translateX(40px); }
+[data-reveal="fade-right"] { transform: translateX(-40px); }
+[data-reveal="scale"]      { transform: scale(0.9); }
+[data-reveal="zoom"]       { transform: scale(0.85); }
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   Magnetic buttons (transform applied inline via JS, transition lives here)
+   -------------------------------------------------------------------------- */
+.btn-magnetic {
+  transition: transform 0.25s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility — respect reduced motion preference
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
