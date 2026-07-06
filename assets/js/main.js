@@ -188,7 +188,7 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   Testimonial slider (auto-advancing, dot navigation)
+   Testimonial slider (auto-advancing, dot navigation, touch/drag swipe)
    -------------------------------------------------------------------------- */
 function initTestimonialSlider() {
   const track = document.getElementById('testimonialTrack');
@@ -224,6 +224,50 @@ function initTestimonialSlider() {
   }
 
   restartAutoplay();
+
+  /* Touch / pointer swipe — mobile-first, GPU-only transform during drag */
+  let startX = 0;
+  let deltaX = 0;
+  let dragging = false;
+  const threshold = 40;
+
+  const onStart = (x) => {
+    dragging = true;
+    startX = x;
+    deltaX = 0;
+    clearInterval(autoplayTimer);
+    track.style.transition = 'none';
+  };
+
+  const onMove = (x) => {
+    if (!dragging) return;
+    deltaX = x - startX;
+    const percent = (deltaX / track.clientWidth) * 100;
+    track.style.transform = `translateX(calc(-${index * 100}% + ${percent}%))`;
+  };
+
+  const onEnd = () => {
+    if (!dragging) return;
+    dragging = false;
+    track.style.transition = '';
+
+    if (Math.abs(deltaX) > threshold) {
+      goTo(deltaX < 0 ? index + 1 : index - 1);
+    } else {
+      goTo(index);
+    }
+  };
+
+  track.addEventListener('touchstart', (e) => onStart(e.touches[0].clientX), { passive: true });
+  track.addEventListener('touchmove', (e) => onMove(e.touches[0].clientX), { passive: true });
+  track.addEventListener('touchend', onEnd);
+
+  track.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'touch') return; // handled by touch events above
+    onStart(e.clientX);
+  });
+  window.addEventListener('pointermove', (e) => onMove(e.clientX));
+  window.addEventListener('pointerup', onEnd);
 }
 
 /* --------------------------------------------------------------------------
