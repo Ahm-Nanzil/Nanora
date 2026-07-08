@@ -1,0 +1,201 @@
+<!-- ============================================================
+     404 ERROR PAGE — NanoRa Technologies
+     Insert this content inside <main>, directly after the navbar
+     and before the footer, in a page such as 404.html.
+     Requires (in addition to the homepage's existing stylesheets
+     and scripts):
+       <link rel="stylesheet" href="assets/css/404.css">
+       <script src="assets/js/404.js" defer></script>
+     ============================================================ -->
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/404.css">
+</head>
+<body>
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="/" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img"
+      >
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#technologies">Technologies</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="navbar-actions">
+      <a href="#contact" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="error-page">
+  <div class="container error-inner">
+
+    <div class="error-text" data-reveal="fade-up">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Error 404
+      </div>
+
+      <h1 class="error-code gradient-text-anim">404</h1>
+
+      <h2 class="error-headline">Oops! Page Not Found</h2>
+
+      <p class="error-desc">
+        The page you're looking for may have been moved, renamed, or no longer exists.
+        Let's help you get back on track.
+      </p>
+
+      <div class="error-cta">
+        <a href="index.html" class="btn btn-primary btn-magnetic btn-lg">
+          <span>Return Home</span><i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="contact.html" class="btn btn-outline btn-magnetic btn-lg">
+          <span>Contact Us</span>
+        </a>
+      </div>
+
+      <p class="error-note">
+        If you believe this is an error, please <a href="contact.html">contact our team</a>.
+      </p>
+    </div>
+
+    <div class="error-illustration" data-reveal="fade-up" data-delay="120">
+      <div class="error-illustration-wrap float-anim" id="errorIllustration">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Abstract network and server infrastructure illustration">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+      <p>Building scalable digital solutions for modern businesses since day one.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Custom Software</a>
+      <a href="#services">Web Development</a>
+      <a href="#services">Mobile Apps</a>
+      <a href="#services">Cloud Solutions</a>
+      <a href="#services">AI Solutions</a>
+    </div>
+    <div class="footer-col">
+      <h4>Technologies</h4>
+      <a href="#technologies">React &amp; Vue</a>
+      <a href="#technologies">Node &amp; Laravel</a>
+      <a href="#technologies">AWS &amp; Azure</a>
+      <a href="#technologies">Docker &amp; K8s</a>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 NanoRa Technologies. All rights reserved.</p>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="assets/js/particles.js" defer></script>
+<script src="assets/js/animation.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

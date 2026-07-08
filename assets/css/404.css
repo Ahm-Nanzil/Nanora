@@ -1,0 +1,107 @@
+/* ==========================================================================
+   NanoRa Technologies — 404.css
+   Page-specific styles for the custom 404 page (404.html). Reuses every
+   color, gradient, radius, shadow and component already defined in
+   style.css / animation.css — this file only adds the single-section
+   layout the error page needs (large gradient code, headline, copy,
+   illustration and centering), since nothing like it exists on the
+   homepage.
+   Loaded AFTER style.css / animation.css / responsive.css.
+   ========================================================================== */
+
+.error-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 60px;
+}
+
+.error-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.error-text .badge { margin-bottom: 26px; }
+
+.error-code {
+  font-family: var(--font-display);
+  font-size: clamp(84px, 11vw, 160px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.error-headline {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 34px);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.error-desc {
+  color: var(--subtext);
+  font-size: 16.5px;
+  max-width: 480px;
+  margin-bottom: 34px;
+}
+
+.error-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+
+.error-note {
+  color: var(--subtext);
+  font-size: 13.5px;
+}
+.error-note a { color: var(--secondary); font-weight: 600; transition: color 0.3s ease; }
+.error-note a:hover { color: var(--text); }
+
+/* --------------------------------------------------------------------------
+   Illustration — glass-framed image, gentle float reused from animation.css
+   -------------------------------------------------------------------------- */
+.error-illustration { display: flex; justify-content: center; }
+.error-illustration-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+.error-illustration-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(79,70,229,0.18), rgba(6,8,22,0.55));
+}
+.error-illustration-wrap img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (single source of truth for this page's phone layout)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .error-inner { grid-template-columns: 1fr; gap: 44px; text-align: center; }
+  .error-text .badge { margin-left: auto; margin-right: auto; }
+  .error-desc { margin-left: auto; margin-right: auto; }
+  .error-cta { justify-content: center; }
+  .error-illustration { order: -1; }
+}
+
+@media (max-width: 768px) {
+  .error-page { padding: 110px 0 50px; min-height: 92vh; min-height: 92svh; }
+  .error-code { font-size: clamp(64px, 22vw, 96px); margin-bottom: 4px; }
+  .error-headline { font-size: 22px; margin-bottom: 12px; }
+  .error-desc { font-size: 14.5px; margin-bottom: 26px; }
+  .error-illustration-wrap { max-width: 280px; }
+  .error-illustration-wrap img { height: 220px; }
+  .error-cta { flex-direction: column; width: 100%; margin-bottom: 18px; }
+  .error-cta .btn { width: 100%; justify-content: center; }
+}

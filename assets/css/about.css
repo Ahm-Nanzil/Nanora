@@ -1,0 +1,304 @@
+/* ==========================================================================
+   NanoRa Technologies — about.css
+   Page-specific styles for the About page (about.html). Reuses every
+   color, gradient, radius, shadow and component already defined in
+   style.css / animation.css / responsive.css — only adds the layout
+   patterns this page needs that the homepage doesn't already have:
+   breadcrumb, about hero, who-we-are split, mission/vision cards,
+   values/why grids, the vertical development process flow, the
+   industry grid, and the quality commitment layout.
+   Loaded AFTER style.css / animation.css / responsive.css.
+   ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------
+   About Hero
+   -------------------------------------------------------------------------- */
+.about-hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-top: 120px;
+}
+.about-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.about-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.about-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,8,22,0.55) 0%, rgba(6,8,22,0.82) 62%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(6,8,22,0.85) 0%, rgba(6,8,22,0.3) 60%);
+}
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 76px;
+  max-width: 740px;
+}
+.about-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.8vw, 54px);
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+.about-hero-desc {
+  color: var(--subtext);
+  font-size: 17.5px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   Who We Are
+   -------------------------------------------------------------------------- */
+.who-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+.who-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+.who-content .section-desc { margin-bottom: 16px; }
+.who-content .section-desc:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Mission & Vision — reuses .glass-card
+   -------------------------------------------------------------------------- */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.mv-card { padding: 40px; }
+.mv-card .service-icon { margin-bottom: 22px; }
+.mv-card .section-tag { margin-bottom: 12px; }
+.mv-card .section-title { font-size: clamp(22px, 2.6vw, 28px); margin-bottom: 14px; }
+
+/* --------------------------------------------------------------------------
+   Core Values — reuses .service-icon
+   -------------------------------------------------------------------------- */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.value-card {
+  padding: 32px 26px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+}
+.value-card:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(79,70,229,0.2); }
+.value-card .service-icon { margin-bottom: 18px; }
+.value-card h3 { font-size: 17px; margin-bottom: 8px; }
+.value-card p { color: var(--subtext); font-size: 14px; }
+
+/* --------------------------------------------------------------------------
+   Why Choose NanoRa
+   -------------------------------------------------------------------------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.why-card {
+  padding: 30px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease);
+}
+.why-card:hover { transform: translateY(-6px); }
+.why-card .service-icon { margin-bottom: 16px; }
+.why-card h3 { font-size: 16.5px; margin-bottom: 8px; }
+.why-card p { color: var(--subtext); font-size: 13.5px; }
+
+/* --------------------------------------------------------------------------
+   Development Process — vertical flow with a scroll-driven progress line
+   (fill + active-step highlighting handled by about.js)
+   -------------------------------------------------------------------------- */
+.process-flow {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 56px;
+}
+.process-progress-track {
+  position: absolute;
+  top: 6px;
+  left: 23px;
+  width: 2px;
+  height: calc(100% - 12px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+}
+.process-progress-fill {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--grad-secondary);
+  border-radius: 2px;
+  transition: height 0.2s ease-out;
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  padding-bottom: 46px;
+}
+.process-step:last-child { padding-bottom: 0; }
+
+.process-icon {
+  position: absolute;
+  left: -56px;
+  top: 0;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--card-solid);
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px;
+  color: var(--subtext);
+  z-index: 2;
+  transition: all 0.4s var(--ease);
+}
+.process-step.active .process-icon {
+  background: var(--grad-primary);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(79,70,229,0.15);
+}
+
+.process-text {
+  padding: 4px 0 0;
+  transition: opacity 0.4s ease;
+}
+.process-text h4 { font-size: 18px; margin-bottom: 6px; }
+.process-text p { color: var(--subtext); font-size: 14.5px; max-width: 460px; }
+
+/* --------------------------------------------------------------------------
+   Industries — icon grid, same visual family as .tech-item
+   -------------------------------------------------------------------------- */
+.industry-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+.industry-item {
+  padding: 26px 12px;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.35s var(--ease), background 0.35s ease;
+}
+.industry-item i { font-size: 26px; color: var(--secondary); margin-bottom: 10px; display: block; }
+.industry-item span { font-size: 12.5px; color: var(--subtext); font-weight: 600; }
+.industry-item:hover { transform: translateY(-6px) scale(1.04); background: rgba(255,255,255,0.12); }
+
+/* --------------------------------------------------------------------------
+   Commitment to Quality
+   -------------------------------------------------------------------------- */
+.quality-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.quality-item {
+  padding: 24px 14px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  transition: transform 0.35s var(--ease);
+}
+.quality-item:hover { transform: translateY(-5px); }
+.quality-item .service-icon { width: 46px; height: 46px; font-size: 17px; margin: 0 auto 12px; }
+.quality-item h4 { font-size: 13px; }
+
+/* --------------------------------------------------------------------------
+   Final CTA — two-button variant
+   -------------------------------------------------------------------------- */
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+.cta-outline-on-dark { border-color: rgba(255,255,255,0.4); color: #fff; }
+.cta-outline-on-dark:hover { border-color: #fff; background: rgba(255,255,255,0.12); }
+
+/* --------------------------------------------------------------------------
+   Mobile (single source of truth for this page's phone layout)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .who-inner { grid-template-columns: 1fr; gap: 44px; }
+  .mv-grid { grid-template-columns: 1fr; gap: 20px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .industry-grid { grid-template-columns: repeat(4, 1fr); }
+  .quality-inner { grid-template-columns: 1fr; gap: 40px; }
+  .quality-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .about-hero { min-height: 66vh; padding-top: 96px; }
+  .about-hero-content { padding-bottom: 40px; }
+  .about-hero-title { font-size: clamp(27px, 8vw, 34px); margin-bottom: 12px; }
+  .about-hero-desc { font-size: 15px; margin-bottom: 22px; }
+
+  .who-img { height: 220px; }
+
+  .mv-card { padding: 26px 22px; }
+  .mv-card .section-title { font-size: 20px; }
+
+  .values-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .value-card { padding: 18px 14px; text-align: center; }
+  .value-card .service-icon { width: 44px; height: 44px; margin: 0 auto 10px; font-size: 17px; }
+  .value-card h3 { font-size: 13px; margin-bottom: 4px; }
+  .value-card p { font-size: 11.5px; }
+
+  .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .why-card { padding: 18px 14px; text-align: center; }
+  .why-card .service-icon { width: 44px; height: 44px; margin: 0 auto 10px; font-size: 17px; }
+  .why-card h3 { font-size: 12.5px; margin-bottom: 4px; }
+  .why-card p { font-size: 11.5px; }
+
+  /* Process: tighter vertical rhythm, smaller connector rail */
+  .process-flow { padding-left: 44px; }
+  .process-progress-track { left: 17px; }
+  .process-icon { left: -44px; width: 38px; height: 38px; font-size: 14px; }
+  .process-step { gap: 16px; padding-bottom: 32px; }
+  .process-text h4 { font-size: 15.5px; }
+  .process-text p { font-size: 13px; }
+
+  .industry-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .industry-item { padding: 18px 8px; }
+  .industry-item i { font-size: 20px; margin-bottom: 6px; }
+  .industry-item span { font-size: 11px; }
+
+  .quality-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .quality-item { padding: 16px 10px; }
+  .quality-item h4 { font-size: 11.5px; }
+
+  .cta-buttons { flex-direction: column; width: 100%; }
+  .cta-buttons .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .values-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .industry-grid { grid-template-columns: repeat(2, 1fr); }
+}

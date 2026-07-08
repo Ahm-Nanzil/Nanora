@@ -1,0 +1,270 @@
+/* ==========================================================================
+   NanoRa Technologies — service.css
+   Page-specific styles for service detail pages (e.g. services/cloud-solutions.html).
+   Reuses all design tokens, colors, gradients and components from style.css —
+   only adds the layout patterns that the homepage doesn't already have
+   (breadcrumb, service hero, overview split, provide grid, alternating
+   feature rows, why-grid, case studies).
+   Loaded AFTER style.css / animation.css / responsive.css so it can safely
+   add page-specific breakpoint rules without touching the homepage.
+   ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------
+   Service Hero — full-bleed image, dark overlay, centered content
+   -------------------------------------------------------------------------- */
+.service-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.service-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.service-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.service-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,8,22,0.55) 0%, rgba(6,8,22,0.75) 55%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(6,8,22,0.85) 0%, rgba(6,8,22,0.35) 60%);
+}
+.service-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 90px;
+  max-width: 720px;
+}
+.service-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.5vw, 66px);
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+.service-hero-desc {
+  color: var(--subtext);
+  font-size: 18px;
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+.service-hero .scroll-indicator { z-index: 2; }
+
+/* --------------------------------------------------------------------------
+   Service Overview — split layout, reuses .glass-card / .progress-*
+   -------------------------------------------------------------------------- */
+.overview-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+.overview-image { position: relative; }
+.overview-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+.overview-glass {
+  position: absolute;
+  bottom: -28px;
+  right: -28px;
+  width: 280px;
+  padding: 24px;
+}
+.overview-glass h4 { font-size: 15px; margin-bottom: 18px; }
+
+.overview-benefits { display: flex; flex-direction: column; gap: 14px; margin-top: 26px; }
+.overview-benefits li { display: flex; align-items: flex-start; gap: 12px; color: var(--subtext); font-size: 15px; }
+.overview-benefits i { color: var(--success); margin-top: 3px; flex-shrink: 0; }
+
+/* --------------------------------------------------------------------------
+   What We Provide — grid, reuses .service-icon
+   -------------------------------------------------------------------------- */
+.provide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.provide-card {
+  padding: 34px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+}
+.provide-card:hover { transform: translateY(-8px); box-shadow: 0 24px 50px rgba(79, 70, 229, 0.25); }
+.provide-card .service-icon { margin-bottom: 22px; }
+.provide-card h3 { font-size: 18.5px; margin-bottom: 10px; }
+.provide-card p { color: var(--subtext); font-size: 14.5px; }
+
+/* --------------------------------------------------------------------------
+   Feature rows — alternating image/text
+   -------------------------------------------------------------------------- */
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.feature-row:last-child { margin-bottom: 0; }
+.feature-row.reverse .feature-text { order: 2; }
+.feature-row.reverse .feature-image { order: 1; }
+
+.feature-text .service-icon { margin-bottom: 20px; }
+.feature-text h3 { font-size: 24px; margin-bottom: 14px; }
+.feature-text p { color: var(--subtext); font-size: 16px; max-width: 460px; }
+
+.feature-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+/* --------------------------------------------------------------------------
+   Why Choose Us — grid variant of service cards
+   -------------------------------------------------------------------------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.why-card {
+  padding: 32px 26px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease);
+}
+.why-card:hover { transform: translateY(-6px); }
+.why-card .service-icon { margin-bottom: 18px; }
+.why-card h3 { font-size: 17.5px; margin-bottom: 8px; }
+.why-card p { color: var(--subtext); font-size: 14px; }
+
+/* --------------------------------------------------------------------------
+   Case studies
+   -------------------------------------------------------------------------- */
+.case-study-list { display: flex; flex-direction: column; gap: 28px; }
+.case-study-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+}
+.case-study-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(79, 70, 229, 0.2); }
+.case-study-img { position: relative; min-height: 260px; overflow: hidden; }
+.case-study-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.case-study-card:hover .case-study-img img { transform: scale(1.06); }
+.case-study-img .project-badge {
+  position: absolute;
+  top: 18px; left: 18px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--grad-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+.case-study-body { padding: 30px 34px; }
+.case-study-body h3 { font-size: 19.5px; margin-bottom: 16px; }
+.case-study-row { font-size: 14.5px; color: var(--subtext); margin-bottom: 10px; }
+.case-study-row strong { color: var(--text); font-family: var(--font-display); font-weight: 600; }
+.case-study-result {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14.5px;
+  color: var(--success);
+  font-weight: 600;
+  margin: 14px 0 0;
+}
+.case-study-toggle { display: none; }
+
+/* --------------------------------------------------------------------------
+   Mobile (single source of truth for this page's phone layout)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .overview-inner { grid-template-columns: 1fr; gap: 50px; }
+  .overview-glass { position: static; margin-top: 24px; width: 100%; }
+  .provide-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-row { grid-template-columns: 1fr; gap: 30px; }
+  .feature-row.reverse .feature-text,
+  .feature-row.reverse .feature-image { order: initial; }
+  .case-study-card { grid-template-columns: 1fr; }
+  .case-study-img { min-height: 220px; }
+}
+
+@media (max-width: 768px) {
+
+
+  /* Hero: shorter, content-first, matches homepage mobile hero rhythm */
+  .service-hero { min-height: 62vh; margin-bottom: 0; }
+  .service-hero-content { padding-bottom: 44px; }
+  .service-hero-title { font-size: clamp(30px, 9vw, 40px); margin-bottom: 12px; }
+  .service-hero-desc { font-size: 15px; margin-bottom: 22px; }
+  .service-hero-cta .btn { width: 100%; justify-content: center; }
+
+  section, .service-overview, .provide, .service-features, .why-choose, .case-studies { padding: 48px 0; }
+
+  .overview-img { height: 240px; }
+  .overview-glass { padding: 18px; }
+  .overview-benefits li { font-size: 14px; }
+
+  /* Provide grid: compact 2-col on mobile, icon+title+short desc */
+  .provide-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .provide-card { padding: 18px 14px; text-align: center; }
+  .provide-card .service-icon { width: 44px; height: 44px; margin: 0 auto 12px; font-size: 17px; }
+  .provide-card h3 { font-size: 13.5px; margin-bottom: 6px; }
+  .provide-card p { font-size: 11.5px; line-height: 1.45; }
+
+  /* Feature rows: stacked, image first for visual impact, tighter gap */
+  .feature-row { gap: 18px; margin-bottom: 44px; }
+  .feature-image img { height: 200px; }
+  .feature-text h3 { font-size: 19px; }
+  .feature-text p { font-size: 14.5px; }
+
+  .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .why-card { padding: 18px 14px; text-align: center; }
+  .why-card .service-icon { width: 44px; height: 44px; margin: 0 auto 10px; font-size: 17px; }
+  .why-card h3 { font-size: 13px; margin-bottom: 4px; }
+  .why-card p { font-size: 11.5px; }
+
+  /* Case studies: compact card, secondary details collapsed behind a toggle */
+  .case-study-list { gap: 16px; }
+  .case-study-img { min-height: 170px; }
+  .case-study-body { padding: 18px 18px 20px; }
+  .case-study-body h3 { font-size: 16px; margin-bottom: 10px; }
+  .case-study-row:nth-of-type(n+2) {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .case-study-card.expanded .case-study-row { display: block; max-height: none; }
+  .case-study-result { margin-top: 10px; font-size: 13px; }
+  .case-study-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary);
+  }
+  .case-study-toggle i { font-size: 11px; transition: transform 0.3s var(--ease); }
+  .case-study-card.expanded .case-study-toggle i { transform: rotate(180deg); }
+}
+
+@media (max-width: 420px) {
+  .provide-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+}

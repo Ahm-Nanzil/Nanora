@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+<!-- ============ PROJECT HERO ============ -->
+<section class="project-hero" id="project-hero">
+  <div class="project-hero-bg">
+    <img src="../assets/img/portfolio/VoipFront1.png" alt="Telecom Business Website homepage on desktop and mobile" class="project-hero-img">
+    <div class="project-hero-overlay"></div>
+  </div>
+
+    <!-- ===== Breadcrumb ===== -->
+    <section class="nr-breadcrumb">
+        <div class="container">
+
+            <h1 class="nr-breadcrumb-title">About Us</h1>
+
+            <nav aria-label="Breadcrumb">
+                <ol class="nr-breadcrumb-list">
+                    <li><a href="/index.html">Home</a></li>
+
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+
+                    <li aria-current="page">
+                        About Us
+                    </li>
+                </ol>
+            </nav>
+
+        </div>
+    </section>
+
+    <div class="badge" data-reveal="fade-up">
+      <span class="badge-dot"></span>
+      Corporate Website Case Study
+    </div>
+
+    <h1 class="project-hero-title" data-reveal="fade-up" data-delay="60">Telecom Business Website</h1>
+
+    <p class="project-hero-desc" data-reveal="fade-up" data-delay="120">
+      A modern corporate website designed for a telecommunications business to showcase services,
+      business solutions, pricing, downloads, and company information through a professional digital
+      experience — backed by a simple yet powerful content management system.
+    </p>
+
+    <ul class="project-meta" data-reveal="fade-up" data-delay="160">
+      <li><i class="fa-solid fa-layer-group"></i><span>Category</span><strong>Corporate Website</strong></li>
+      <li><i class="fa-solid fa-diagram-project"></i><span>Project Type</span><strong>Business Website with CMS</strong></li>
+      <li><i class="fa-solid fa-industry"></i><span>Industry</span><strong>Telecommunications</strong></li>
+      <li><i class="fa-solid fa-circle-check"></i><span>Status</span><strong>Completed</strong></li>
+    </ul>
+
+    <div class="project-tech-badges" data-reveal="fade-up" data-delay="200">
+      <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+    </div>
+
+    <div class="project-hero-cta" data-reveal="fade-up" data-delay="240">
+      <a href="../contact.html#contact" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT HIGHLIGHTS ============ -->
+<section class="project-features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Project Highlights</div>
+      <h2 class="section-title center">What Makes This Website Different</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Website</h3>
+        <p>A polished corporate presence that adapts seamlessly to every screen size.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+        <h3>Content Management System</h3>
+        <p>Non-technical staff can update pages, services, and downloads without touching code.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-house-laptop"></i></div>
+        <h3>Dynamic Homepage</h3>
+        <p>Editable homepage sections that keep the first impression fresh and relevant.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Service Management</h3>
+        <p>Create, update, and organize service offerings from a centralized dashboard.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-newspaper"></i></div>
+        <h3>Blog Management</h3>
+        <p>Publish company news, articles, and updates through a built-in blogging tool.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-download"></i></div>
+        <h3>Download Center</h3>
+        <p>Manage downloadable applications, brochures, and resources in one place.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-tag"></i></div>
+        <h3>Rates Management</h3>
+        <p>Maintain and publish pricing information without developer involvement.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Admin Dashboard</h3>
+        <p>A clean interface for overseeing and updating every section of the website.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT AT A GLANCE ============ -->
+<section class="project-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="../assets/img/portfolio/VoipFront2.png" alt="Telecom Business Website system overview interface" class="overview-img">
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Project At A Glance</div>
+      <h2 class="section-title">A Corporate Website That Works as Hard as the Business</h2>
+      <p class="section-desc">
+        The Telecom Business Website combines a public-facing corporate presence with a private
+        administration panel. Service pages, downloads, pricing, and blog content are all managed
+        through a single dashboard — no developer needed for day-to-day updates.
+      </p>
+
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-building"></i> Client: Private Telecommunications Business</li>
+        <li><i class="fa-solid fa-diagram-project"></i> Project Type: Corporate Website</li>
+        <li><i class="fa-solid fa-gear"></i> Services: UI/UX Design, Frontend & Backend Development, CMS Development</li>
+        <li><i class="fa-solid fa-code"></i> Technology: Laravel, PHP, MySQL</li>
+        <li><i class="fa-solid fa-display"></i> Platform: Web Application</li>
+        <li><i class="fa-solid fa-circle-check"></i> Status: Completed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT OVERVIEW ============ -->
+<section class="project-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="../assets/img/portfolio/VoipFront2.png" alt="Telecom Business Website centralized dashboard" class="overview-img">
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Project Overview</div>
+      <h2 class="section-title">A Digital Storefront Built for a Telecom Brand</h2>
+      <p class="section-desc">
+        The client needed a modern business website capable of presenting telecom services
+        professionally while allowing administrators to easily manage content across multiple
+        sections. The existing site had become difficult to update, and routine changes required
+        technical assistance that slowed down the marketing team.
+      </p>
+      <p class="section-desc">
+        NanoRa Technologies delivered a complete corporate website with an integrated content
+        management system. Service pages, downloads, pricing tables, blog posts, and contact
+        information can all be updated through an intuitive admin interface — giving the business
+        full control over its digital presence.
+      </p>
+
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Every public-facing page is editable through a simple dashboard</li>
+        <li><i class="fa-solid fa-check"></i> Service offerings and pricing stay current without developer intervention</li>
+        <li><i class="fa-solid fa-check"></i> The blog and download center keep customers engaged with fresh content</li>
+        <li><i class="fa-solid fa-check"></i> The entire experience is responsive across desktop, tablet, and mobile</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS CHALLENGE ============ -->
+<section class="project-challenge">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">The Challenge</div>
+      <h2 class="section-title center">When a Website Becomes a Bottleneck</h2>
+    </div>
+
+    <div class="challenge-grid">
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>Outdated Digital Presence</h3>
+        <p>The previous website no longer reflected the company's service portfolio or professional
+          standing, creating a disconnect between the brand and its online image.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Cumbersome Content Updates</h3>
+        <p>Updating services, pricing, or downloads required technical knowledge, meaning routine
+          changes sat in a queue waiting for developer availability.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Fragmented Page Management</h3>
+        <p>Maintaining consistency across multiple static pages without a centralized system made
+          the website feel disjointed and difficult to keep current.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR SOLUTION ============ -->
+<section class="project-solution">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Solution</div>
+      <h2 class="section-title center">A Website That Empowers, Not Frustrates</h2>
+      <p class="section-desc center">
+        NanoRa developed a modern responsive corporate website paired with an intuitive
+        administration panel that puts content control directly in the hands of the client's
+        team — no coding required.
+      </p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="solution-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h3>Architecture</h3>
+        <p>A Laravel application with a clean separation between the public-facing website and
+          the private content management dashboard, connected through a shared data layer.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Engineering Approach</h3>
+        <p>Iterative design and development with regular client reviews ensured the final website
+          matched the brand identity and functional requirements.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Room to Grow</h3>
+        <p>A well-structured codebase allows new pages, sections, and content types to be added
+          as the business expands its digital footprint.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="240">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security &amp; Access</h3>
+        <p>Secure authentication ensures only authorized staff can access the admin panel and
+          modify website content.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY FEATURES ============ -->
+<section class="project-features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Core Capabilities</div>
+      <h2 class="section-title center">Everything a Modern Corporate Website Needs</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-house-laptop"></i></div>
+        <h3>Responsive Homepage</h3>
+        <p>Professional landing page introducing telecom services with dynamic, editable sections.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Service Management</h3>
+        <p>Create and manage detailed service pages complete with descriptions and visuals.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+        <h3>Homepage Content Editor</h3>
+        <p>Update hero sections, feature highlights, and calls-to-action without touching code.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-tag"></i></div>
+        <h3>Rates Management</h3>
+        <p>Maintain and publish pricing tables that visitors can browse with confidence.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-download"></i></div>
+        <h3>Download Center</h3>
+        <p>Manage downloadable applications, brochures, and technical resources in one place.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-newspaper"></i></div>
+        <h3>Blog Management</h3>
+        <p>Publish company news, educational articles, and industry updates through a simple editor.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>Contact Management</h3>
+        <p>Maintain contact information, inquiry forms, and communication channels centrally.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-sliders"></i></div>
+        <h3>Content Administration</h3>
+        <p>An intuitive dashboard for managing every section of the website without technical skills.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Design</h3>
+        <p>Optimized across desktop, tablet, and mobile devices for every visitor.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>SEO Friendly Structure</h3>
+        <p>Clean page architecture supporting discoverability through search engines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGY STACK ============ -->
+<section class="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Technology Stack</div>
+      <h2 class="section-title center">Built With Reliable, Maintainable Tools</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-plug"></i><span>REST API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-box"></i><span>Composer</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-server"></i><span>Apache</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UI SHOWCASE ============ -->
+<section class="project-showcase" id="showcase">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">UI Showcase</div>
+      <h2 class="section-title center">Designed for Every Screen</h2>
+      <p class="section-desc center">Browse the interface across desktop, tablet and mobile.</p>
+    </div>
+
+    <div class="showcase-tabs" role="tablist" aria-label="Screen type" data-reveal="fade-up">
+      <button class="showcase-tab active" role="tab" aria-selected="true" data-filter="desktop">
+        <i class="fa-solid fa-display"></i><span>Desktop</span>
+      </button>
+      <button class="showcase-tab" role="tab" aria-selected="false" data-filter="tablet">
+        <i class="fa-solid fa-tablet-screen-button"></i><span>Tablet</span>
+      </button>
+      <button class="showcase-tab" role="tab" aria-selected="false" data-filter="mobile">
+        <i class="fa-solid fa-mobile-screen-button"></i><span>Mobile</span>
+      </button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/telecom-homepage.png" alt="Desktop homepage">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Homepage — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/telecom-about.png" alt="Desktop about page">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> About Page — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="120">
+        <img src="../assets/img/portfolio/telecom-services.png" alt="Desktop services page">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Services — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="tablet" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/telecom-blog.png" alt="Tablet blog page">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Blog — Tablet</span>
+      </button>
+      <button class="gallery-item" data-category="tablet" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/telecom-downloads.png" alt="Tablet download center">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Download Center — Tablet</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/telecom-rates.png" alt="Mobile rates page">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Rates — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/telecom-contact.png" alt="Mobile contact page">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Contact Page — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="120">
+        <img src="../assets/img/portfolio/telecom-cms-dashboard.png" alt="Mobile content management dashboard">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Content Management Dashboard — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/telecom-homepage-editor.png" alt="Mobile homepage editor">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Homepage Editor — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/telecom-settings.png" alt="Mobile website settings">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Website Settings — Mobile</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVELOPMENT PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Built It</div>
+      <h2 class="section-title center">Development Process</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>Initial stakeholder engagement to understand brand identity, content needs, and goals.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="50">
+        <div class="timeline-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h4>02. Business Requirement Analysis</h4>
+        <p>Detailed documentation of website sections, content types, and administrative workflows.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="100">
+        <div class="timeline-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h4>03. System Architecture</h4>
+        <p>Designing the website structure, CMS architecture, database schema, and API design.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="150">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h4>04. UI/UX Design</h4>
+        <p>Creating a professional, on-brand interface for both the public website and admin panel.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="200">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>05. Backend Development</h4>
+        <p>Building the content management logic, database layer, and administrative API endpoints.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="250">
+        <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h4>06. Frontend Development</h4>
+        <p>Developing the responsive public website and connecting it to the CMS backend.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>07. Testing &amp; Quality Assurance</h4>
+        <p>Comprehensive testing including cross-browser compatibility, responsiveness, and content validation.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="350">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>08. Deployment &amp; Support</h4>
+        <p>Production deployment with ongoing technical support and maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR CONTRIBUTION ============ -->
+<section class="project-challenge">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Contribution</div>
+      <h2 class="section-title center">End-to-End Delivery by NanoRa Technologies</h2>
+    </div>
+
+    <div class="challenge-grid">
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Business Analysis</h3>
+        <p>Thorough evaluation of brand requirements and content management needs to define the right feature set.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Professional website and dashboard interfaces crafted for visual impact and ease of daily use.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Frontend Development</h3>
+        <p>Responsive, interactive frontend delivering a consistent brand experience across all device sizes.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Backend Development</h3>
+        <p>Robust server-side logic powering the CMS, content delivery, and administrative functions.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+        <h3>CMS Development</h3>
+        <p>Custom content management system enabling non-technical staff to manage every website section.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+        <h3>Database Design</h3>
+        <p>Optimized relational database structure ensuring efficient content storage and retrieval.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+        <h3>Testing</h3>
+        <p>Rigorous quality assurance covering functionality, responsiveness, and content accuracy.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Deployment &amp; Configuration</h3>
+        <p>Smooth production launch with environment setup tailored to the client's hosting infrastructure.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Technical Support</h3>
+        <p>Post-launch support ensuring website stability and a smooth transition for the content team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS RESULTS ============ -->
+<section class="project-results">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Business Impact</div>
+      <h2 class="section-title center">Measurable Organizational Improvements</h2>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Improved Online Presence</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Professional Digital Branding</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Simplified Website Administration</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Faster Content Publishing</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Responsive User Experience</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Centralized Website Management</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Improved Service Presentation</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Scalable Content Structure</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED PROJECTS ============ -->
+<section class="projects">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Related Projects</div>
+      <h2 class="section-title center">More Work From NanoRa</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-reveal="fade-up" data-delay="0">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/NbsFront1.png" alt="NBS Business Management Platform dashboard">
+          <div class="project-overlay">
+            <span class="project-badge">Business Management</span>
+            <a href="../portfolio/nbs.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>NBS Business Management Platform</h4><p>A comprehensive business management solution unifying multiple operational departments.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="100">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/RitcoFront1.png" alt="RITCO Multi-Vendor Commerce Platform storefront">
+          <div class="project-overlay">
+            <span class="project-badge">E-Commerce</span>
+            <a href="../portfolio/ritco.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>RITCO Multi-Vendor Commerce Platform</h4><p>A scalable multi-vendor marketplace connecting customers, vendors, and administrators.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="200">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/ZenixFront1.png" alt="Zenix Enterprise Management Platform dashboard">
+          <div class="project-overlay">
+            <span class="project-badge">Enterprise</span>
+            <a href="../portfolio/zenix.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Zenix Enterprise Management Platform</h4><p>Enterprise management solution designed to streamline operations across departments.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Modernize Your Business Website?</h2>
+    <h3>Whether you're launching a new corporate website or upgrading an existing one, NanoRa Technologies creates modern, scalable digital experiences tailored to your business goals.</h3>
+    <a href="../contact.html#contact" class="btn btn-white btn-magnetic btn-lg">
+      <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/project.js" defer></script>
+</body>
+</html>

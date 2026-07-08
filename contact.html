@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============ CONTACT HERO ============ -->
+<section class="contact-hero">
+
+  <div class="contact-hero-bg">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80"
+         alt="Software development workspace"
+         class="contact-hero-img">
+    <div class="contact-hero-overlay"></div>
+  </div>
+
+  <div class="container contact-hero-content">
+
+    <!-- ===== Breadcrumb ===== -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb"> <ol class="breadcrumb-list"> <li><a href="/index.html">Home</a></li> <li><i class="fa-solid fa-chevron-right"></i></li> <li aria-current="page">About</li> </ol> </nav>
+
+
+    <div class="badge" data-reveal="fade-up">
+      <span class="badge-dot"></span>
+      Let's Connect
+    </div>
+
+    <h1 class="contact-hero-title"
+        data-reveal="fade-up"
+        data-delay="60">
+
+        Have a Project in Mind?
+        <span class="grad-text">
+            Let's Build It Together.
+        </span>
+
+    </h1>
+
+    <p class="contact-hero-desc"
+       data-reveal="fade-up"
+       data-delay="120">
+
+        We'd love to learn about your ideas, answer your questions, and help you find the right technology solution.
+
+    </p>
+
+    <div class="contact-hero-cta"
+         data-reveal="fade-up"
+         data-delay="160">
+
+      <a href="#contact-form"
+         class="btn btn-primary btn-magnetic btn-lg">
+
+          <span>
+              Get Free Consultation
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+      <a href="/project.html"
+         class="btn btn-outline btn-magnetic btn-lg">
+
+          <span>
+              View Our Projects
+          </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============ CONTACT INFORMATION ============ -->
+<section class="contact-info">
+
+  <div class="container">
+
+    <div class="info-grid">
+
+      <!-- Email -->
+
+      <div class="glass-card info-card"
+           data-reveal="fade-up"
+           data-delay="0">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <h3>Email Us</h3>
+
+        <a href="mailto:hello@nanoratech.com">
+          hello@nanoratech.com
+        </a>
+
+      </div>
+
+
+      <!-- Phone -->
+
+      <div class="glass-card info-card"
+           data-reveal="fade-up"
+           data-delay="60">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+
+        <h3>Call Us</h3>
+
+        <a href="tel:+8801XXXXXXXXX">
+          +880 1XXXXXXXXX
+        </a>
+
+      </div>
+
+
+      <!-- Location -->
+
+      <div class="glass-card info-card"
+           data-reveal="fade-up"
+           data-delay="120">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <h3>Location</h3>
+
+        <p>
+          Dhaka, Bangladesh<br>
+          Serving Clients Worldwide
+        </p>
+
+      </div>
+
+
+      <!-- Business Hours -->
+
+      <div class="glass-card info-card"
+           data-reveal="fade-up"
+           data-delay="180">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <h3>Business Hours</h3>
+
+        <p>
+
+          Monday – Friday<br>
+
+          9:00 AM – 6:00 PM (GMT+6)
+
+        </p>
+
+      </div>
+
+
+      <!-- Response -->
+
+      <div class="glass-card info-card"
+           data-reveal="fade-up"
+           data-delay="240">
+
+        <div class="service-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Quick Response</h3>
+
+        <p>
+
+          We usually reply within one business day.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============ CONTACT FORM ============ -->
+<section class="contact-form-section" id="contact-form">
+  <div class="container">
+
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Free Consultation</div>
+      <h2 class="section-title center">Let's Discuss Your Project</h2>
+      <p class="section-desc center">
+        Tell us what you're building, and we'll recommend the right solution.
+      </p>
+    </div>
+
+    <div class="form-wrap glass-card" data-reveal="fade-up" data-delay="80">
+      <form class="contact-form" id="contactForm" novalidate>
+
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="John Smith"
+              required>
+            <span class="field-error" data-error-for="fullName"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Your Company (Optional)">
+          </div>
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@company.com"
+              required>
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+1 234 567 890">
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="subject">Project Title <span class="required">*</span></label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="CRM System for Logistics Company"
+              required>
+            <span class="field-error" data-error-for="subject"></span>
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label for="budget">Estimated Budget</label>
+
+            <div class="select-wrap">
+
+              <select id="budget" name="budget">
+
+                <option value="" selected disabled>
+                  Select Budget
+                </option>
+
+                <option value="under-1000">
+                  Under $1,000
+                </option>
+
+                <option value="1000-3000">
+                  $1,000 – $3,000
+                </option>
+
+                <option value="3000-5000">
+                  $3,000 – $5,000
+                </option>
+
+                <option value="5000-10000">
+                  $5,000 – $10,000
+                </option>
+
+                <option value="10000-plus">
+                  $10,000+
+                </option>
+
+                <option value="not-sure">
+                  Not Sure Yet
+                </option>
+
+              </select>
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="serviceInterest">
+              Service Interested In
+            </label>
+
+            <div class="select-wrap">
+
+              <select id="serviceInterest" name="serviceInterest">
+
+                <option value="" selected disabled>
+                  Select a Service
+                </option>
+
+                <option value="custom-software">
+                  Custom Software Development
+                </option>
+
+                <option value="web-development">
+                  Web Development
+                </option>
+
+                <option value="api-integration">
+                  API Integration
+                </option>
+
+                <option value="cloud-solutions">
+                  Cloud Solutions
+                </option>
+
+                <option value="devops">
+                  DevOps
+                </option>
+
+                <option value="ai-solutions">
+                  AI Solutions
+                </option>
+
+                <option value="ui-ux">
+                  UI/UX Design
+                </option>
+
+                <option value="ecommerce">
+                  E-Commerce Development
+                </option>
+
+                <option value="maintenance">
+                  Maintenance & Support
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group full-width">
+
+            <label for="message">
+              Project Details <span class="required">*</span>
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              maxlength="800"
+              placeholder="Briefly describe your project, business goals, preferred timeline, and any specific requirements..."
+              required></textarea>
+
+            <div class="textarea-meta">
+              <span class="field-error" data-error-for="message"></span>
+              <span class="char-counter">
+                <span id="charCount">0</span>/800
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-magnetic btn-lg form-submit"
+          id="formSubmitBtn">
+
+          <span class="btn-label">
+            Request Free Consultation
+          </span>
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+          <span class="btn-spinner" aria-hidden="true"></span>
+
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="contact-location">
+  <div class="container location-inner">
+    <div class="map-wrap" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80" alt="Map view of Austin, Texas near NanoRa Technologies office" class="map-img">
+      <div class="map-pin"><i class="fa-solid fa-location-dot"></i></div>
+      <a href="https://maps.google.com" target="_blank" rel="noopener" class="map-overlay-link" aria-label="Open location in Google Maps"></a>
+    </div>
+
+    <div class="location-card glass-card" data-reveal="fade-left">
+      <div class="section-tag">Our Office</div>
+      <h2 class="section-title">Visit Us in Austin</h2>
+      <ul class="location-details">
+        <li><i class="fa-solid fa-location-dot"></i><span>128 Innovation Drive, Suite 400, Austin, TX 78701</span></li>
+        <li><i class="fa-solid fa-clock"></i><span>Mon – Fri, 9:00 AM – 6:00 PM</span></li>
+        <li><i class="fa-solid fa-globe"></i><span>Central Standard Time (CST / UTC-6)</span></li>
+      </ul>
+      <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline btn-magnetic">
+        <span>Get Directions</span><i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="container">
+
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>How do I get started with NanoRa?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Simply fill out the consultation form with your project details. We'll review your requirements and get back to you to discuss the best solution.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a software project usually take?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Every project is different. After understanding your requirements, we'll provide a clear timeline based on the project's scope and complexity.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you improve or upgrade existing software?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes. We can modernize existing applications, add new features, improve performance, enhance security, or migrate your system to modern technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide maintenance and support?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes. We offer ongoing maintenance, software updates, performance optimization, security improvements, and technical support after project delivery.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>When can I expect a response?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            We usually respond to all project inquiries within one business day.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta">
+
+  <div class="container cta-inner" data-reveal="scale">
+
+    <h2>
+      Ready to Start Your Project?
+    </h2>
+
+    <h3>
+      Let's build something exceptional together.
+    </h3>
+
+    <a href="#contact-form"
+       class="btn btn-white btn-magnetic btn-lg">
+
+      <span>
+        Request Free Consultation
+      </span>
+
+      <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+      <p>Building scalable digital solutions for modern businesses since day one.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Custom Software</a>
+      <a href="#services">Web Development</a>
+      <a href="#services">Mobile Apps</a>
+      <a href="#services">Cloud Solutions</a>
+      <a href="#services">AI Solutions</a>
+    </div>
+    <div class="footer-col">
+      <h4>Technologies</h4>
+      <a href="#technologies">React &amp; Vue</a>
+      <a href="#technologies">Node &amp; Laravel</a>
+      <a href="#technologies">AWS &amp; Azure</a>
+      <a href="#technologies">Docker &amp; K8s</a>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 NanoRa Technologies. All rights reserved.</p>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="assets/js/particles.js" defer></script>
+<script src="assets/js/animation.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/contact.js" defer></script>
+</body>
+</html>

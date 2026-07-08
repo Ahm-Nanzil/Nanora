@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>Portfolio — Enterprise Software, Commerce & Corporate Websites | NanoRa Technologies</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="Explore NanoRa Technologies' portfolio of enterprise software, business platforms, e-commerce systems, and corporate websites built to solve real business challenges.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ============ PORTFOLIO HERO ============ -->
+<section class="portfolio-hero" id="portfolio-hero">
+  <div class="container portfolio-hero-inner">
+
+    <!-- ===== Breadcrumb ===== -->
+    <section class="nr-breadcrumb">
+        <div class="container">
+
+            <h1 class="nr-breadcrumb-title">About Us</h1>
+
+            <nav aria-label="Breadcrumb">
+                <ol class="nr-breadcrumb-list">
+                    <li><a href="/index.html">Home</a></li>
+
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+
+                    <li aria-current="page">
+                        About Us
+                    </li>
+                </ol>
+            </nav>
+
+        </div>
+    </section>
+
+    <div class="badge" data-reveal="fade-up">
+      <span class="badge-dot"></span>
+      Portfolio
+    </div>
+
+    <h1 class="portfolio-hero-title" data-reveal="fade-up" data-delay="60">
+      Real Projects. <br>
+      <span class="gradient-text-anim">Real Business Solutions.</span>
+    </h1>
+
+    <p class="portfolio-hero-desc" data-reveal="fade-up" data-delay="120">
+      Showcase of custom software, business platforms, digital commerce solutions, and corporate
+      websites developed to solve real-world business challenges.
+    </p>
+
+    <div class="portfolio-hero-cta" data-reveal="fade-up" data-delay="180">
+      <a href="#portfolio-projects" class="btn btn-primary btn-magnetic btn-lg">
+        <span>View Projects</span><i class="fa-solid fa-arrow-down"></i>
+      </a>
+      <a href="../contact.html#contact" class="btn btn-outline btn-magnetic btn-lg">
+        <span>Start Your Project</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO SUMMARY ============ -->
+<section class="stats" aria-label="Portfolio summary">
+  <div class="container stats-grid">
+    <div class="stat-box" data-reveal="scale">
+      <h3>3</h3>
+      <p>Completed Projects</p>
+    </div>
+    <div class="stat-box" data-reveal="scale" data-delay="60">
+      <h3>3</h3>
+      <p>Business Categories</p>
+    </div>
+    <div class="stat-box" data-reveal="scale" data-delay="120">
+      <h3>100%</h3>
+      <p>Custom Development</p>
+    </div>
+    <div class="stat-box" data-reveal="scale" data-delay="180">
+      <h3>&infin;</h3>
+      <p>Scalable Solutions</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED CASE STUDIES ============ -->
+<section class="projects" id="portfolio-projects">
+  <div class="container">
+
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Portfolio</div>
+      <h2 class="section-title center">Featured Projects</h2>
+      <p class="section-desc center">
+        Explore a selection of software solutions we've designed and developed for businesses
+        across multiple industries.
+      </p>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="portfolio-filters" data-reveal="fade-up" role="group" aria-label="Filter projects by category">
+      <button class="portfolio-filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="portfolio-filter-btn" data-filter="enterprise" aria-pressed="false">Enterprise Software</button>
+      <button class="portfolio-filter-btn" data-filter="commerce" aria-pressed="false">Commerce</button>
+      <button class="portfolio-filter-btn" data-filter="corporate" aria-pressed="false">Corporate Website</button>
+    </div>
+
+    <div class="portfolio-projects-grid">
+
+      <!-- ================= Project 1: NBS ================= -->
+      <a href="nbs.html"
+         class="portfolio-project-card"
+         data-category="enterprise"
+         data-reveal="fade-up"
+         data-delay="0"
+         aria-label="View NBS Business Management Platform case study">
+
+        <div class="portfolio-project-img-wrap">
+          <span class="portfolio-project-badge">Enterprise Software</span>
+          <img src="../assets/img/portfolio/NbsFront1.png" alt="NBS Business Management Platform dashboard interface">
+        </div>
+
+        <div class="portfolio-project-body">
+          <h3>NBS Business Management Platform</h3>
+          <p>
+            A scalable enterprise platform built to streamline operations, automate workflows, and
+            centralize organizational management through a secure, modern web application.
+          </p>
+
+          <div class="portfolio-tech-chips">
+            <span>Laravel</span><span>PHP</span><span>MySQL</span><span>REST API</span>
+          </div>
+
+          <div class="portfolio-project-focus">
+            <i class="fa-solid fa-briefcase"></i> Business Operations Management
+          </div>
+
+          <span class="portfolio-project-cta">
+            View Case Study <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- ================= Project 2: RITCO ================= -->
+      <a href="ritco.html"
+         class="portfolio-project-card"
+         data-category="commerce"
+         data-reveal="fade-up"
+         data-delay="100"
+         aria-label="View RITCO Multi-Vendor Commerce Platform case study">
+
+        <div class="portfolio-project-img-wrap">
+          <span class="portfolio-project-badge">Commerce</span>
+          <img src="../assets/img/portfolio/RitcoFront1.png" alt="RITCO Multi-Vendor Commerce Platform storefront interface">
+        </div>
+
+        <div class="portfolio-project-body">
+          <h3>RITCO Multi-Vendor Commerce Platform</h3>
+          <p>
+            A scalable multi-vendor marketplace connecting customers, vendors, and administrators
+            through one unified digital commerce experience.
+          </p>
+
+          <div class="portfolio-tech-chips">
+            <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Marketplace</span>
+          </div>
+
+          <div class="portfolio-project-focus">
+            <i class="fa-solid fa-cart-shopping"></i> Retail &amp; E-Commerce
+          </div>
+
+          <span class="portfolio-project-cta">
+            View Case Study <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- ================= Project 3: Telecom ================= -->
+      <a href="telecom.html"
+         class="portfolio-project-card"
+         data-category="corporate"
+         data-reveal="fade-up"
+         data-delay="200"
+         aria-label="View Telecom Business Website case study">
+
+        <div class="portfolio-project-img-wrap">
+          <span class="portfolio-project-badge">Corporate Website</span>
+          <img src="../assets/img/portfolio/VoipFront1.png" alt="Telecom Business Website homepage on desktop">
+        </div>
+
+        <div class="portfolio-project-body">
+          <h3>Telecom Business Website</h3>
+          <p>
+            A professional corporate website built for a telecommunications business to showcase
+            services, strengthen brand identity, and deliver a seamless digital experience.
+          </p>
+
+          <div class="portfolio-tech-chips">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span>
+          </div>
+
+          <div class="portfolio-project-focus">
+            <i class="fa-solid fa-tower-broadcast"></i> Telecommunications
+          </div>
+
+          <span class="portfolio-project-cta">
+            View Case Study <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY BUSINESSES CHOOSE NANORA ============ -->
+<section class="services">
+  <div class="container">
+
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why NanoRa</div>
+      <h2 class="section-title center">Why Businesses Choose NanoRa</h2>
+      <p class="section-desc center">
+        Every project we deliver is built on principles that protect your investment long after
+        launch day.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Business-Driven Development</h3>
+        <p>Every technical decision is weighed against the business outcome it needs to support.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>Systems designed to grow with your business, not to be rebuilt every time you scale.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>Modern UI/UX</h3>
+        <p>Interfaces built around how your customers and teams actually work day to day.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+        <h3>Long-Term Maintainability</h3>
+        <p>Clean, well-structured codebases that stay easy to extend years after launch.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Performance Optimization</h3>
+        <p>Fast-loading, efficient applications engineered to keep users and customers engaged.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Experiences</h3>
+        <p>Consistent, polished experiences across desktop, tablet, and mobile devices.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Development</h3>
+        <p>Security considered at every layer, from data handling to access control.</p>
+      </div>
+
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <h3>Custom Solutions</h3>
+        <p>Software shaped around your workflows, never forced into a one-size-fits-all template.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVELOPMENT PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Process</div>
+      <h2 class="section-title center">How We Bring Projects to Life</h2>
+      <p class="section-desc center">
+        A structured process focused on quality, transparency, and delivering software that meets
+        your business goals.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>Understanding your business, objectives, and project requirements.</p>
+      </div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="50">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>Defining scope, timelines, technology stack, and development roadmap.</p>
+      </div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="100">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h4>03. Design</h4>
+        <p>Designing intuitive, user-friendly interfaces built around real workflows.</p>
+      </div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="150">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>Building secure, scalable, and maintainable software with modern tools.</p>
+      </div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="200">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>Verifying functionality, performance, security, and overall quality.</p>
+      </div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="250">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Deployment</h4>
+        <p>Launching your application to a reliable production environment.</p>
+      </div>
+
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Support</h4>
+        <p>Ongoing updates, improvements, and technical support as you grow.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Build Your Next Digital Product?</h2>
+    <h3>
+      Whether you're planning enterprise software, an e-commerce platform, or a modern business
+      website, NanoRa Technologies can help transform your ideas into scalable digital solutions.
+    </h3>
+    <a href="../contact.html#contact" class="btn btn-white btn-magnetic btn-lg">
+      <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal"></div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main → portfolio (page-specific), all deferred -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/portfolio.js" defer></script>
+</body>
+</html>

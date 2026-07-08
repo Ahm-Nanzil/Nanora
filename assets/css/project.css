@@ -1,0 +1,373 @@
+/* ==========================================================================
+   NanoRa Technologies — project.css
+   Page-specific styles for individual project case study pages
+   (e.g. flowershop.html). Reuses every color, gradient, radius, shadow
+   and component already defined in style.css / animation.css /
+   responsive.css — only adds the layout patterns a case study page
+   needs that the homepage doesn't already have: breadcrumb, project
+   hero + meta, challenge/solution/feature grids, UI showcase gallery
+   + lightbox, and the results grid.
+   Loaded AFTER style.css / animation.css / responsive.css.
+   ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------
+   Project Hero — full-bleed image, dark overlay, meta row, tech badges
+   -------------------------------------------------------------------------- */
+.project-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-top: 120px;
+}
+.project-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.project-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.project-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,8,22,0.5) 0%, rgba(6,8,22,0.8) 60%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(6,8,22,0.85) 0%, rgba(6,8,22,0.3) 60%);
+}
+.project-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 80px;
+  max-width: 760px;
+}
+.project-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 58px);
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.project-hero-desc {
+  color: var(--subtext);
+  font-size: 17.5px;
+  max-width: 600px;
+  margin-bottom: 28px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.project-meta li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+}
+.project-meta i { color: var(--secondary); font-size: 15px; }
+.project-meta span { color: var(--subtext); }
+.project-meta strong { font-family: var(--font-display); font-weight: 600; margin-left: 2px; }
+
+.project-tech-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.project-tech-badges span {
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.project-hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* --------------------------------------------------------------------------
+   Project Overview — split layout, reuses .section-tag / .section-title
+   -------------------------------------------------------------------------- */
+.overview-inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+.overview-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+.overview-benefits { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+.overview-benefits li { display: flex; align-items: flex-start; gap: 12px; color: var(--subtext); font-size: 15px; }
+.overview-benefits i { color: var(--success); margin-top: 3px; flex-shrink: 0; }
+
+/* --------------------------------------------------------------------------
+   Business Challenge — reuses .glass-card, adds icon + copy layout
+   -------------------------------------------------------------------------- */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.challenge-card { padding: 34px 28px; }
+.challenge-card .service-icon { margin-bottom: 20px; background: linear-gradient(135deg, #EF4444, var(--accent)); }
+.challenge-card h3 { font-size: 18px; margin-bottom: 10px; }
+.challenge-card p { color: var(--subtext); font-size: 14.5px; }
+
+/* --------------------------------------------------------------------------
+   Our Solution — reuses .service-icon, 4-up grid
+   -------------------------------------------------------------------------- */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 10px;
+}
+.solution-card {
+  padding: 30px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+}
+.solution-card:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(79,70,229,0.22); }
+.solution-card .service-icon { margin-bottom: 18px; }
+.solution-card h3 { font-size: 16.5px; margin-bottom: 8px; }
+.solution-card p { color: var(--subtext); font-size: 13.5px; }
+
+/* --------------------------------------------------------------------------
+   Key Features — reuses .service-icon, denser 4-up grid
+   -------------------------------------------------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.feature-card {
+  padding: 26px 22px;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  transition: transform 0.35s var(--ease), border-color 0.35s ease;
+}
+.feature-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.22); }
+.feature-card .service-icon { width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px; }
+.feature-card h3 { font-size: 15.5px; margin-bottom: 6px; }
+.feature-card p { color: var(--subtext); font-size: 13px; }
+
+/* --------------------------------------------------------------------------
+   UI Showcase — filter tabs + gallery grid
+   -------------------------------------------------------------------------- */
+.showcase-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.showcase-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-full);
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--subtext);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: all 0.3s ease;
+}
+.showcase-tab i { font-size: 13px; }
+.showcase-tab:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+.showcase-tab.active { background: var(--grad-primary); color: #fff; border-color: transparent; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.4s var(--ease);
+}
+.gallery-item.hidden { display: none; }
+.gallery-item:hover { transform: translateY(-6px); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(6,8,22,0.9), transparent);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.35s var(--ease);
+}
+.gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+
+/* --------------------------------------------------------------------------
+   Lightbox
+   -------------------------------------------------------------------------- */
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 8, 22, 0.92);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.project-lightbox.active { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.lightbox-figure { max-width: 88vw; max-height: 82vh; text-align: center; }
+.lightbox-figure img {
+  max-width: 88vw;
+  max-height: 74vh;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  object-fit: contain;
+}
+.lightbox-figure figcaption { color: var(--subtext); font-size: 14px; margin-top: 16px; }
+
+.lightbox-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.16); }
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.16); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+/* --------------------------------------------------------------------------
+   Business Results — reuses counter/stat pattern with its own grid
+   -------------------------------------------------------------------------- */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.result-box {
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+.result-box h3 { font-size: 38px; background: var(--grad-full); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.result-box p { color: var(--subtext); margin-top: 8px; font-size: 13.5px; }
+
+/* --------------------------------------------------------------------------
+   Mobile (single source of truth for this page's phone layout)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .overview-inner { grid-template-columns: 1fr; gap: 46px; }
+  .challenge-grid { grid-template-columns: repeat(2, 1fr); }
+  .solution-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .results-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  /* Hero: shorter and content-first on mobile */
+  .project-hero { min-height: 72vh; padding-top: 96px; }
+  .project-hero-content { padding-bottom: 40px; }
+  .project-hero-title { font-size: clamp(28px, 8vw, 38px); margin-bottom: 12px; }
+  .project-hero-desc { font-size: 15px; margin-bottom: 20px; }
+
+  .project-meta { gap: 8px; margin-bottom: 18px; }
+  .project-meta li { padding: 8px 12px; font-size: 11.5px; gap: 7px; }
+  .project-meta i { font-size: 13px; }
+
+  .project-tech-badges { gap: 8px; margin-bottom: 24px; }
+  .project-tech-badges span { padding: 6px 13px; font-size: 11.5px; }
+
+  .project-hero-cta { flex-direction: column; width: 100%; }
+  .project-hero-cta .btn { width: 100%; justify-content: center; }
+
+  .overview-img { height: 220px; }
+
+  /* Challenge / Solution / Features: compact, readable, 2-up minimum */
+  .challenge-grid { grid-template-columns: 1fr; gap: 14px; }
+  .challenge-card { padding: 22px 20px; }
+
+  .solution-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .solution-card { padding: 18px 14px; text-align: center; }
+  .solution-card .service-icon { width: 42px; height: 42px; margin: 0 auto 10px; font-size: 16px; }
+  .solution-card h3 { font-size: 13px; }
+  .solution-card p { font-size: 11.5px; }
+
+  .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .feature-card { padding: 16px 12px; text-align: center; }
+  .feature-card .service-icon { width: 42px; height: 42px; margin: 0 auto 10px; font-size: 16px; }
+  .feature-card h3 { font-size: 12.5px; margin-bottom: 4px; }
+  .feature-card p { font-size: 11px; }
+
+  /* Showcase: horizontally scrollable tabs, 2-up gallery */
+  .showcase-tabs { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+  .showcase-tab { flex-shrink: 0; padding: 9px 16px; font-size: 12.5px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .gallery-caption { font-size: 11px; padding: 10px 12px; opacity: 1; transform: none; background: linear-gradient(0deg, rgba(6,8,22,0.85), transparent 70%); }
+
+  .lightbox-nav { width: 40px; height: 40px; font-size: 15px; }
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+  .lightbox-close { top: 14px; right: 14px; width: 40px; height: 40px; font-size: 16px; }
+
+  /* Results */
+  .results-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .result-box { padding: 24px 14px; }
+  .result-box h3 { font-size: 28px; }
+}
+
+@media (max-width: 420px) {
+  .solution-grid, .feature-grid, .challenge-grid { grid-template-columns: repeat(2, 1fr); }
+}

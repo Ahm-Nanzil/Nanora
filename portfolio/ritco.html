@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+<!-- ============ PROJECT HERO ============ -->
+<section class="project-hero" id="project-hero">
+  <div class="project-hero-bg">
+    <img src="../assets/img/portfolio/RitcoFront1.png" alt="RITCO Multi-Vendor Commerce Platform storefront on desktop and mobile" class="project-hero-img">
+    <div class="project-hero-overlay"></div>
+  </div>
+
+    <!-- ===== Breadcrumb ===== -->
+    <section class="nr-breadcrumb">
+        <div class="container">
+
+            <h1 class="nr-breadcrumb-title">About Us</h1>
+
+            <nav aria-label="Breadcrumb">
+                <ol class="nr-breadcrumb-list">
+                    <li><a href="/index.html">Home</a></li>
+
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+
+                    <li aria-current="page">
+                        About Us
+                    </li>
+                </ol>
+            </nav>
+
+        </div>
+    </section>
+
+    <div class="badge" data-reveal="fade-up">
+      <span class="badge-dot"></span>
+      E-Commerce Case Study
+    </div>
+
+    <h1 class="project-hero-title" data-reveal="fade-up" data-delay="60">RITCO Multi-Vendor Commerce Platform</h1>
+
+    <p class="project-hero-desc" data-reveal="fade-up" data-delay="120">
+      A scalable multi-vendor commerce platform designed to connect customers, vendors, and
+      administrators through one unified digital marketplace — delivering a modern shopping
+      experience backed by centralized management tools.
+    </p>
+
+    <ul class="project-meta" data-reveal="fade-up" data-delay="160">
+      <li><i class="fa-solid fa-layer-group"></i><span>Category</span><strong>E-Commerce Platform</strong></li>
+      <li><i class="fa-solid fa-diagram-project"></i><span>Project Type</span><strong>Multi-Vendor Marketplace</strong></li>
+      <li><i class="fa-solid fa-industry"></i><span>Industry</span><strong>Retail Technology</strong></li>
+      <li><i class="fa-solid fa-circle-check"></i><span>Status</span><strong>Completed</strong></li>
+    </ul>
+
+    <div class="project-tech-badges" data-reveal="fade-up" data-delay="200">
+      <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+    </div>
+
+    <div class="project-hero-cta" data-reveal="fade-up" data-delay="240">
+      <a href="../contact.html#contact" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT HIGHLIGHTS ============ -->
+<section class="project-features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Project Highlights</div>
+      <h2 class="section-title center">What Makes This Platform Different</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Multi-Vendor Marketplace</h3>
+        <p>Multiple vendors operate independently under one unified storefront experience.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Storefront</h3>
+        <p>A modern shopping interface that adapts seamlessly to every screen size.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-users-between-lines"></i></div>
+        <h3>Vendor Management</h3>
+        <p>Comprehensive tools for onboarding, managing, and supporting marketplace vendors.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-grid-2"></i></div>
+        <h3>Product Catalog</h3>
+        <p>Organized product listings with categories, brands, pricing, and rich attributes.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>Order Management</h3>
+        <p>Complete order lifecycle tracking from purchase through fulfillment and delivery.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory Control</h3>
+        <p>Real-time stock visibility with automated updates across the vendor ecosystem.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-tags"></i></div>
+        <h3>Promotion Engine</h3>
+        <p>Flexible campaigns, discounts, and banner management to drive customer engagement.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Admin Dashboard</h3>
+        <p>A centralized command center for overseeing the entire marketplace operation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT AT A GLANCE ============ -->
+<section class="project-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="../assets/img/portfolio/RitcoFront2.png" alt="RITCO Multi-Vendor Commerce Platform system overview interface" class="overview-img">
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Project At A Glance</div>
+      <h2 class="section-title">A Unified Marketplace Under One Roof</h2>
+      <p class="section-desc">
+        The RITCO platform brings together customers, vendors, products, orders, and promotions
+        into a single commerce ecosystem. A polished storefront sits on one side while a powerful
+        administration panel orchestrates everything behind the scenes.
+      </p>
+
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-building"></i> Client: Private Organization</li>
+        <li><i class="fa-solid fa-diagram-project"></i> Project Type: Multi-Vendor Marketplace</li>
+        <li><i class="fa-solid fa-gear"></i> Services: Custom Web Development, Marketplace Development</li>
+        <li><i class="fa-solid fa-code"></i> Technology: Laravel, PHP, MySQL</li>
+        <li><i class="fa-solid fa-display"></i> Platform: Web Application</li>
+        <li><i class="fa-solid fa-circle-check"></i> Status: Completed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT OVERVIEW ============ -->
+<section class="project-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="../assets/img/portfolio/RitcoFront2.png" alt="RITCO Multi-Vendor Commerce Platform centralized dashboard" class="overview-img">
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Project Overview</div>
+      <h2 class="section-title">Where Shoppers, Sellers, and Administrators Meet</h2>
+      <p class="section-desc">
+        The client needed a marketplace that could support multiple vendors while giving customers
+        a cohesive, modern shopping journey — not a collection of disconnected storefronts glued
+        together. The goal was a platform where products, orders, inventory, and promotions work
+        in concert rather than in isolation.
+      </p>
+      <p class="section-desc">
+        NanoRa Technologies delivered a comprehensive commerce solution combining an intuitive
+        customer-facing storefront with a robust administration layer. The system centralizes
+        vendor coordination, product cataloging, order processing, and promotional campaigns —
+        giving the business full visibility without adding operational friction.
+      </p>
+
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> A single storefront unifies products from multiple independent vendors</li>
+        <li><i class="fa-solid fa-check"></i> The admin panel provides complete oversight of every marketplace activity</li>
+        <li><i class="fa-solid fa-check"></i> Orders flow through a consistent lifecycle regardless of which vendor fulfills them</li>
+        <li><i class="fa-solid fa-check"></i> The entire experience is responsive across desktop, tablet, and mobile</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS CHALLENGE ============ -->
+<section class="project-challenge">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">The Challenge</div>
+      <h2 class="section-title center">What Happens When Growth Outpaces the Tools</h2>
+    </div>
+
+    <div class="challenge-grid">
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>Fragmented Vendor Operations</h3>
+        <p>Managing products from multiple vendors without a shared system led to inconsistent
+          catalog data and slow coordination between sellers and administrators.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Disconnected Order Processing</h3>
+        <p>Orders arriving through separate channels made it difficult to maintain a single source
+          of truth for fulfillment status, customer communication, and issue resolution.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Limited Promotional Control</h3>
+        <p>Running campaigns, discounts, and seasonal promotions required manual effort across
+          multiple interfaces, limiting how quickly the business could respond to market opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR SOLUTION ============ -->
+<section class="project-solution">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Solution</div>
+      <h2 class="section-title center">A Commerce Engine Built for Many, Managed by One</h2>
+      <p class="section-desc center">
+        Rather than patching together existing tools, NanoRa built a purpose-built marketplace
+        where the storefront, vendor operations, and administrative controls share a single,
+        coherent foundation — giving every stakeholder the right tools for their role.
+      </p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="solution-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h3>Architecture</h3>
+        <p>A Laravel application with clean separation between the customer storefront, vendor
+          management layer, and administrative backend — each communicating through a shared API.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Engineering Approach</h3>
+        <p>Iterative development cycles with regular feedback loops ensured the marketplace
+          reflected real operational needs before any feature reached production.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Room to Grow</h3>
+        <p>A well-organized codebase and normalized database allow new vendors, product lines,
+          and promotional capabilities to be added without destabilizing the core system.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="240">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security &amp; Access</h3>
+        <p>Role-based controls ensure vendors only manage their own products and orders, while
+          administrators retain full visibility across the entire marketplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY FEATURES ============ -->
+<section class="project-features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Core Capabilities</div>
+      <h2 class="section-title center">Everything a Modern Marketplace Needs</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Customer Storefront</h3>
+        <p>Modern shopping experience with intuitive product browsing and responsive layouts.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-users-between-lines"></i></div>
+        <h3>Vendor Management</h3>
+        <p>Manage vendors, products, and business activities from one centralized interface.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-grid-2"></i></div>
+        <h3>Product Catalog</h3>
+        <p>Organize products, categories, brands, pricing, and attributes with ease.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>Order Processing</h3>
+        <p>Track the complete order lifecycle from purchase through fulfillment.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory Management</h3>
+        <p>Monitor stock availability and maintain accurate inventory records in real time.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-tags"></i></div>
+        <h3>Promotions &amp; Campaigns</h3>
+        <p>Manage banners, offers, discounts, and promotional campaigns from one place.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+        <h3>Customer Management</h3>
+        <p>Centralized customer information with account details and order history.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Reports &amp; Analytics</h3>
+        <p>Business insights through sales dashboards and operational reporting.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-user-shield"></i></div>
+        <h3>Secure Administration</h3>
+        <p>Role-based administration for managing every aspect of the marketplace.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Experience</h3>
+        <p>Optimized across desktop, tablet, and mobile devices for every user role.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGY STACK ============ -->
+<section class="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Technology Stack</div>
+      <h2 class="section-title center">Built With Reliable, Maintainable Tools</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-plug"></i><span>REST API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-box"></i><span>Composer</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-server"></i><span>Apache</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UI SHOWCASE ============ -->
+<section class="project-showcase" id="showcase">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">UI Showcase</div>
+      <h2 class="section-title center">Designed for Every Screen</h2>
+      <p class="section-desc center">Browse the interface across desktop, tablet and mobile.</p>
+    </div>
+
+    <div class="showcase-tabs" role="tablist" aria-label="Screen type" data-reveal="fade-up">
+      <button class="showcase-tab active" role="tab" aria-selected="true" data-filter="desktop">
+        <i class="fa-solid fa-display"></i><span>Desktop</span>
+      </button>
+      <button class="showcase-tab" role="tab" aria-selected="false" data-filter="tablet">
+        <i class="fa-solid fa-tablet-screen-button"></i><span>Tablet</span>
+      </button>
+      <button class="showcase-tab" role="tab" aria-selected="false" data-filter="mobile">
+        <i class="fa-solid fa-mobile-screen-button"></i><span>Mobile</span>
+      </button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/ritco-homepage.png" alt="Desktop homepage">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Homepage — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/ritco-categories.png" alt="Desktop categories view">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Categories — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="120">
+        <img src="../assets/img/portfolio/ritco-product-details.png" alt="Desktop product details page">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Product Details — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="tablet" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/ritco-vendor-dashboard.png" alt="Tablet vendor dashboard">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Vendor Dashboard — Tablet</span>
+      </button>
+      <button class="gallery-item" data-category="tablet" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/ritco-admin-dashboard.png" alt="Tablet admin dashboard">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Admin Dashboard — Tablet</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/ritco-order-management.png" alt="Mobile order management">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Order Management — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/ritco-product-management.png" alt="Mobile product management">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Product Management — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="120">
+        <img src="../assets/img/portfolio/ritco-promotions.png" alt="Mobile promotion management">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Promotion Management — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/ritco-customers.png" alt="Mobile customer management">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Customer Management — Mobile</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVELOPMENT PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Built It</div>
+      <h2 class="section-title center">Development Process</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>Initial stakeholder engagement to understand vision, goals, and constraints.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="50">
+        <div class="timeline-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h4>02. Business Requirement Analysis</h4>
+        <p>Detailed documentation of functional requirements and marketplace workflows.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="100">
+        <div class="timeline-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h4>03. System Architecture</h4>
+        <p>Designing the multi-vendor architecture, database schema, and API structure.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="150">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h4>04. UI/UX Design</h4>
+        <p>Creating a clean, intuitive shopping experience with consistent vendor and admin interfaces.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="200">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>05. Backend Development</h4>
+        <p>Building the core commerce logic, vendor management, and API endpoints.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="250">
+        <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h4>06. Frontend Development</h4>
+        <p>Developing the responsive storefront, vendor panels, and admin dashboard.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>07. Testing &amp; Quality Assurance</h4>
+        <p>Comprehensive testing including functional, security, and performance validation.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="350">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>08. Deployment &amp; Support</h4>
+        <p>Production deployment with ongoing technical support and maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR CONTRIBUTION ============ -->
+<section class="project-challenge">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Contribution</div>
+      <h2 class="section-title center">End-to-End Delivery by NanoRa Technologies</h2>
+    </div>
+
+    <div class="challenge-grid">
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Business Analysis</h3>
+        <p>Thorough evaluation of marketplace requirements to define the right feature set and vendor workflows.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Professional storefront and dashboard interfaces crafted for clarity and ease of daily use.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Frontend Development</h3>
+        <p>Responsive, interactive frontend delivering a consistent experience across all device sizes.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Backend Development</h3>
+        <p>Robust server-side logic powering the marketplace, vendor operations, and order processing.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+        <h3>Database Design</h3>
+        <p>Optimized relational database structure ensuring data integrity across vendors and products.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>API Development</h3>
+        <p>Well-documented REST API enabling seamless communication between storefront and backend services.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+        <h3>Testing</h3>
+        <p>Rigorous quality assurance covering functionality, security, and shopping experience across scenarios.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Deployment &amp; Configuration</h3>
+        <p>Smooth production launch with environment setup tailored to the client's infrastructure.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Technical Support</h3>
+        <p>Post-launch support ensuring marketplace stability and a smooth adoption process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS RESULTS ============ -->
+<section class="project-results">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Business Impact</div>
+      <h2 class="section-title center">Measurable Organizational Improvements</h2>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Centralized Marketplace Management</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Improved Vendor Collaboration</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Simplified Product Administration</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Efficient Order Processing</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Better Customer Experience</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Unified Commerce Operations</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Scalable Marketplace Architecture</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Responsive Shopping Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED PROJECTS ============ -->
+<section class="projects">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Related Projects</div>
+      <h2 class="section-title center">More Work From NanoRa</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-reveal="fade-up" data-delay="0">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/NbsFront1.png" alt="NBS Business Management Platform dashboard">
+          <div class="project-overlay">
+            <span class="project-badge">Business Management</span>
+            <a href="../portfolio/nbs.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>NBS Business Management Platform</h4><p>A comprehensive business management solution unifying multiple operational departments.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="100">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/VoipFront1.png" alt="Telecom Business Website on desktop">
+          <div class="project-overlay">
+            <span class="project-badge">Website</span>
+            <a href="../portfolio/telecom.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Telecom Business Website</h4><p>A modern corporate website developed for a telecommunications business.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="200">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/ZenixFront1.png" alt="Zenix Enterprise Management Platform dashboard">
+          <div class="project-overlay">
+            <span class="project-badge">Enterprise</span>
+            <a href="../portfolio/zenix.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Zenix Enterprise Management Platform</h4><p>Enterprise management solution designed to streamline operations across departments.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Build Your Digital Marketplace?</h2>
+    <h3>Whether you're launching a modern online store, a multi-vendor marketplace, or a custom commerce platform, NanoRa Technologies delivers scalable solutions designed to grow with your business.</h3>
+    <a href="../contact.html#contact" class="btn btn-white btn-magnetic btn-lg">
+      <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/project.js" defer></script>
+</body>
+</html>

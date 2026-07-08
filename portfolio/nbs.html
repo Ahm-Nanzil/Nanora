@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+<!-- ============ PROJECT HERO ============ -->
+<section class="project-hero" id="project-hero">
+  <div class="project-hero-bg">
+    <img src="../assets/img/portfolio/NbsFront1.png" alt="NBS Business Management Platform dashboard on desktop and mobile" class="project-hero-img">
+    <div class="project-hero-overlay"></div>
+  </div>
+
+  <div class="container project-hero-content">
+    <!-- ===== Breadcrumb ===== -->
+    <section class="nr-breadcrumb">
+        <div class="container">
+
+            <h1 class="nr-breadcrumb-title">About Us</h1>
+
+            <nav aria-label="Breadcrumb">
+                <ol class="nr-breadcrumb-list">
+                    <li><a href="/index.html">Home</a></li>
+
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+
+                    <li aria-current="page">
+                        About Us
+                    </li>
+                </ol>
+            </nav>
+
+        </div>
+    </section>
+
+    <div class="badge" data-reveal="fade-up">
+      <span class="badge-dot"></span>
+      Enterprise Software Case Study
+    </div>
+
+    <h1 class="project-hero-title" data-reveal="fade-up" data-delay="60">NBS Business Management </h1>
+
+    <p class="project-hero-desc" data-reveal="fade-up" data-delay="120">
+      A centralized business management platform designed to unify multiple operational departments
+      into a single secure web application — bringing finance, customer management, HR, inventory,
+      and project tracking together under one interface.
+    </p>
+
+    <ul class="project-meta" data-reveal="fade-up" data-delay="160">
+      <li><i class="fa-solid fa-layer-group"></i><span>Category</span><strong>Enterprise Software</strong></li>
+      <li><i class="fa-solid fa-diagram-project"></i><span>Project Type</span><strong>Business Management Platform</strong></li>
+      <li><i class="fa-solid fa-industry"></i><span>Industry</span><strong>Business Solutions</strong></li>
+      <li><i class="fa-solid fa-circle-check"></i><span>Status</span><strong>Completed</strong></li>
+    </ul>
+
+    <div class="project-tech-badges" data-reveal="fade-up" data-delay="200">
+      <span>Laravel</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+    </div>
+
+    <div class="project-hero-cta" data-reveal="fade-up" data-delay="240">
+      <a href="../contact.html#contact" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT HIGHLIGHTS ============ -->
+<section class="project-features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Project Highlights</div>
+      <h2 class="section-title center">What Makes This Platform Different</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-users-gear"></i></div>
+        <h3>Integrated HRM</h3>
+        <p>Employee records, departments, and user permissions managed from one central hub.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>CRM Management</h3>
+        <p>Built-in customer relationship tools that keep client interactions organized and accessible.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-calculator"></i></div>
+        <h3>Accounting System</h3>
+        <p>Comprehensive financial management with invoicing, bills, and cashflow tracking.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory &amp; Logistics</h3>
+        <p>Stock control, purchase orders, and logistics coordination in one integrated module.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>Project Tracking</h3>
+        <p>Monitor project progress, assign tasks, and track milestones across teams.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon"><i class="fa-solid fa-cash-register"></i></div>
+        <h3>POS Management</h3>
+        <p>Point-of-sale functionality integrated directly into the business workflow.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Support Center</h3>
+        <p>Centralized ticketing and support tools for internal and customer service operations.</p>
+      </div>
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-user-shield"></i></div>
+        <h3>Role-Based Access</h3>
+        <p>Granular permissions that give every user exactly the access their role requires.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT AT A GLANCE ============ -->
+<section class="project-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="../assets/img/portfolio/NbsFront2.png" alt="NBS Business Management Platform system overview interface" class="overview-img">
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Executive Summary</div>
+      <h2 class="section-title">A Unified Command Center for Daily Operations</h2>
+      <p class="section-desc">
+        The NBS Business Management Platform brings together HR, finance, customer management,
+        inventory, and project tracking into a single coherent application. Every module shares
+        a common data foundation, eliminating the friction of switching between disconnected tools.
+      </p>
+
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-building"></i> Client: Private Organization</li>
+        <li><i class="fa-solid fa-diagram-project"></i> Project Type: Business Management Platform</li>
+        <li><i class="fa-solid fa-gear"></i> Services: Custom Software Development</li>
+        <li><i class="fa-solid fa-code"></i> Technology: Laravel, PHP, MySQL</li>
+        <li><i class="fa-solid fa-display"></i> Platform: Web Application</li>
+        <li><i class="fa-solid fa-circle-check"></i> Status: Completed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT OVERVIEW ============ -->
+<section class="project-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="../assets/img/portfolio/NbsFront2.png" alt="NBS Business Management Platform centralized dashboard" class="overview-img">
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Project Overview</div>
+      <h2 class="section-title">Bringing Together What Should Never Have Been Apart</h2>
+      <p class="section-desc">
+        The client needed a centralized business management solution capable of handling multiple
+        operational processes from a single web application — without the complexity of stitching
+        together separate software products.
+      </p>
+      <p class="section-desc">
+        NanoRa Technologies developed a comprehensive platform that improves visibility across
+        departments, simplifies day-to-day administration, and provides an integrated environment
+        where teams can manage their work without constantly switching contexts.
+      </p>
+
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> All core business functions accessible from one secure location</li>
+        <li><i class="fa-solid fa-check"></i> Role-based views ensure the right people see the right information</li>
+        <li><i class="fa-solid fa-check"></i> Cross-department data flows naturally without manual transfers</li>
+        <li><i class="fa-solid fa-check"></i> The interface works consistently across desktops, tablets, and phones</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS CHALLENGE ============ -->
+<section class="project-challenge">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">The Challenge</div>
+      <h2 class="section-title center">When Separate Tools Create Collective Friction</h2>
+    </div>
+
+    <div class="challenge-grid">
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>Scattered Information</h3>
+        <p>Departments maintained their own records in isolated formats, making it difficult to get a
+          complete picture without chasing data across multiple sources.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Growing Complexity</h3>
+        <p>As the team expanded, managing user access, departmental structures, and data consistency
+          became an increasingly demanding overhead.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Manual Workflows</h3>
+        <p>Routine processes relied heavily on human coordination. Without a system to enforce structure,
+          small delays compounded into larger operational slowdowns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR SOLUTION ============ -->
+<section class="project-solution">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Solution</div>
+      <h2 class="section-title center">A System Designed Around How Teams Actually Work</h2>
+      <p class="section-desc center">
+        Rather than forcing the organization into a rigid off-the-shelf product, NanoRa designed a
+        flexible system where each business function operates as an independent yet connected module —
+        giving the team precision control without sacrificing cohesion.
+      </p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="solution-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h3>Architecture</h3>
+        <p>A Laravel application structured around distinct business domains, each with self-contained
+          logic that communicates through a well-defined service layer.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Engineering Approach</h3>
+        <p>Iterative development with frequent stakeholder reviews kept every module aligned with
+          practical needs before it reached production.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Room to Grow</h3>
+        <p>A clean codebase and normalized database design mean new capabilities can be added without
+          destabilizing what already works.</p>
+      </div>
+      <div class="solution-card" data-reveal="fade-up" data-delay="240">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security &amp; Access</h3>
+        <p>Robust authentication combined with detailed role definitions protects sensitive information
+          while giving every team member the access they actually need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY FEATURES ============ -->
+<section class="project-features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Core Capabilities</div>
+      <h2 class="section-title center">Designed to Power Every Aspect of Business Operations</h2>
+      <p class="section-desc center">
+        The NBS Business Management Platform combines essential business modules into a single,
+        secure, and scalable ecosystem—helping organizations simplify operations, improve collaboration,
+        and make informed decisions from one centralized dashboard.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3>Human Resource Management</h3>
+        <p>Manage employees, departments, roles, and organizational structure from one centralized workspace.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <h3>Role-Based Access Control</h3>
+        <p>Provide secure, permission-based access so every user sees only the information relevant to their responsibilities.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3>Customer Relationship Management</h3>
+        <p>Organize customer information, business interactions, and communication history through an integrated CRM module.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <h3>Project & Activity Management</h3>
+        <p>Plan projects, assign responsibilities, monitor activities, and track progress across teams.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon">
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+        <h3>Accounting & Finance</h3>
+        <p>Handle invoices, bills, vendor management, expenses, and financial reporting through one unified module.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h3>Business Analytics</h3>
+        <p>Visual dashboards provide operational insights, financial summaries, and business performance indicators.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon">
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <h3>Inventory & Procurement</h3>
+        <p>Manage inventory, purchasing, logistics, and stock movement through an integrated operational workflow.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon">
+          <i class="fa-solid fa-cash-register"></i>
+        </div>
+        <h3>Point of Sale (POS)</h3>
+        <p>Support retail operations with a built-in POS system connected directly to inventory and accounting.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3>Support Management</h3>
+        <p>Track support requests and improve communication between teams through a centralized support module.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="40">
+        <div class="service-icon">
+          <i class="fa-solid fa-display"></i>
+        </div>
+        <h3>Centralized Dashboard</h3>
+        <p>Monitor key business information from a single dashboard designed for fast navigation and informed decision-making.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h3>Responsive Experience</h3>
+        <p>Optimized for desktop, tablet, and mobile devices to support productivity from virtually anywhere.</p>
+      </div>
+
+      <div class="feature-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Secure & Scalable Architecture</h3>
+        <p>Built with a maintainable architecture that supports secure operations and future business growth.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGY STACK ============ -->
+<section class="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Technology Stack</div>
+      <h2 class="section-title center">Built With Reliable, Maintainable Tools</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-plug"></i><span>REST API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-box"></i><span>Composer</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-server"></i><span>Apache</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UI SHOWCASE ============ -->
+<section class="project-showcase" id="showcase">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">UI Showcase</div>
+      <h2 class="section-title center">Designed for Every Screen</h2>
+      <p class="section-desc center">Browse the interface across desktop, tablet and mobile.</p>
+    </div>
+
+    <div class="showcase-tabs" role="tablist" aria-label="Screen type" data-reveal="fade-up">
+      <button class="showcase-tab active" role="tab" aria-selected="true" data-filter="desktop">
+        <i class="fa-solid fa-display"></i><span>Desktop</span>
+      </button>
+      <button class="showcase-tab" role="tab" aria-selected="false" data-filter="tablet">
+        <i class="fa-solid fa-tablet-screen-button"></i><span>Tablet</span>
+      </button>
+      <button class="showcase-tab" role="tab" aria-selected="false" data-filter="mobile">
+        <i class="fa-solid fa-mobile-screen-button"></i><span>Mobile</span>
+      </button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/dashboard.png" alt="Desktop dashboard overview">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Dashboard — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/hrm.png" alt="Desktop HRM system">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> HRM System — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="desktop" data-reveal="fade-up" data-delay="120">
+        <img src="../assets/img/portfolio/crm.png" alt="Desktop CRM system">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> CRM System — Desktop</span>
+      </button>
+      <button class="gallery-item" data-category="tablet" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/accounting.png" alt="Tablet accounting module">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Accounting — Tablet</span>
+      </button>
+      <button class="gallery-item" data-category="tablet" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/project.png" alt="Tablet project management">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Project Management — Tablet</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/inventory.png" alt="Mobile inventory module">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Inventory — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="60">
+        <img src="../assets/img/portfolio/purchase.png" alt="Mobile purchase module">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Purchase — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="120">
+        <img src="../assets/img/portfolio/pos.png" alt="Mobile POS system">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> POS System — Mobile</span>
+      </button>
+      <button class="gallery-item" data-category="mobile" data-reveal="fade-up" data-delay="0">
+        <img src="../assets/img/portfolio/support.png" alt="Mobile support system">
+        <span class="gallery-caption"><i class="fa-solid fa-expand"></i> Support System — Mobile</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVELOPMENT PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Built It</div>
+      <h2 class="section-title center">Development Process</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>Initial stakeholder engagement to understand vision, goals, and constraints.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="50">
+        <div class="timeline-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h4>02. Business Requirement Analysis</h4>
+        <p>Detailed documentation of functional requirements and business workflows.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="100">
+        <div class="timeline-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h4>03. System Architecture</h4>
+        <p>Designing the modular architecture, database schema, and API structure.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="150">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h4>04. UI/UX Design</h4>
+        <p>Creating a clean, intuitive interface with consistent user experience across modules.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="200">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>05. Backend Development</h4>
+        <p>Building the core business logic, data layer, and API endpoints.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="250">
+        <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h4>06. Frontend Development</h4>
+        <p>Developing the responsive interface and connecting all frontend components.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>07. Testing &amp; Quality Assurance</h4>
+        <p>Comprehensive testing including functional, security, and performance validation.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="350">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>08. Deployment &amp; Support</h4>
+        <p>Production deployment with ongoing technical support and maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR CONTRIBUTION ============ -->
+<section class="project-challenge">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Contribution</div>
+      <h2 class="section-title center">End-to-End Delivery by NanoRa Technologies</h2>
+    </div>
+
+    <div class="challenge-grid">
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Business Analysis</h3>
+        <p>Thorough evaluation of existing processes to identify integration opportunities and define clear requirements.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Professional interface crafted for clarity, consistency, and ease of daily use across all modules.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Frontend Development</h3>
+        <p>Responsive, interactive frontend built with modern web standards for cross-device compatibility.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Backend Development</h3>
+        <p>Robust server-side logic powering every business module with reliable performance.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+        <h3>Database Design</h3>
+        <p>Optimized relational database structure ensuring data integrity and fast query performance.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>API Development</h3>
+        <p>Well-documented REST API enabling seamless communication between modules and external services.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+        <h3>Testing</h3>
+        <p>Rigorous quality assurance covering functionality, security, and performance across all scenarios.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Deployment &amp; Configuration</h3>
+        <p>Smooth production launch with environment setup and configuration tailored to the client's infrastructure.</p>
+      </div>
+      <div class="glass-card challenge-card" data-reveal="fade-up" data-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Technical Support</h3>
+        <p>Post-launch support ensuring platform stability and user confidence during adoption.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS RESULTS ============ -->
+<section class="project-results">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Business Impact</div>
+      <h2 class="section-title center">Measurable Organizational Improvements</h2>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Centralized Department Management</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Unified Business Operations</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Improved Operational Visibility</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Streamlined Administrative Workflows</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Secure Multi-User Collaboration</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Scalable Business Platform</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Integrated Operational Modules</p>
+      </div>
+      <div class="result-box" data-reveal="scale">
+        <h3><i class="fa-solid fa-check-circle"></i></h3>
+        <p>Responsive Cross-Device Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED PROJECTS ============ -->
+<section class="projects">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Related Projects</div>
+      <h2 class="section-title center">More Work From NanoRa</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-reveal="fade-up" data-delay="0">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/RitcoFront1.png" alt="RITCO Digital Commerce platform interface">
+          <div class="project-overlay">
+            <span class="project-badge">E-Commerce</span>
+            <a href="../portfolio/ritco.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>RITCO Digital Commerce</h4><p>A responsive e-commerce platform designed to deliver a seamless online shopping experience.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="100">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/VoipFront1.png" alt="Telecom Business Website on desktop">
+          <div class="project-overlay">
+            <span class="project-badge">Website</span>
+            <a href="../portfolio/telecom.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Telecom Business Website</h4><p>A modern corporate website developed for a telecommunications business.</p></div>
+      </div>
+      <div class="project-card" data-reveal="fade-up" data-delay="200">
+        <div class="project-img-wrap">
+          <img src="../assets/img/portfolio/ZenixFront1.png" alt="Zenix ERP Platform dashboard">
+          <div class="project-overlay">
+            <span class="project-badge">ERP</span>
+            <a href="../portfolio/zenix.html" class="btn btn-sm btn-primary">View Case Study</a>
+          </div>
+        </div>
+        <div class="project-info"><h4>Zenix ERP Platform</h4><p>Enterprise ERP solution designed to streamline business operations across departments.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Transform Your Business?</h2>
+    <h3>Let's build a secure, scalable software solution tailored to your organization's goals.</h3>
+    <a href="../contact.html#contact" class="btn btn-white btn-magnetic btn-lg">
+      <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/project.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Breadcrumb ===== -->
+<section class="nr-breadcrumb">
+    <div class="container">
+
+        <h1 class="nr-breadcrumb-title">About Us</h1>
+
+        <nav aria-label="Breadcrumb">
+            <ol class="nr-breadcrumb-list">
+                <li><a href="/index.html">Home</a></li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <li aria-current="page">
+                    About Us
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+</section>
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="service-hero" id="service-hero">
+  <div class="service-hero-bg">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Software monitoring and maintenance dashboard" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+  </div>
+  <div class="container service-hero-content" data-reveal="fade-up">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Ongoing Software Care & Reliability
+    </div>
+    <h1 class="service-hero-title">Maintenance & Support</h1>
+    <p class="service-hero-desc">
+      Keep your software secure, stable, and performing at its best with proactive maintenance and reliable ongoing support.
+    </p>
+    <div class="service-hero-cta">
+      <a href="../contact.html#contact-form" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ SERVICE OVERVIEW ============ -->
+<section class="service-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="System health and uptime monitoring screen" class="overview-img">
+      <div class="glass-card overview-glass">
+        <h4>System Health Snapshot</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>Uptime Maintained</span><span>99.9%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="99"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Security Patch Compliance</span><span>100%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="100"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Issue Resolution Speed</span><span>94%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="94"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Overview</div>
+      <h2 class="section-title">Your Software, Always Running at Its Best</h2>
+      <p class="section-desc">
+        Software needs ongoing care to stay secure, fast, and reliable. We provide comprehensive maintenance and support that protects your investment — handling updates, security patches, performance tuning, and technical issues so your team can focus on your business, not on troubleshooting.
+      </p>
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Prevent security breaches with regular updates and proactive monitoring</li>
+        <li><i class="fa-solid fa-check"></i> Minimize costly downtime with rapid issue detection and resolution</li>
+        <li><i class="fa-solid fa-check"></i> Extend the lifespan of your software through continuous optimization</li>
+        <li><i class="fa-solid fa-check"></i> Keep your applications compatible with evolving technologies and platforms</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE ============ -->
+<section class="provide" id="provide">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Provide</div>
+      <h2 class="section-title center">Complete Maintenance & Support Services</h2>
+      <p class="section-desc center">Everything you need to keep your software healthy, secure, and evolving with your business.</p>
+    </div>
+
+    <div class="provide-grid">
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security Updates & Patches</h3>
+        <p>Regular application of security patches, dependency updates, and vulnerability remediation to keep your systems protected.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Performance Monitoring</h3>
+        <p>Continuous tracking of application speed, server health, and resource usage with proactive alerts before issues affect users.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-bug-slash"></i></div>
+        <h3>Bug Fixing & Issue Resolution</h3>
+        <p>Fast diagnosis and resolution of software issues, with clear communication and minimal disruption to your operations.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Backup & Disaster Recovery</h3>
+        <p>Automated backups, recovery testing, and failover strategies that protect your data and keep your business running.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <h3>Technology Upgrades</h3>
+        <p>Version upgrades, framework migrations, and compatibility updates that keep your software modern and maintainable.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Technical Support Desk</h3>
+        <p>Direct access to experienced engineers for technical questions, troubleshooting, and ongoing guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (alternating) ============ -->
+<section class="service-features" id="features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Capabilities</div>
+      <h2 class="section-title center">Support Engineered for Business Continuity</h2>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Proactive Monitoring</h3>
+        <p>We detect and address potential problems before they impact your users — not after complaints start coming in.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Proactive system monitoring dashboard">
+      </div>
+    </div>
+
+    <div class="feature-row reverse" data-reveal="fade-left">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>Security-First Maintenance</h3>
+        <p>Regular vulnerability scans, dependency audits, and rapid patch deployment keep your software protected against emerging threats.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Secure server maintenance and updates">
+      </div>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Performance Optimization</h3>
+        <p>Database tuning, code profiling, and infrastructure right-sizing to keep your applications fast as they grow.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Application performance optimization analytics">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our Maintenance & Support Process</h2>
+      <p class="section-desc center">A structured, responsive approach to keeping your software healthy.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Onboarding</h4>
+        <p>We audit your current systems, document the architecture, and understand your priorities.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>We define the maintenance plan, SLA terms, monitoring setup, and escalation procedures.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-eye"></i></div>
+        <h4>03. Monitoring Setup</h4>
+        <p>We configure uptime monitoring, performance dashboards, and automated alerting for your systems.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>04. Proactive Maintenance</h4>
+        <p>We perform regular updates, security patches, backups, and performance tuning on schedule.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-bug-slash"></i></div>
+        <h4>05. Issue Resolution</h4>
+        <p>When issues arise, we diagnose, fix, and communicate clearly with your team throughout.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h4>06. Reporting</h4>
+        <p>We provide regular reports on system health, resolved issues, and completed maintenance activities.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <h4>07. Continuous Improvement</h4>
+        <p>We recommend and implement upgrades that keep your software modern, fast, and secure over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Support Stack</div>
+      <h2 class="section-title center">Technologies We Monitor & Maintain</h2>
+      <p class="section-desc center">We support a wide range of modern platforms, frameworks, and infrastructure.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-chart-simple"></i><span>Prometheus</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose Us</div>
+      <h2 class="section-title center">A Support Partner You Can Rely On</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h3>Experienced Engineers</h3>
+        <p>Senior developers who understand your codebase deeply and resolve issues efficiently.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security First</h3>
+        <p>Proactive vulnerability management, regular patching, and secure coding practices built into every update.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>Fast Response Times</h3>
+        <p>Defined SLAs and rapid resolution paths so critical issues never wait long for attention.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Clear Communication</h3>
+        <p>Regular updates, transparent reporting, and plain-language explanations — never a black box.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>Long-Term Partnership</h3>
+        <p>We invest in understanding your business and software so our support gets better over time.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Predictable Costs</h3>
+        <p>Flexible maintenance plans with clear pricing — no surprise invoices for routine support work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="case-studies" id="case-studies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Case Studies</div>
+      <h2 class="section-title center">Support Engagements That Protected Businesses</h2>
+    </div>
+
+    <div class="case-study-list">
+      <article class="case-study-card" data-reveal="fade-up" data-delay="0">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce platform maintenance and monitoring">
+          <span class="project-badge">E-Commerce</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Ongoing Support for a High-Traffic Online Store</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> An e-commerce business experiencing rapid growth needed reliable support to maintain store stability during traffic spikes and promotional events.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Established a comprehensive maintenance plan with 24/7 monitoring, performance optimization, and rapid-response bug fixing with defined SLAs.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Laravel, Vue.js, PostgreSQL, AWS, Docker</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> Zero downtime during peak sales events, 60% faster issue resolution time</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-study-card" data-reveal="fade-up" data-delay="100">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="SaaS platform security update and upgrade">
+          <span class="project-badge">SaaS</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Security Overhaul & Version Upgrade for a SaaS Platform</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A B2B SaaS company was running on outdated framework versions with known vulnerabilities, putting client data and platform stability at risk.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Executed a phased upgrade of the entire technology stack, applied security patches, and established ongoing maintenance procedures to prevent future drift.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Laravel, Node.js, MySQL, Docker, GitHub Actions</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> All known vulnerabilities closed, platform performance improved by 35%</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">Maintenance & Support — Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>What does your maintenance and support service include?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Our service covers security updates, bug fixes, performance monitoring, backups, technology upgrades, and technical support — everything needed to keep your software healthy and secure.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you support software that wasn't built by NanoRa?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We take over maintenance for existing applications built with technologies we specialize in. We start with a thorough code and infrastructure audit to get up to speed quickly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How quickly do you respond when something goes wrong?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We work with defined SLAs tailored to your needs. Critical issues receive immediate attention, and we communicate clearly throughout the resolution process.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide regular software updates and security patches?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We proactively monitor for vulnerabilities, apply security patches, and keep your dependencies up to date to protect against emerging threats.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What if we need new features in addition to maintenance?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We handle feature development alongside maintenance. Having the same team maintain and enhance your software means faster implementation and better technical decisions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Protect Your Software Investment?</h2>
+    <h3>Let's discuss a maintenance plan that keeps your applications secure, stable, and performing at their best.</h3>
+    <a href="../contact.html#contact-form" class="btn btn-white btn-magnetic btn-lg">
+      <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Breadcrumb ===== -->
+<section class="nr-breadcrumb">
+    <div class="container">
+
+        <h1 class="nr-breadcrumb-title">About Us</h1>
+
+        <nav aria-label="Breadcrumb">
+            <ol class="nr-breadcrumb-list">
+                <li><a href="/index.html">Home</a></li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <li aria-current="page">
+                    About Us
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+</section>
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="service-hero" id="service-hero">
+  <div class="service-hero-bg">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80" alt="Connected cloud systems and API infrastructure" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+  </div>
+  <div class="container service-hero-content" data-reveal="fade-up">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      System Connectivity & Automation
+    </div>
+    <h1 class="service-hero-title">API Integration</h1>
+    <p class="service-hero-desc">
+      Connect your business applications, automate data flow, and eliminate manual work with secure, reliable API integrations.
+    </p>
+    <div class="service-hero-cta">
+      <a href="../contact.html#contact-form" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ SERVICE OVERVIEW ============ -->
+<section class="service-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="API integration dashboard with connected services" class="overview-img">
+      <div class="glass-card overview-glass">
+        <h4>Integration Health Snapshot</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>API Uptime</span><span>99.9%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="99"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Data Sync Accuracy</span><span>99.7%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="99"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Process Automation Rate</span><span>82%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="82"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Overview</div>
+      <h2 class="section-title">Seamless Connections Between Your Business Tools</h2>
+      <p class="section-desc">
+        We design and build robust API integrations that connect your CRM, ERP, payment gateways, and third-party platforms into one cohesive system. Stop copying data between applications manually — let secure, automated workflows handle it while you focus on growing your business.
+      </p>
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Eliminate manual data entry and reduce human error</li>
+        <li><i class="fa-solid fa-check"></i> Synchronize customer data across all your platforms in real time</li>
+        <li><i class="fa-solid fa-check"></i> Automate repetitive workflows between business applications</li>
+        <li><i class="fa-solid fa-check"></i> Scale your operations without adding administrative overhead</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE ============ -->
+<section class="provide" id="provide">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Provide</div>
+      <h2 class="section-title center">Complete API Integration Services</h2>
+      <p class="section-desc center">Everything you need to connect, automate, and optimize your business systems.</p>
+    </div>
+
+    <div class="provide-grid">
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Custom API Development</h3>
+        <p>Well-documented, secure REST and GraphQL APIs built to connect your applications reliably.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>Third-Party API Integration</h3>
+        <p>Connect your systems with Stripe, PayPal, Twilio, Salesforce, and hundreds of other platforms.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <h3>Payment Gateway Integration</h3>
+        <p>Secure payment processing with Stripe, PayPal, or local gateways — fully integrated into your workflow.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>CRM & ERP Synchronization</h3>
+        <p>Real-time, bidirectional data sync between your CRM, ERP, accounting, and operations tools.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>Communication API Integration</h3>
+        <p>Automated email, SMS, and push notifications triggered by events in your business systems.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Integration Maintenance</h3>
+        <p>Ongoing monitoring, version updates, and support to keep your integrations running smoothly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (alternating) ============ -->
+<section class="service-features" id="features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Capabilities</div>
+      <h2 class="section-title center">Integration Engineered for Reliability</h2>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-shield-check"></i></div>
+        <h3>Secure Data Exchange</h3>
+        <p>OAuth 2.0, JWT, and encrypted data transfer protect your business information across every connection.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Secure API server infrastructure">
+      </div>
+    </div>
+
+    <div class="feature-row reverse" data-reveal="fade-left">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <h3>Real-Time Synchronization</h3>
+        <p>Data updates instantly across all connected systems, ensuring every team works with accurate, current information.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Real-time data sync dashboard">
+      </div>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>Integrations designed to handle growing transaction volumes without performance degradation or data loss.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Scalable cloud API architecture">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our API Integration Process</h2>
+      <p class="section-desc center">A clear, methodical path from requirements to fully operational integrations.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Analysis</h4>
+        <p>We map your current systems, data flows, and integration requirements.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>We design the integration architecture, data mapping, and security protocols.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h4>03. API Design</h4>
+        <p>We define endpoints, authentication, and data schemas with clear documentation.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>We build the integration layer with clean, maintainable, and well-tested code.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>We validate every endpoint, error scenario, and data flow under real conditions.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Deployment</h4>
+        <p>We launch with monitoring, logging, and rollback safeguards in place.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Monitoring</h4>
+        <p>We provide ongoing support, performance monitoring, and proactive maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our API Stack</div>
+      <h2 class="section-title center">Technologies We Build With</h2>
+      <p class="section-desc center">Modern tools and protocols for secure, scalable integrations.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-code"></i><span>REST API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-diagram-project"></i><span>GraphQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-python"></i><span>FastAPI</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-key"></i><span>OAuth 2.0</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-shield-halved"></i><span>JWT</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose Us</div>
+      <h2 class="section-title center">A Reliable Integration Partner</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h3>Experienced Engineers</h3>
+        <p>Developers who have built complex integrations across hundreds of platforms and APIs.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security First</h3>
+        <p>Every integration follows strict security protocols — encrypted data, secure authentication, and access controls.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Built to Scale</h3>
+        <p>Integrations that handle growing data volumes and transaction loads without breaking.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Ongoing Support</h3>
+        <p>Proactive monitoring, quick fixes, and version updates to keep everything running smoothly.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Clear Communication</h3>
+        <p>Regular updates, documented APIs, and direct access to the engineers working on your project.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Cost-Effective</h3>
+        <p>Efficient development that delivers value — automation that pays for itself through time saved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="case-studies" id="case-studies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Case Studies</div>
+      <h2 class="section-title center">API Projects That Delivered Business Results</h2>
+    </div>
+
+    <div class="case-study-list">
+      <article class="case-study-card" data-reveal="fade-up" data-delay="0">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce payment integration">
+          <span class="project-badge">E-Commerce</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Multi-Payment Gateway Integration for an Online Store</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A growing e-commerce business needed to offer multiple payment options — credit cards, digital wallets, and local bank transfers — through a single checkout experience.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Built a unified payment integration layer supporting Stripe, PayPal, and a regional payment processor with automatic reconciliation.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Stripe API, PayPal API, Node.js, PostgreSQL, Docker</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 35% increase in completed checkouts, payment reconciliation time cut by 80%</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-study-card" data-reveal="fade-up" data-delay="100">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="CRM and ERP synchronization dashboard">
+          <span class="project-badge">Service Business</span>
+        </div>
+        <div class="case-study-body">
+          <h3>CRM-to-ERP Data Synchronization for a Service Company</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> Sales used a CRM while operations relied on an ERP system — data was manually transferred between them, causing delays and frequent errors.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Developed a real-time, bidirectional sync between their CRM and ERP, ensuring both teams always worked with accurate, current data.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Laravel, REST API, MySQL, Redis, Docker</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> Data entry reduced by 90%, order processing time halved</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">API Integration — Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>What is API integration and why does my business need it?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>API integration connects your different software systems so they can share data and work together automatically. It eliminates manual data entry, reduces errors, and saves your team hours every week.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you integrate our existing business software?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We work with most modern business platforms — CRMs, ERPs, accounting software, payment gateways, and custom-built systems — to create seamless connections between them.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you work with third-party APIs like Stripe and Twilio?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We have extensive experience integrating Stripe, PayPal, Twilio, SendGrid, and many other third-party platforms into business applications.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Is data transferred securely between systems?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We implement encryption, secure authentication protocols like OAuth 2.0 and JWT, and follow security best practices to protect your data at every step.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide ongoing maintenance for integrations?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. APIs change over time. We offer maintenance plans that include monitoring, version updates, and quick resolution of any integration issues.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Connect Your Business Systems?</h2>
+    <h3>Let's build secure, reliable integrations that automate your workflows and improve business efficiency.</h3>
+    <a href="../contact.html#contact-form" class="btn btn-white btn-magnetic btn-lg">
+      <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>

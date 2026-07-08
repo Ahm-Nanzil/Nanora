@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== Breadcrumb ===== -->
+<section class="nr-breadcrumb">
+    <div class="container">
+
+        <h1 class="nr-breadcrumb-title">About Us</h1>
+
+        <nav aria-label="Breadcrumb">
+            <ol class="nr-breadcrumb-list">
+                <li><a href="/index.html">Home</a></li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <li aria-current="page">
+                    About Us
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+</section>
+
+<!-- ============ SERVICES HERO ============ -->
+<section class="hero" id="services-hero">
+  <div class="container hero-inner">
+    <div class="hero-left" data-reveal="fade-right">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Our Services
+      </div>
+      <h1 class="hero-title">
+        Technology Solutions for<br>
+        Every Stage of Your <span class="gradient-text-anim">Business</span>
+      </h1>
+      <p class="hero-desc">
+        NanoRa Technologies provides end-to-end software development services — from the first
+        idea, through design and engineering, to deployment and long-term support. Explore our
+        services below to find the right fit for where your business is headed.
+      </p>
+      <div class="hero-cta">
+        <a href="index.html#contact" class="btn btn-primary btn-magnetic btn-lg">
+          <span>Get Free Consultation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="index.html#projects" class="btn btn-outline btn-magnetic btn-lg">
+          <span>View Projects</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right" data-reveal="fade-left">
+      <div class="hero-visual">
+        <div class="hero-image-wrap float-anim">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Software engineers planning a technology solution" class="hero-image">
+        </div>
+        <div class="floating-card fc-1 float-anim-slow">
+          <i class="fa-solid fa-layer-group"></i>
+          <div><strong>End-to-End</strong><span>Idea to Deployment</span></div>
+        </div>
+        <div class="floating-card fc-2 float-anim">
+          <i class="fa-solid fa-headset"></i>
+          <div><strong>Long-Term Support</strong><span>We stay involved</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRODUCTION ============ -->
+<section class="about" id="services-intro">
+  <div class="container about-inner">
+    <div class="about-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Team reviewing a tailored technology solution" class="about-img-main">
+    </div>
+
+    <div class="about-content" data-reveal="fade-left">
+      <div class="section-tag">Our Approach</div>
+      <h2 class="section-title">Solutions Designed Around Your Business</h2>
+      <p class="section-desc">
+        No two businesses run the same way, so we don't believe in one-size-fits-all software.
+        Every engagement starts with understanding how your business actually operates, then we
+        design and build around that — not around a template.
+      </p>
+      <ul class="why-list">
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Quality-First Engineering</strong><p>Every solution is held to the same standard of code quality and review.</p></div>
+        </li>
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Security by Design</strong><p>Security considerations are built in from architecture, not added later.</p></div>
+        </li>
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Built to Scale</strong><p>Systems are designed for the growth your business is planning for.</p></div>
+        </li>
+        <li>
+          <span class="check-anim"><i class="fa-solid fa-check"></i></span>
+          <div><strong>Modern, Proven Technology</strong><p>We use current, well-supported tools chosen for long-term maintainability.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES GRID ============ -->
+<section class="services" id="services-grid-section">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Offer</div>
+      <h2 class="section-title center">Explore Our Services</h2>
+      <p class="section-desc center">Choose a service below to see how we approach it in detail.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Custom Software Development</h3>
+        <p>Tailored applications engineered around your exact workflows and business logic.</p>
+        <a href="/service/software-development.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Web Development</h3>
+        <p>Fast, accessible, SEO-friendly websites and web applications built on modern frameworks.</p>
+        <a href="/service/web-development.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>API Integration</h3>
+        <p>Secure, well-documented APIs that connect your systems and partners seamlessly.</p>
+        <a href="/service/api-integration.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Cloud Solutions</h3>
+        <p>Cloud architecture on AWS, Azure and GCP built for scale and cost efficiency.</p>
+        <a href="/service/cloud-solutions.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-infinity"></i></div>
+        <h3>DevOps</h3>
+        <p>CI/CD pipelines, infrastructure as code, and observability from day one.</p>
+        <a href="/service/devops.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>AI Solutions</h3>
+        <p>Practical AI and machine learning features that create real business value.</p>
+        <a href="/service/ai-solutions.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Research-driven design systems that make complex products feel simple.</p>
+        <a href="/service/ui-ux-design.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>E-Commerce Development</h3>
+        <p>High-converting storefronts with robust checkout, inventory and payments.</p>
+        <a href="/service/ecommerce-development.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Maintenance &amp; Support</h3>
+        <p>Proactive monitoring, updates and long-term support that keeps you running.</p>
+        <a href="/service/maintenance-support.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY OUR SERVICES ============ -->
+<section class="services" id="why-our-services">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why NanoRa</div>
+      <h2 class="section-title center">Why Businesses Choose Our Services</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Business-Focused Solutions</h3>
+        <p>Every technical decision is weighed against the business outcome it needs to serve.</p>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Modern Technologies</h3>
+        <p>Current, well-supported frameworks and tools — never legacy choices made out of habit.</p>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>Systems designed to grow smoothly from first users to full production scale.</p>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Transparent Communication</h3>
+        <p>Clear roadmaps, honest estimates, and regular updates throughout delivery.</p>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Development</h3>
+        <p>Security reviewed and built in at every layer, not treated as an afterthought.</p>
+      </div>
+      <div class="service-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Long-Term Support</h3>
+        <p>We stay involved after launch with monitoring, updates and ongoing improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR DEVELOPMENT APPROACH ============ -->
+<section class="process" id="development-approach">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our Development Approach</h2>
+      <p class="section-desc center">A consistent, transparent process behind every service we offer.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>We learn your business, users and goals.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>We define scope, architecture and milestones.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h4>03. Design</h4>
+        <p>We craft intuitive, on-brand interfaces.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>We build in agile sprints with continuous review.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>We validate quality through rigorous QA.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Deployment</h4>
+        <p>We ship with zero-downtime release pipelines.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Support</h4>
+        <p>We monitor and improve long after launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGIES ============ -->
+<section class="technologies" id="services-technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Stack</div>
+      <h2 class="section-title center">Technologies Behind Our Services</h2>
+      <p class="section-desc center">A proven toolkit spanning every service we offer.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-vuejs"></i><span>Vue</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-microsoft"></i><span>Azure</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-elephant"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-plug"></i><span>REST API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-brain"></i><span>AI</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-shopify"></i><span>Shopify</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-wordpress"></i><span>WooCommerce</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-cloud"></i><span>Cloud</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="services-faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>How do I choose the right service?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Start with a free consultation — we'll walk through your goals and recommend the service, or combination of services, that fits best.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can multiple services be combined?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes, most projects combine several services — for example, custom software development alongside cloud infrastructure and ongoing support.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you improve or extend our existing software?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We regularly work within existing codebases to add features, improve performance, or modernize outdated systems.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you offer long-term support after launch?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes, every service includes an optional ongoing support and maintenance plan with monitoring and updates.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I start a project with NanoRa?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Reach out through our contact page or book a free consultation, and we'll schedule a discovery call to discuss your project.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="services-cta">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Build Your Next Digital Product?</h2>
+    <h3>Whether you need a custom application, modern website, cloud infrastructure, AI integration, or long-term technical support, NanoRa Technologies is ready to help.</h3>
+    <a href="index.html#contact" class="btn btn-white btn-magnetic btn-lg">
+      <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>

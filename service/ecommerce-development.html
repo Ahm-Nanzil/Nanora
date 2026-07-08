@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Breadcrumb ===== -->
+<section class="nr-breadcrumb">
+    <div class="container">
+
+        <h1 class="nr-breadcrumb-title">About Us</h1>
+
+        <nav aria-label="Breadcrumb">
+            <ol class="nr-breadcrumb-list">
+                <li><a href="/index.html">Home</a></li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <li aria-current="page">
+                    About Us
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+</section>
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="service-hero" id="service-hero">
+  <div class="service-hero-bg">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=80" alt="Modern e-commerce store on laptop and mobile" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+  </div>
+  <div class="container service-hero-content" data-reveal="fade-up">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Online Store & Commerce Engineering
+    </div>
+    <h1 class="service-hero-title">E-Commerce Development</h1>
+    <p class="service-hero-desc">
+      Custom online stores and commerce platforms built to convert visitors into customers, process payments securely, and scale with your business.
+    </p>
+    <div class="service-hero-cta">
+      <a href="../contact.html#contact-form" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ SERVICE OVERVIEW ============ -->
+<section class="service-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="E-commerce sales and analytics dashboard" class="overview-img">
+      <div class="glass-card overview-glass">
+        <h4>Store Performance Snapshot</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>Checkout Completion</span><span>89%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="89"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Page Load Speed</span><span>96%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="96"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Conversion Rate Uplift</span><span>34%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="34"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Overview</div>
+      <h2 class="section-title">Online Stores Built to Sell and Scale</h2>
+      <p class="section-desc">
+        We build e-commerce platforms that do more than display products. From custom storefronts and secure payment processing to inventory management and order fulfillment automation, every store we deliver is designed to drive sales, reduce operational friction, and grow alongside your business.
+      </p>
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Convert more visitors with fast, intuitive shopping experiences</li>
+        <li><i class="fa-solid fa-check"></i> Accept payments securely through multiple payment methods</li>
+        <li><i class="fa-solid fa-check"></i> Manage inventory, orders, and customers from a single dashboard</li>
+        <li><i class="fa-solid fa-check"></i> Scale seamlessly during peak seasons and promotional events</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE ============ -->
+<section class="provide" id="provide">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Provide</div>
+      <h2 class="section-title center">Complete E-Commerce Development Services</h2>
+      <p class="section-desc center">Everything you need to launch, manage, and grow a successful online store.</p>
+    </div>
+
+    <div class="provide-grid">
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Custom Store Development</h3>
+        <p>Tailor-made online stores built with your brand, products, and unique business requirements in mind.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-brands fa-shopify"></i></div>
+        <h3>Shopify & WooCommerce</h3>
+        <p>Customized Shopify and WooCommerce solutions with premium themes, custom features, and seamless integrations.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <h3>Payment Gateway Integration</h3>
+        <p>Secure checkout with Stripe, PayPal, local payment methods, and multi-currency support for global customers.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory Management</h3>
+        <p>Real-time stock tracking, automated reorder alerts, and synchronized inventory across multiple sales channels.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h3>Shipping Integration</h3>
+        <p>Automated shipping rates, label printing, tracking updates, and multi-carrier support built into your workflow.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Store Maintenance</h3>
+        <p>Ongoing support, security updates, performance optimization, and feature enhancements to keep your store thriving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (alternating) ============ -->
+<section class="service-features" id="features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Capabilities</div>
+      <h2 class="section-title center">E-Commerce Engineered for Sales Growth</h2>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Shopping Experience</h3>
+        <p>Your store looks and works beautifully on mobile phones, tablets, and desktops — where most purchases now happen.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Responsive e-commerce design on multiple devices">
+      </div>
+    </div>
+
+    <div class="feature-row reverse" data-reveal="fade-left">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-shield-check"></i></div>
+        <h3>Secure Payment Processing</h3>
+        <p>PCI-compliant checkout with SSL encryption, fraud protection, and support for cards, wallets, and local payment methods.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Secure payment processing infrastructure">
+      </div>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Fast, Conversion-Optimized Performance</h3>
+        <p>Lightning-fast page loads and optimized checkout flows that reduce cart abandonment and increase completed orders.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="E-commerce performance optimization dashboard">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our E-Commerce Delivery Process</h2>
+      <p class="section-desc center">A structured path from your business vision to a live, revenue-generating store.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>We understand your products, target customers, and sales goals.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>We map the store architecture, product catalog structure, and technical requirements.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-palette"></i></div>
+        <h4>03. UI/UX Design</h4>
+        <p>We design an attractive, easy-to-navigate store that reflects your brand identity.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>We build the store with clean code, custom features, and all necessary integrations.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>We test every checkout flow, payment method, and device before launch.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Launch</h4>
+        <p>We deploy your store and monitor closely during the critical first days.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Growth & Support</h4>
+        <p>We provide ongoing maintenance, optimization, and feature updates as you scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our E-Commerce Stack</div>
+      <h2 class="section-title center">Technologies We Build With</h2>
+      <p class="section-desc center">Modern platforms and tools for reliable, scalable online stores.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-shopify"></i><span>Shopify</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-wordpress"></i><span>WooCommerce</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-credit-card"></i><span>Stripe</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-paypal"></i><span>PayPal</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose Us</div>
+      <h2 class="section-title center">An E-Commerce Partner Focused on Your Sales</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Sales-Focused Development</h3>
+        <p>Every feature we build is designed to increase conversions, reduce abandonment, and grow your revenue.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Transactions</h3>
+        <p>PCI-compliant payment processing with SSL encryption and fraud protection your customers can trust.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Mobile-First Design</h3>
+        <p>Stores optimized for mobile shoppers, who now account for the majority of online purchases.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Built to Scale</h3>
+        <p>Architecture that handles traffic spikes during sales, holidays, and promotional campaigns without downtime.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Clear Communication</h3>
+        <p>Regular progress updates, transparent timelines, and direct access to the team building your store.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Reliable Support</h3>
+        <p>Ongoing maintenance, quick fixes, and feature enhancements to keep your store performing at its best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="case-studies" id="case-studies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Case Studies</div>
+      <h2 class="section-title center">E-Commerce Projects That Delivered Results</h2>
+    </div>
+
+    <div class="case-study-list">
+      <article class="case-study-card" data-reveal="fade-up" data-delay="0">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="Fashion e-commerce store on laptop">
+          <span class="project-badge">Fashion Retail</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Custom Online Store for a Growing Fashion Brand</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A fashion brand selling through social media needed a proper online store to manage growing order volumes and offer a professional shopping experience.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Built a custom Shopify store with premium theme customization, size guide integration, and automated order management with shipping provider connection.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Shopify, Liquid, React, Stripe, REST API</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 3x increase in monthly sales, 40% fewer customer inquiries about orders</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-study-card" data-reveal="fade-up" data-delay="100">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Wholesale ordering portal dashboard">
+          <span class="project-badge">Wholesale Business</span>
+        </div>
+        <div class="case-study-body">
+          <h3>B2B Wholesale Ordering Portal for a Food Supplier</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A food wholesaler relied entirely on phone and email orders from retail clients, leading to order errors and hours of daily manual processing.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Developed a custom B2B ordering portal with bulk pricing, client-specific catalogs, and automated invoice generation integrated with their accounting system.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Laravel, Vue.js, MySQL, Stripe, Docker</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 60% reduction in order processing time, 25% increase in repeat orders</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">E-Commerce Development — Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>Can you build a custom online store for my business?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We build custom e-commerce stores tailored to your products, brand, and business needs — whether on Shopify, WooCommerce, or a fully custom platform.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you develop Shopify and WooCommerce websites?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We customize Shopify and WooCommerce stores with premium themes, custom features, and seamless third-party integrations to match your exact requirements.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you integrate payment gateways into my store?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We integrate Stripe, PayPal, local payment methods, and multi-currency support so your customers can pay securely using their preferred method.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Will my online store work well on mobile phones?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. Every store we build is fully responsive and tested on phones, tablets, and desktops. Mobile shopping is a priority, not an afterthought.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide maintenance and support after launch?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We offer ongoing maintenance plans covering security updates, performance monitoring, feature enhancements, and technical support to keep your store running smoothly.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Grow Your Online Business?</h2>
+    <h3>Let's build a secure, scalable, and high-converting e-commerce platform that helps your business sell more and grow faster.</h3>
+    <a href="../contact.html#contact-form" class="btn btn-white btn-magnetic btn-lg">
+      <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* ==========================================================================
+   NanoRa Technologies — contact.css
+   Page-specific styles for the Contact page (contact.html). Reuses every
+   color, gradient, radius, shadow and component already defined in
+   style.css / animation.css / responsive.css — only adds the patterns
+   this page needs that the homepage doesn't already have: a compact
+   contact hero, info card grid, the form itself, and the map/location
+   layout. FAQ and final CTA reuse homepage classes directly and need
+   no page-specific rules beyond what's already global.
+   Loaded AFTER style.css / animation.css / responsive.css.
+   ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------
+   Contact Hero — compact, not full-height like a project/service hero
+   -------------------------------------------------------------------------- */
+.contact-hero {
+  position: relative;
+  min-height: 56vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-top: 120px;
+}
+.contact-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.contact-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.contact-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,8,22,0.55) 0%, rgba(6,8,22,0.85) 65%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(6,8,22,0.85) 0%, rgba(6,8,22,0.35) 60%);
+}
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 64px;
+  max-width: 680px;
+}
+.contact-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.2vw, 46px);
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.contact-hero-desc {
+  color: var(--subtext);
+  font-size: 16.5px;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+.contact-hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* --------------------------------------------------------------------------
+   Contact Information — reuses .glass-card / .service-icon
+   -------------------------------------------------------------------------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+.info-card {
+  padding: 30px 24px;
+  text-align: center;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+}
+.info-card:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(79,70,229,0.2); }
+.info-card .service-icon { margin: 0 auto 18px; }
+.info-card h3 { font-size: 15px; margin-bottom: 10px; }
+.info-card p, .info-card a {
+  color: var(--subtext);
+  font-size: 13.5px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+.info-card a:hover { color: var(--secondary); }
+
+/* --------------------------------------------------------------------------
+   Contact Form
+   -------------------------------------------------------------------------- */
+.form-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.form-status {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  margin-bottom: 26px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.form-status.visible { display: flex; }
+.form-status.success { background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.35); color: var(--success); }
+.form-status.error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.35); color: #F87171; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group.full-width { grid-column: 1 / -1; }
+
+.form-group label {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+.required { color: var(--secondary); }
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14.5px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(182,194,207,0.5); }
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background: rgba(255,255,255,0.07);
+}
+.form-group textarea { resize: vertical; min-height: 130px; font-family: var(--font-body); }
+
+.form-group.field-invalid input,
+.form-group.field-invalid textarea,
+.form-group.field-invalid select {
+  border-color: #EF4444;
+}
+
+.field-error {
+  font-size: 12px;
+  color: #F87171;
+  min-height: 14px;
+  display: block;
+}
+
+.select-wrap { position: relative; }
+.select-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+.select-wrap select option { background: var(--card-solid); color: var(--text); }
+.select-wrap i {
+  position: absolute;
+  top: 50%; right: 16px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--subtext);
+  pointer-events: none;
+}
+
+.textarea-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.char-counter { font-size: 12px; color: var(--subtext); white-space: nowrap; }
+.char-counter.near-limit { color: #FBBF24; }
+.char-counter.at-limit { color: #F87171; }
+
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 6px;
+  position: relative;
+}
+.form-submit .btn-spinner {
+  display: none;
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+.form-submit.loading .btn-label { opacity: 0.7; }
+.form-submit.loading .btn-spinner { display: inline-block; animation: contact-spin 0.7s linear infinite; }
+.form-submit.loading i.fa-paper-plane { display: none; }
+.form-submit:disabled { cursor: not-allowed; opacity: 0.85; }
+
+@keyframes contact-spin { to { transform: rotate(360deg); } }
+
+/* --------------------------------------------------------------------------
+   Location — map + info card
+   -------------------------------------------------------------------------- */
+.location-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+}
+.map-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 420px;
+}
+.map-img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.7) brightness(0.75); }
+.map-pin {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -100%);
+  width: 46px; height: 46px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--grad-primary);
+  display: flex; align-items: center; justify-content: center;
+  transform-origin: bottom center;
+  box-shadow: 0 8px 20px rgba(79,70,229,0.45);
+}
+.map-pin i { transform: rotate(45deg); color: #fff; font-size: 16px; }
+.map-wrap { display: flex; align-items: center; justify-content: center; }
+.map-pin { position: absolute; }
+.map-overlay-link { position: absolute; inset: 0; z-index: 2; }
+
+.location-card { padding: 40px; }
+.location-details { display: flex; flex-direction: column; gap: 16px; margin: 24px 0 30px; }
+.location-details li { display: flex; align-items: flex-start; gap: 14px; color: var(--subtext); font-size: 14.5px; }
+.location-details i { color: var(--secondary); margin-top: 3px; flex-shrink: 0; }
+
+/* --------------------------------------------------------------------------
+   Mobile (single source of truth for this page's phone layout)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .info-grid { grid-template-columns: repeat(3, 1fr); }
+  .location-inner { grid-template-columns: 1fr; gap: 36px; }
+  .map-wrap { height: 320px; }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .contact-hero { min-height: 46vh; padding-top: 96px; }
+  .contact-hero-content { padding-bottom: 36px; }
+  .contact-hero-title { font-size: clamp(26px, 8vw, 32px); margin-bottom: 10px; }
+  .contact-hero-desc { font-size: 14.5px; margin-bottom: 20px; }
+  .contact-hero-cta { flex-direction: column; width: 100%; }
+  .contact-hero-cta .btn { width: 100%; justify-content: center; }
+
+  /* Info cards: compact 2-up */
+  .info-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .info-card { padding: 20px 14px; }
+  .info-card .service-icon { width: 44px; height: 44px; font-size: 17px; margin-bottom: 12px; }
+  .info-card h3 { font-size: 13px; }
+  .info-card p, .info-card a { font-size: 12px; }
+
+  /* Form */
+  .form-wrap { padding: 26px 20px; }
+  .form-row { grid-template-columns: 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group input, .form-group textarea, .form-group select { padding: 13px 15px; font-size: 14px; }
+  .form-submit { padding: 16px 24px; }
+
+  /* Location */
+  .map-wrap { height: 220px; }
+  .location-card { padding: 26px 22px; }
+  .location-details { gap: 12px; margin: 18px 0 22px; }
+}
+
+@media (max-width: 420px) {
+  .info-grid { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Breadcrumb ===== -->
+<section class="nr-breadcrumb">
+    <div class="container">
+
+        <h1 class="nr-breadcrumb-title">About Us</h1>
+
+        <nav aria-label="Breadcrumb">
+            <ol class="nr-breadcrumb-list">
+                <li><a href="/index.html">Home</a></li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <li aria-current="page">
+                    About Us
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+</section>
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="service-hero" id="service-hero">
+  <div class="service-hero-bg">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80" alt="Clean code on development screens" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+  </div>
+  <div class="container service-hero-content" data-reveal="fade-up">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Custom Software Engineering
+    </div>
+    <h1 class="service-hero-title">Custom Software Development</h1>
+    <p class="service-hero-desc">
+      Tailored applications, enterprise platforms, and workflow automation built precisely around your operational needs.
+    </p>
+    <div class="service-hero-cta">
+      <a href="../index.html#contact" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Start Your Project</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ SERVICE OVERVIEW ============ -->
+<section class="service-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Custom software dashboard monitoring" class="overview-img">
+      <div class="glass-card overview-glass">
+        <h4>Development Health Snapshot</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>On-Time Delivery</span><span>98%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="98"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Code Quality Score</span><span>95%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="95"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Process Efficiency Gain</span><span>41%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="41"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Overview</div>
+      <h2 class="section-title">Software Built Around Your Operations</h2>
+      <p class="section-desc">
+        We design, build, and maintain custom applications that fit your workflows exactly. From internal management systems and CRM platforms to enterprise SaaS solutions, we deliver clean, scalable code that solves real business problems without the compromise of off-the-shelf software.
+      </p>
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Replace manual processes with intelligent automation</li>
+        <li><i class="fa-solid fa-check"></i> Integrate seamlessly with your existing toolchain</li>
+        <li><i class="fa-solid fa-check"></i> Scale your software as your business grows</li>
+        <li><i class="fa-solid fa-check"></i> Own your codebase with full IP transfer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE ============ -->
+<section class="provide" id="provide">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Provide</div>
+      <h2 class="section-title center">End-to-End Custom Development</h2>
+      <p class="section-desc center">Everything required to turn your idea into a reliable, secure software product.</p>
+    </div>
+
+    <div class="provide-grid">
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-file-code"></i></div>
+        <h3>Enterprise Applications</h3>
+        <p>Custom CRM, ERP, and inventory systems built to streamline your internal operations.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+        <h3>SaaS Platform Development</h3>
+        <p>Multi-tenant, subscription-ready platforms with robust, scalable architecture.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>API Integration</h3>
+        <p>Connect your software with third-party services through secure, well-documented APIs.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>Workflow Automation</h3>
+        <p>Automate repetitive tasks and data flows to eliminate manual errors and save hours.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Management Systems</h3>
+        <p>Custom dashboards and reporting tools that give you real-time operational visibility.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Long-Term Maintenance</h3>
+        <p>Ongoing support, feature enhancements, and performance tuning to protect your investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (alternating) ============ -->
+<section class="service-features" id="features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Capabilities</div>
+      <h2 class="section-title center">Engineered for Performance and Growth</h2>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>We design clean, modular code that handles more users and data without degrading performance or security.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Scalable software architecture diagram">
+      </div>
+    </div>
+
+    <div class="feature-row reverse" data-reveal="fade-left">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-shield-check"></i></div>
+        <h3>Secure Development Practices</h3>
+        <p>Security is embedded in every sprint, with OWASP-aligned code reviews and rigorous vulnerability testing.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Secure coding environment">
+      </div>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Performance Optimization</h3>
+        <p>Fast load times, efficient database queries, and responsive interfaces keep your team productive and your users happy.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Performance analytics on screen">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our Software Delivery Process</h2>
+      <p class="section-desc center">A transparent, iterative path from concept to launch and beyond.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>We map your workflows, pain points, and core objectives.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Planning</h4>
+        <p>We define the technical scope, user stories, and architecture.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h4>03. Design</h4>
+        <p>We create clean, functional UI/UX that fits your team.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>We build iteratively with clean code and regular demos.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>We validate with automated, performance, and UAT cycles.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Launch</h4>
+        <p>We deploy securely and monitor closely during go-live.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Maintenance</h4>
+        <p>We provide ongoing support, updates, and optimization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Development Stack</div>
+      <h2 class="section-title center">Technologies We Build With</h2>
+      <p class="section-desc center">Modern, reliable tools for maintainable and scalable code.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-dharmachakra"></i><span>Kubernetes</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-layer-group"></i><span>Terraform</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-github"></i><span>GitHub Actions</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose Us</div>
+      <h2 class="section-title center">A Development Partner You Can Trust</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h3>Experienced Engineers</h3>
+        <p>Senior developers who have shipped complex enterprise systems across industries.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure by Default</h3>
+        <p>Application security and data protection woven into every stage of development.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Built to Scale</h3>
+        <p>Architectures that support your growth from first customer to enterprise scale.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Long-Term Support</h3>
+        <p>A reliable team providing updates, monitoring, and feature enhancements.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Transparent Process</h3>
+        <p>Direct communication, shared roadmaps, and clear progress reporting.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Cost-Effective Delivery</h3>
+        <p>Efficient engineering that delivers real value without excessive overhead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="case-studies" id="case-studies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Case Studies</div>
+      <h2 class="section-title center">Custom Software Projects That Drive Results</h2>
+    </div>
+
+    <div class="case-study-list">
+      <article class="case-study-card" data-reveal="fade-up" data-delay="0">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Inventory management system interface">
+          <span class="project-badge">Retail</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Streamlined Inventory & Order Management</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A growing retailer relied on spreadsheets and disconnected tools to track stock across three warehouses.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Built a custom inventory and order management system with real-time syncing and a unified dashboard.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> React, Node.js, PostgreSQL, AWS</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 50% reduction in order processing time, zero stock discrepancies</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-study-card" data-reveal="fade-up" data-delay="100">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="SaaS workflow automation dashboard">
+          <span class="project-badge">SaaS</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Workflow Automation Platform for Field Services</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A field services firm had 80% of its scheduling and invoicing done manually, leading to errors and delays.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Designed and launched a SaaS platform that automated job scheduling, invoicing, and client reporting.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Python, Django, React, Docker, PostgreSQL</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 70% less admin work, invoicing cycle dropped from weeks to hours</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">Custom Software Development — Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>What kind of custom software do you build?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We build enterprise applications, CRM and ERP systems, SaaS platforms, internal management tools, and workflow automation solutions tailored to your operations.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How long does a typical development project take?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Timelines vary by scope, but a meaningful first release usually takes 8-14 weeks. We provide a clear roadmap after the discovery phase.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Will we own the source code?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. You receive full intellectual property rights and complete access to your codebase upon delivery.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you integrate with our existing systems?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes, API integration and connecting to legacy systems is a core part of our development process.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you offer support after launch?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Every project includes a tailored maintenance plan for updates, monitoring, and ongoing enhancements.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Build Your Custom Software?</h2>
+    <h3>Let's discuss your requirements and timeline.</h3>
+    <a href="../index.html#contact" class="btn btn-white btn-magnetic btn-lg">
+      <span>Start a Conversation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Breadcrumb ===== -->
+<section class="nr-breadcrumb">
+    <div class="container">
+
+        <h1 class="nr-breadcrumb-title">About Us</h1>
+
+        <nav aria-label="Breadcrumb">
+            <ol class="nr-breadcrumb-list">
+                <li><a href="/index.html">Home</a></li>
+
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <li aria-current="page">
+                    About Us
+                </li>
+            </ol>
+        </nav>
+
+    </div>
+</section>
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="service-hero" id="service-hero">
+  <div class="service-hero-bg">
+    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1600&q=80" alt="UI/UX designer working on interface wireframes" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+  </div>
+  <div class="container service-hero-content" data-reveal="fade-up">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      User Experience & Interface Design
+    </div>
+    <h1 class="service-hero-title">UI/UX Design</h1>
+    <p class="service-hero-desc">
+      Intuitive, engaging digital experiences designed around your users — beautiful interfaces that drive satisfaction and business results.
+    </p>
+    <div class="service-hero-cta">
+      <a href="../contact.html#contact-form" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ SERVICE OVERVIEW ============ -->
+<section class="service-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Design system and UI component library on screen" class="overview-img">
+      <div class="glass-card overview-glass">
+        <h4>Design Impact Snapshot</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>User Satisfaction</span><span>94%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="94"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Task Completion Rate</span><span>96%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="96"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Conversion Uplift</span><span>32%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="32"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Overview</div>
+      <h2 class="section-title">Design That Puts Your Users First</h2>
+      <p class="section-desc">
+        We create digital experiences that feel natural to use. Through careful research, thoughtful wireframing, and polished visual design, we build interfaces that simplify complex tasks, reflect your brand, and keep users coming back. Good design isn't just about looks — it's about measurable business impact.
+      </p>
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Reduce user frustration with intuitive, easy-to-navigate interfaces</li>
+        <li><i class="fa-solid fa-check"></i> Increase conversions through clear, purposeful design choices</li>
+        <li><i class="fa-solid fa-check"></i> Build trust and credibility with a professional, modern brand presence</li>
+        <li><i class="fa-solid fa-check"></i> Make your product accessible to everyone, including users with disabilities</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE ============ -->
+<section class="provide" id="provide">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Provide</div>
+      <h2 class="section-title center">Complete UI/UX Design Services</h2>
+      <p class="section-desc center">Everything you need to create digital products people enjoy using.</p>
+    </div>
+
+    <div class="provide-grid">
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>User Research</h3>
+        <p>Understand your users' needs, behaviors, and pain points through structured research and analysis.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>UX Strategy & Wireframes</h3>
+        <p>Map user journeys and create low-fidelity wireframes that define the optimal flow before any visual design begins.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>UI Design</h3>
+        <p>Clean, modern visual interfaces with consistent typography, color systems, and polished component design.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Design</h3>
+        <p>Interfaces that adapt perfectly to every screen size — desktop, tablet, and mobile — with no compromises.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-cube"></i></div>
+        <h3>Design Systems</h3>
+        <p>Scalable component libraries and style guides that keep your product consistent as it grows.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-vial"></i></div>
+        <h3>Usability Testing</h3>
+        <p>Validate designs with real users, identify friction points, and refine the experience before development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (alternating) ============ -->
+<section class="service-features" id="features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Capabilities</div>
+      <h2 class="section-title center">Design Engineered for Real People</h2>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-user-check"></i></div>
+        <h3>User-Centered Approach</h3>
+        <p>Every design decision starts with your users — their goals, their context, and what makes an experience feel effortless to them.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="User research and persona mapping on screen">
+      </div>
+    </div>
+
+    <div class="feature-row reverse" data-reveal="fade-left">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-universal-access"></i></div>
+        <h3>Accessible by Design</h3>
+        <p>WCAG-compliant interfaces that work for everyone — including people using screen readers, keyboard navigation, and assistive technologies.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Accessible interface with high contrast design elements">
+      </div>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+        <h3>Conversion-Focused Design</h3>
+        <p>Strategic layouts, clear calls-to-action, and optimized user flows that guide visitors toward meaningful business outcomes.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80" alt="Conversion-optimized landing page design on laptop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our UI/UX Design Process</h2>
+      <p class="section-desc center">A collaborative, iterative path from research to polished design.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>We learn about your business, users, and design goals.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-users"></i></div>
+        <h4>02. User Research</h4>
+        <p>We study user behavior, needs, and pain points through interviews and analysis.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>03. Wireframing</h4>
+        <p>We map user flows and create structural blueprints for every screen.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-palette"></i></div>
+        <h4>04. UI Design</h4>
+        <p>We craft the visual interface — colors, typography, components, and branding.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Prototyping</h4>
+        <p>We build interactive prototypes to test flows before any code is written.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>06. Developer Handoff</h4>
+        <p>We deliver organized design files, specs, and assets ready for implementation.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <h4>07. Iteration</h4>
+        <p>We refine based on user feedback and analytics after launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Design Stack</div>
+      <h2 class="section-title center">Tools We Design With</h2>
+      <p class="section-desc center">Industry-standard tools for modern, collaborative design work.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-pen-nib"></i><span>Adobe XD</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-image"></i><span>Photoshop</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-bezier-curve"></i><span>Illustrator</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-note-sticky"></i><span>FigJam</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-border-all"></i><span>Miro</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-css3-alt"></i><span>Tailwind CSS</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-cubes"></i><span>Design Systems</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose Us</div>
+      <h2 class="section-title center">A Design Partner Focused on Results</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-user-check"></i></div>
+        <h3>User-First Thinking</h3>
+        <p>We design for the people who will actually use your product — not just to impress stakeholders.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Business-Aligned Design</h3>
+        <p>Every design choice ties back to your business goals — conversions, retention, and customer satisfaction.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Everywhere</h3>
+        <p>Interfaces that work flawlessly across every device and screen size your users prefer.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-universal-access"></i></div>
+        <h3>Accessibility Built In</h3>
+        <p>Inclusive design that meets WCAG standards and ensures everyone can use your product.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Collaborative Process</h3>
+        <p>We work closely with your team, incorporating feedback at every stage for a result you'll love.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+        <h3>Scalable Design Systems</h3>
+        <p>Component libraries and style guides that grow with your product and keep everything consistent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="case-studies" id="case-studies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Case Studies</div>
+      <h2 class="section-title center">Design Projects That Delivered Results</h2>
+    </div>
+
+    <div class="case-study-list">
+      <article class="case-study-card" data-reveal="fade-up" data-delay="0">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="Corporate website redesign on multiple screens">
+          <span class="project-badge">Professional Services</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Website Redesign for a Professional Services Firm</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> An established firm had an outdated website that confused visitors and generated very few inquiries despite steady traffic.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Redesigned the entire site with clear navigation, modern visual identity, and conversion-optimized service pages based on user research.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Figma, Tailwind CSS, React, Next.js</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 55% increase in contact form submissions, 40% longer average session duration</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-study-card" data-reveal="fade-up" data-delay="100">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="SaaS dashboard UI design on laptop">
+          <span class="project-badge">SaaS</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Dashboard Redesign for a B2B SaaS Platform</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A SaaS company's complex analytics dashboard overwhelmed new users, leading to low adoption and high churn in the first month.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Simplified the interface with progressive disclosure, clear data visualizations, and a guided onboarding experience for new users.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Figma, Miro, React, Tailwind CSS</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 30% increase in new user retention, 25% reduction in support tickets</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">UI/UX Design — Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>Why is UI/UX design important for my business?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Good design directly impacts your bottom line. It improves customer satisfaction, increases conversions, reduces support costs, and builds trust in your brand. Poor design drives users away.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can you redesign our existing website or application?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We evaluate your current product, identify usability issues, and create a refreshed design that improves the experience while preserving what already works well.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you create designs for mobile apps as well?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We design for web, mobile apps, tablets, and any other screen your users interact with. Every design is fully responsive and platform-appropriate.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Will our developers receive ready-to-use design files?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We provide organized Figma files with component specifications, style guides, and all assets. Our handoff process ensures developers have everything they need to build accurately.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you follow accessibility standards?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. Accessibility is a core part of our design process. We follow WCAG guidelines to ensure color contrast, keyboard navigation, screen reader compatibility, and inclusive design patterns.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Create a Better User Experience?</h2>
+    <h3>Let's design intuitive, engaging, and modern digital experiences that delight your users and support your business goals.</h3>
+    <a href="../contact.html#contact-form" class="btn btn-white btn-magnetic btn-lg">
+      <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>

@@ -305,3 +305,38 @@
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .timeline { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+@media (max-width:768px){
+
+    .logo-img{
+        height:40px;
+    }
+
+}
+
+@media (max-width:420px){
+
+    .logo-img{
+        height:34px;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .breadcrumb-list {
+    font-size: 11.5px;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .breadcrumb-list li {
+    gap: 8px;
+  }
+  .breadcrumb-bar--bare {
+    padding: 100px 0 2px;
+  }
+}

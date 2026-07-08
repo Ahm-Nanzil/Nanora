@@ -1,0 +1,178 @@
+/* ==========================================================================
+   NanoRa Technologies — portfolio.css
+   Page-specific styles for the Portfolio landing page (portfolio/project.html).
+   Reuses every color, gradient, radius, shadow, and component already
+   defined in style.css / animation.css / responsive.css — this file only
+   adds the handful of layout patterns unique to this page: the portfolio
+   hero, the category filter bar, and the premium project card upgrades
+   (tech chips + business-focus line + fully-clickable card).
+   Loaded AFTER style.css / animation.css / responsive.css.
+   ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------
+   Portfolio Hero — centered, reuses hero typography scale
+   -------------------------------------------------------------------------- */
+.portfolio-hero {
+  padding: 160px 0 100px;
+  text-align: center;
+}
+.portfolio-hero-inner { max-width: 760px; margin: 0 auto; }
+.portfolio-hero .badge { margin-left: auto; margin-right: auto; }
+.portfolio-hero-title {
+  font-size: clamp(34px, 5vw, 56px);
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+.portfolio-hero-desc {
+  color: var(--subtext);
+  font-size: 17.5px;
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+.portfolio-hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Category Filter Bar
+   -------------------------------------------------------------------------- */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.portfolio-filter-btn {
+  padding: 11px 24px;
+  border-radius: var(--radius-full);
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--subtext);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.portfolio-filter-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+.portfolio-filter-btn.active { background: var(--grad-primary); color: #fff; border-color: transparent; }
+
+/* --------------------------------------------------------------------------
+   Premium Project Cards — the whole card is a link; overlay content is
+   always partially visible (not hover-only) so the sales info reads
+   immediately, with hover adding lift + image zoom for polish.
+   -------------------------------------------------------------------------- */
+.portfolio-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.portfolio-project-card {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card-solid);
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), border-color 0.45s ease;
+}
+.portfolio-project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(79, 70, 229, 0.28);
+  border-color: rgba(255,255,255,0.2);
+}
+.portfolio-project-card.hidden { display: none; }
+
+.portfolio-project-img-wrap { position: relative; overflow: hidden; height: 260px; }
+.portfolio-project-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease); }
+.portfolio-project-card:hover .portfolio-project-img-wrap img { transform: scale(1.1); }
+.portfolio-project-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(6,8,22,0.92) 100%);
+}
+.portfolio-project-badge {
+  position: absolute;
+  top: 18px; left: 18px;
+  z-index: 2;
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  background: var(--grad-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.portfolio-project-body { padding: 28px 26px 30px; }
+.portfolio-project-body h3 { font-size: 20px; margin-bottom: 10px; }
+.portfolio-project-body p { color: var(--subtext); font-size: 14.5px; margin-bottom: 18px; }
+
+.portfolio-tech-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.portfolio-tech-chips span {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.portfolio-project-focus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--subtext);
+  margin-bottom: 22px;
+}
+.portfolio-project-focus i { color: var(--secondary); }
+
+.portfolio-project-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+.portfolio-project-cta i { font-size: 12px; transition: transform 0.3s ease; }
+.portfolio-project-card:hover .portfolio-project-cta i { transform: translateX(5px); }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .portfolio-projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .portfolio-hero { padding: 140px 0 70px; }
+  .portfolio-projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero { padding: 116px 0 50px; }
+  .portfolio-hero-title { font-size: clamp(28px, 8vw, 38px); }
+  .portfolio-hero-desc { font-size: 15px; }
+  .portfolio-hero-cta { flex-direction: column; width: 100%; }
+  .portfolio-hero-cta .btn { width: 100%; justify-content: center; }
+
+  .portfolio-filters { gap: 8px; }
+  .portfolio-filter-btn { padding: 9px 16px; font-size: 12.5px; }
+
+  .portfolio-projects-grid { grid-template-columns: 1fr; gap: 20px; max-width: 480px; margin: 0 auto; }
+  .portfolio-project-img-wrap { height: 210px; }
+  .portfolio-project-body { padding: 22px 20px 26px; }
+}
+
+@media (max-width: 420px) {
+  .portfolio-projects-grid { grid-template-columns: 1fr; }
+}

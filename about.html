@@ -1,0 +1,574 @@
+<!-- ============================================================
+     ABOUT PAGE — NanoRa Technologies
+     Insert this content inside <main>, directly after the navbar
+     and before the footer, in a page such as about.html.
+     Requires (in addition to the homepage's existing stylesheets
+     and scripts):
+       <link rel="stylesheet" href="assets/css/about.css">
+       <script src="assets/js/about.js" defer></script>
+     ============================================================ -->
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ============ ABOUT HERO ============ -->
+<section class="about-hero">
+  <div class="about-hero-bg">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80"
+         alt="Modern software development workspace"
+         class="about-hero-img">
+    <div class="about-hero-overlay"></div>
+  </div>
+
+  <div class="container about-hero-content">
+
+    <!-- ===== Breadcrumb ===== -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb"> <ol class="breadcrumb-list"> <li><a href="/index.html">Home</a></li> <li><i class="fa-solid fa-chevron-right"></i></li> <li aria-current="page">About</li> </ol> </nav>
+    <div class="badge" data-reveal="fade-up">
+      <span class="badge-dot"></span>
+      About NanoRa Technologies
+    </div>
+
+    <h1 class="about-hero-title" data-reveal="fade-up" data-delay="60">
+      Building Technology That Powers Business Growth
+    </h1>
+
+    <p class="about-hero-desc" data-reveal="fade-up" data-delay="120">
+      We build secure, scalable software solutions that help businesses innovate, automate, and grow with confidence.
+    </p>
+
+    <div class="about-hero-cta" data-reveal="fade-up" data-delay="160">
+      <a href="/contact.html#contact-form" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Get Free Consultation</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ WHO WE ARE ============ -->
+<section class="who-we-are">
+  <div class="container who-inner">
+
+    <div class="who-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+           alt="Software development workspace"
+           class="who-img">
+    </div>
+
+    <div class="who-content" data-reveal="fade-left">
+
+      <div class="section-tag">
+        Who We Are
+      </div>
+
+      <h2 class="section-title">
+        Your Technology Partner for Digital Success
+      </h2>
+
+      <p class="section-desc">
+        NanoRa Technologies is a software development company dedicated to helping businesses transform ideas into reliable digital products. We specialize in custom software, web applications, cloud solutions, AI integration, and modern technology consulting.
+      </p>
+
+      <p class="section-desc">
+        Every solution is designed with performance, security, scalability, and long-term maintainability in mind. Whether you're launching a new product or improving an existing system, our focus is delivering technology that creates real business value.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ MISSION & VISION ============ -->
+<section class="mission-vision">
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card glass-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="section-tag">Our Mission</div>
+        <h2 class="section-title">
+          Building Software That Makes a Difference
+          </h2>
+
+          <p class="section-desc">
+          Our mission is to create secure, scalable, and user-focused software that helps businesses solve real problems, improve efficiency, and achieve sustainable growth through technology.
+          </p>
+      </div>
+
+      <div class="mv-card glass-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-telescope"></i></div>
+        <div class="section-tag">Our Vision</div>
+        <h2 class="section-title">
+        Empowering Businesses Through Technology
+        </h2>
+
+        <p class="section-desc">
+        Our vision is to become a trusted technology partner for businesses worldwide by delivering innovative software solutions that drive digital transformation and long-term success.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE VALUES ============ -->
+<section class="core-values">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Core Values</div>
+      <h2 class="section-title center">The Principles Behind Every Project</h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3>Engineering Excellence</h3>
+        <p>We hold every line of code to a standard that would pass our own review, twice.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-medal"></i></div>
+        <h3>Quality First</h3>
+        <p>Deadlines matter, but never at the expense of what we ship holding up in production.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Transparency</h3>
+        <p>Clear roadmaps, honest estimates, and no surprises about scope or progress.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Innovation</h3>
+        <p>We adopt new tools and patterns deliberately — when they genuinely improve the product.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-book-open"></i></div>
+        <h3>Continuous Learning</h3>
+        <p>Our engineering practices evolve as the industry does, project after project.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>Long-Term Partnership</h3>
+        <p>We build relationships meant to outlast a single release cycle.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Security</h3>
+        <p>Security is designed in from the first architecture diagram, not patched in afterward.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Scalability</h3>
+        <p>We build for the traffic and team you'll have in two years, not just today.</p>
+      </div>
+      <div class="value-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Client Success</h3>
+        <p>Our work is judged by the business outcomes it enables, not just what shipped.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE NANORA ============ -->
+<section class="why-nanora">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose NanoRa</div>
+      <h2 class="section-title center">Built Different, By Design</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Modern Technology Stack</h3>
+        <p>Current, well-supported frameworks — never legacy tools chosen out of habit.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="50">
+        <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>Systems designed to grow with your traffic, team and feature set.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Performance Focused</h3>
+        <p>Speed is treated as a feature, measured and optimized throughout delivery.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="150">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Clean Code</h3>
+        <p>Readable, documented, and structured for whoever maintains it after us.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Responsive Design</h3>
+        <p>Every product is designed and tested across desktop, tablet and mobile.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="50">
+        <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+        <h3>Cloud Ready</h3>
+        <p>Infrastructure built for AWS, Azure or Google Cloud from the start.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="100">
+        <div class="service-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>Security First</h3>
+        <p>Security is considered from planning to deployment using modern development best practices.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="150">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Reliable Support</h3>
+        <p>Ongoing maintenance, updates, and technical assistance to keep your software running smoothly.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Business-Oriented Development</h3>
+        <p>Every technical decision is weighed against the business outcome it serves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR DEVELOPMENT PROCESS ============ -->
+<section class="dev-process" id="dev-process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our Development Process</h2>
+      <p class="section-desc center">A structured, transparent path from first conversation to long-term support.</p>
+    </div>
+
+    <div class="process-flow" id="processFlow">
+      <div class="process-progress-track">
+        <div class="process-progress-fill" id="processProgressFill"></div>
+      </div>
+
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="process-text">
+          <h4>Discovery</h4>
+          <p>We learn your business, users and goals before writing a single line of code.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-flask"></i></div>
+        <div class="process-text">
+          <h4>Research</h4>
+          <p>We evaluate technical approaches, constraints and prior art relevant to your product.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <div class="process-text">
+          <h4>Planning</h4>
+          <p>We define scope, architecture and a realistic delivery roadmap.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <div class="process-text">
+          <h4>UI/UX</h4>
+          <p>We design intuitive, on-brand interfaces validated before development begins.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-code"></i></div>
+        <div class="process-text">
+          <h4>Development</h4>
+          <p>We build in focused sprints, with regular reviews and visible progress.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-vial"></i></div>
+        <div class="process-text">
+          <h4>Testing</h4>
+          <p>We validate functionality, performance and security before anything ships.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="process-text">
+          <h4>Deployment</h4>
+          <p>We release with zero-downtime pipelines and a clear rollback plan.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal="fade-up">
+        <div class="process-icon"><i class="fa-solid fa-headset"></i></div>
+        <div class="process-text">
+          <h4>Maintenance</h4>
+          <p>We monitor, support and evolve the system long after launch day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGIES WE WORK WITH ============ -->
+<section class="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our Toolkit</div>
+      <h2 class="section-title center">Technologies We Work With</h2>
+      <p class="section-desc center">Proven, well-supported technologies chosen for performance and longevity.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-react"></i><span>React</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-elephant"></i><span>PostgreSQL</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-aws"></i><span>AWS</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-microsoft"></i><span>Azure</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-plug"></i><span>REST API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-brain"></i><span>AI</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-cloud"></i><span>Cloud</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-infinity"></i><span>DevOps</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Industries We Empower ============ -->
+<section class="industries">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Where We Work</div>
+      <h2 class="section-title center">Industries We Empower</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-cart-shopping"></i><span>Retail</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-heart-pulse"></i><span>Healthcare</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-tower-cell"></i><span>Telecommunications</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-sack-dollar"></i><span>Finance</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-industry"></i><span>Manufacturing</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-building"></i><span>Real Estate</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-truck-fast"></i><span>Logistics</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-concierge-bell"></i><span>Hospitality</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-rocket"></i><span>Startups</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-store"></i><span>SMEs</span></div>
+      <div class="industry-item" data-reveal="scale"><i class="fa-solid fa-building-columns"></i><span>Enterprise</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMITMENT TO QUALITY ============ -->
+<section class="quality-commitment">
+  <div class="container quality-inner">
+    <div class="quality-content" data-reveal="fade-right">
+      <div class="section-tag">Commitment to Quality</div>
+      <h2 class="section-title">Quality Isn't a Phase — It's How We Build</h2>
+      <p class="section-desc">
+        Quality is built into every stage of development. From clean code and thorough testing to security and documentation, we deliver software that's reliable, maintainable, and ready for long-term growth.
+      </p>
+    </div>
+
+    <div class="quality-grid" data-reveal="fade-left">
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>Code Quality</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+        <h4>Maintainability</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-book"></i></div>
+        <h4>Documentation</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>Testing</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h4>Performance</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>Security</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h4>Future Scalability</h4>
+      </div>
+      <div class="quality-item">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>Long-Term Support</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Have a Project in Mind?</h2>
+    <h3>Let's bring it to life.</h3>
+    <div class="cta-buttons">
+      <a href="/contact.html#contact-form" class="btn btn-white btn-magnetic btn-lg">
+        <span>Start a Project</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="contact.html" class="btn btn-outline btn-magnetic btn-lg cta-outline-on-dark">
+        <span>Contact Us</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+      <p>Building scalable digital solutions for modern businesses since day one.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Custom Software</a>
+      <a href="#services">Web Development</a>
+      <a href="#services">Mobile Apps</a>
+      <a href="#services">Cloud Solutions</a>
+      <a href="#services">AI Solutions</a>
+    </div>
+    <div class="footer-col">
+      <h4>Technologies</h4>
+      <a href="#technologies">React &amp; Vue</a>
+      <a href="#technologies">Node &amp; Laravel</a>
+      <a href="#technologies">AWS &amp; Azure</a>
+      <a href="#technologies">Docker &amp; K8s</a>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 NanoRa Technologies. All rights reserved.</p>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="assets/js/particles.js" defer></script>
+<script src="assets/js/animation.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/about.js" defer></script>
+</body>
+</html>

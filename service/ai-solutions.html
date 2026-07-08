@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060816">
+<meta name="color-scheme" content="dark">
+<title>NanoRa Technologies — Building Scalable Digital Solutions</title>
+
+<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+
+<meta name="description" content="NanoRa Technologies is a premium software development partner delivering custom software, web, mobile, cloud, DevOps and AI solutions for modern businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Styles: base → animation → responsive (so breakpoints always win the cascade) -->
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/animation.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/service.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background Layers -->
+<div class="bg-layer">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-pattern"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a href="/index.html" class="logo" aria-label="NanoRa Technologies">
+      <img
+        src="../assets/img/logo.png"
+        alt="NanoRa Technologies"
+        class="logo-img">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="/contact.html" class="btn btn-primary btn-magnetic btn-sm">
+        <span>Get Started</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Breadcrumb ===== -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb"> <ol class="breadcrumb-list"> <li><a href="/index.html">Home</a></li> <li><i class="fa-solid fa-chevron-right"></i></li> <li aria-current="page">About</li> </ol> </nav>
+
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="service-hero" id="service-hero">
+  <div class="service-hero-bg">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80" alt="AI neural network visualization on modern screen" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+  </div>
+  <div class="container service-hero-content" data-reveal="fade-up">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Intelligent Automation & AI Engineering
+    </div>
+    <h1 class="service-hero-title">AI Solutions</h1>
+    <p class="service-hero-desc">
+      Practical artificial intelligence that automates work, uncovers insights, and helps your business operate more intelligently every day.
+    </p>
+    <div class="service-hero-cta">
+      <a href="../contact.html#contact-form" class="btn btn-primary btn-magnetic btn-lg">
+        <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ SERVICE OVERVIEW ============ -->
+<section class="service-overview">
+  <div class="container overview-inner">
+    <div class="overview-image" data-reveal="fade-right">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="AI-powered business analytics dashboard" class="overview-img">
+      <div class="glass-card overview-glass">
+        <h4>AI Implementation Snapshot</h4>
+        <div class="progress-item">
+          <div class="progress-label"><span>Process Automation Rate</span><span>78%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="78"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Decision Accuracy</span><span>94%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="94"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Operational Efficiency Gain</span><span>45%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="45"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-content" data-reveal="fade-left">
+      <div class="section-tag">Overview</div>
+      <h2 class="section-title">Intelligent Solutions That Drive Real Business Outcomes</h2>
+      <p class="section-desc">
+        We build practical AI applications that solve tangible business problems. From intelligent chatbots and document processing to predictive analytics and workflow automation, our solutions integrate seamlessly with your existing systems and deliver measurable results without the hype.
+      </p>
+      <ul class="overview-benefits">
+        <li><i class="fa-solid fa-check"></i> Automate repetitive tasks and free up your team's time</li>
+        <li><i class="fa-solid fa-check"></i> Generate actionable insights from your existing data</li>
+        <li><i class="fa-solid fa-check"></i> Enhance customer experience with intelligent assistants</li>
+        <li><i class="fa-solid fa-check"></i> Make faster, data-driven business decisions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE ============ -->
+<section class="provide" id="provide">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">What We Provide</div>
+      <h2 class="section-title center">Complete AI Development Services</h2>
+      <p class="section-desc center">Practical AI solutions designed to automate, optimize, and grow your business.</p>
+    </div>
+
+    <div class="provide-grid">
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>AI Chatbots & Assistants</h3>
+        <p>Intelligent conversational agents that handle customer inquiries, qualify leads, and provide instant support 24/7.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h3>Document Processing AI</h3>
+        <p>Automatically extract, classify, and process information from invoices, contracts, and forms with high accuracy.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Predictive Analytics</h3>
+        <p>Forecast trends, customer behavior, and business outcomes using your historical data and machine learning models.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>Custom AI Applications</h3>
+        <p>Tailored AI solutions built specifically for your unique business processes and industry requirements.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>AI-Powered Search</h3>
+        <p>Semantic search engines that understand context and intent, helping users find exactly what they need faster.</p>
+      </div>
+      <div class="provide-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>AI Integration & Support</h3>
+        <p>Seamless integration with your existing software, plus ongoing monitoring, tuning, and model updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (alternating) ============ -->
+<section class="service-features" id="features">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Capabilities</div>
+      <h2 class="section-title center">AI Engineered for Business Impact</h2>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+        <h3>Intelligent Automation</h3>
+        <p>Automate complex workflows that previously required human judgment — from document review to data entry and beyond.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="AI automation workflow dashboard">
+      </div>
+    </div>
+
+    <div class="feature-row reverse" data-reveal="fade-left">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-shield-check"></i></div>
+        <h3>Secure AI Integration</h3>
+        <p>Your data stays protected with private deployment options, encrypted processing, and strict access controls built into every solution.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Secure AI server infrastructure">
+      </div>
+    </div>
+
+    <div class="feature-row" data-reveal="fade-right">
+      <div class="feature-text">
+        <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Actionable Business Intelligence</h3>
+        <p>Turn raw data into clear insights and recommendations that help you make informed decisions with confidence.</p>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Business intelligence and AI insights screen">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">How We Work</div>
+      <h2 class="section-title center">Our AI Solution Delivery Process</h2>
+      <p class="section-desc center">A structured, transparent path from business challenge to deployed AI solution.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="0">
+        <div class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>01. Discovery</h4>
+        <p>We identify high-impact automation and intelligence opportunities in your business.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="60">
+        <div class="timeline-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>02. Analysis</h4>
+        <p>We evaluate your data, workflows, and technical environment to define the solution scope.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="120">
+        <div class="timeline-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h4>03. Design</h4>
+        <p>We architect the AI solution, select appropriate models, and design the user experience.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="180">
+        <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>04. Development</h4>
+        <p>We build and train models, develop the application layer, and integrate with your systems.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="240">
+        <div class="timeline-icon"><i class="fa-solid fa-vial"></i></div>
+        <h4>05. Testing</h4>
+        <p>We rigorously test accuracy, performance, edge cases, and security before deployment.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="300">
+        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>06. Deployment</h4>
+        <p>We launch the solution with monitoring and a clear rollback plan in place.</p>
+      </div>
+      <div class="timeline-item" data-reveal="fade-up" data-delay="360">
+        <div class="timeline-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4>07. Optimization</h4>
+        <p>We continuously monitor, tune, and improve model performance over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="technologies" id="technologies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Our AI Stack</div>
+      <h2 class="section-title center">Technologies We Build With</h2>
+      <p class="section-desc center">Modern AI platforms and frameworks for reliable, scalable solutions.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-brain"></i><span>OpenAI API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-robot"></i><span>Claude API</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-google"></i><span>Google Gemini</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-link"></i><span>LangChain</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-database"></i><span>Pinecone</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-solid fa-code"></i><span>FastAPI</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      <div class="tech-item" data-reveal="scale"><i class="fa-brands fa-aws"></i><span>AWS AI</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose" id="why-choose">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Why Choose Us</div>
+      <h2 class="section-title center">A Trusted AI Partner for Your Business</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h3>Business-First Approach</h3>
+        <p>We focus on solving real business problems, not chasing the latest AI hype cycle.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Implementation</h3>
+        <p>Your data never leaves your control. Private deployment, encryption, and strict access policies.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+        <h3>Scalable Architecture</h3>
+        <p>Solutions designed to grow with your data volume, user base, and evolving business needs.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Ongoing Support</h3>
+        <p>Continuous model monitoring, performance tuning, and updates to keep your AI working effectively.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="60">
+        <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Clear Communication</h3>
+        <p>We explain complex AI concepts in plain language and keep you informed at every stage.</p>
+      </div>
+      <div class="why-card" data-reveal="fade-up" data-delay="120">
+        <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Measurable ROI</h3>
+        <p>Every project ties back to business metrics — time saved, costs reduced, or revenue generated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section class="case-studies" id="case-studies">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">Case Studies</div>
+      <h2 class="section-title center">AI Projects That Delivered Business Results</h2>
+    </div>
+
+    <div class="case-study-list">
+      <article class="case-study-card" data-reveal="fade-up" data-delay="0">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="AI customer support dashboard">
+          <span class="project-badge">Service Business</span>
+        </div>
+        <div class="case-study-body">
+          <h3>AI Customer Support Assistant for a Growing Service Firm</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> A service business handling hundreds of daily inquiries struggled with slow response times and overwhelmed support staff.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Built an AI assistant that handles common questions, qualifies leads, and escalates complex issues to the right team member instantly.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> OpenAI API, LangChain, Python, FastAPI, PostgreSQL</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 65% faster response times, 40% reduction in support ticket volume</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-study-card" data-reveal="fade-up" data-delay="100">
+        <div class="case-study-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Document processing automation system">
+          <span class="project-badge">Financial Services</span>
+        </div>
+        <div class="case-study-body">
+          <h3>Automated Invoice Processing for a Financial Firm</h3>
+          <p class="case-study-row"><strong>Challenge:</strong> Manual invoice data entry consumed hours daily and introduced frequent errors that delayed payments and reporting.</p>
+          <p class="case-study-row"><strong>Solution:</strong> Developed an AI document processing system that extracts, validates, and enters invoice data automatically with high accuracy.</p>
+          <p class="case-study-row"><strong>Technologies:</strong> Claude API, Python, LangChain, AWS, PostgreSQL</p>
+          <p class="case-study-result"><i class="fa-solid fa-arrow-trend-up"></i> 90% reduction in manual data entry time, 99% accuracy on extracted data</p>
+          <button class="case-study-toggle" aria-expanded="false">
+            <span>View Details</span><i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-reveal="fade-up">
+      <div class="section-tag center">FAQ</div>
+      <h2 class="section-title center">AI Solutions — Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>What kind of AI solutions do you build?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We build practical AI applications including intelligent chatbots, document processing systems, predictive analytics tools, AI-powered search, and custom automation solutions tailored to specific business needs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can AI integrate with our existing software?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. We design AI solutions to work alongside your current tools — CRM, ERP, help desk, or custom systems — through well-documented APIs and secure integrations.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Is our business data secure with AI?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Absolutely. We offer private deployment options, encrypt data in transit and at rest, and never use your data to train public models without explicit consent.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you provide ongoing AI maintenance?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>Yes. AI models need monitoring and tuning over time. We provide ongoing support to maintain accuracy, improve performance, and adapt to your changing needs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Which AI models and platforms do you support?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><p>We work with leading AI platforms including OpenAI, Anthropic Claude, Google Gemini, and open-source models. We recommend the best fit based on your requirements, budget, and data sensitivity.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="contact-cta" id="contact">
+  <div class="container cta-inner" data-reveal="scale">
+    <h2>Ready to Bring AI Into Your Business?</h2>
+    <h3>Let's build intelligent solutions that automate work, improve efficiency, and help your business grow.</h3>
+    <a href="../contact.html#contact-form" class="btn btn-white btn-magnetic btn-lg">
+      <span>Get Free Consultation</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col footer-brand">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-infinity"></i></span>
+        <span class="logo-text">Nano<span class="grad-text">Ra</span></span>
+      </a>
+
+      <p>
+        Delivering custom software, web applications, cloud solutions, and AI-powered technology for modern businesses.
+      </p>
+
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/project.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html#contact-form">Free Consultation</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Services</h4>
+
+      <a href="/service/software-development.html">Custom Software</a>
+      <a href="/service/web-development.html">Web Development</a>
+      <a href="/service/cloud-solutions.html">Cloud Solutions</a>
+      <a href="/service/devops.html">DevOps</a>
+      <a href="/service/ai-solutions.html">AI Solutions</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Company</h4>
+
+      <a href="/about.html">About NanoRa</a>
+      <a href="/project.html">Our Projects</a>
+      <a href="/contact.html">Contact Us</a>
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get product updates and engineering insights.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 NanoRa Technologies. All Rights Reserved.
+    </p>
+
+    <div class="footer-legal">
+      <!-- <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a> -->
+    </div>
+
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="service-modal" id="serviceModal">
+  <div class="service-modal-backdrop" id="serviceModalBackdrop"></div>
+  <div class="service-modal-sheet" id="serviceModalSheet">
+    <div class="service-modal-handle"></div>
+    <div class="service-modal-icon" id="serviceModalIcon"></div>
+    <h3 id="serviceModalTitle"></h3>
+    <p id="serviceModalDesc"></p>
+    <a href="#contact" class="btn btn-primary btn-magnetic" id="serviceModalCta">
+      <span>Get Started</span><i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
+<script src="../assets/js/particles.js" defer></script>
+<script src="../assets/js/animation.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/service.js" defer></script>
+</body>
+</html>
