@@ -80,33 +80,32 @@
 
 <main>
 
-  <!-- ===== Breadcrumb ===== -->
-<section class="nr-breadcrumb">
-    <div class="container">
-
-        <h1 class="nr-breadcrumb-title">About Us</h1>
-
-        <nav aria-label="Breadcrumb">
-            <ol class="nr-breadcrumb-list">
-                <li><a href="/index.html">Home</a></li>
-
-                <li>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-
-                <li aria-current="page">
-                    About Us
-                </li>
-            </ol>
-        </nav>
-
-    </div>
-</section>
 
 <!-- ============ SERVICES HERO ============ -->
 <section class="hero" id="services-hero">
+  
   <div class="container hero-inner">
-    <div class="hero-left" data-reveal="fade-right">
+        <!-- ===== Breadcrumb ===== -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb"> <ol class="breadcrumb-list"> <li><a href="/index.html">Home</a></li> <li><i class="fa-solid fa-chevron-right"></i></li> <li aria-current="page">Services</li> </ol> </nav>
+    <div class="badge" data-reveal="fade-up">
+    </div>
+    <style>
+      .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border-radius: var(--radius-full);
+    background: none;
+    border: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--subtext);
+    margin-bottom: 26px;
+    backdrop-filter: blur(10px);
+}
+    </style>
+    <div class="hero-left" >
       <div class="badge">
         <span class="badge-dot"></span>
         Our Services
@@ -464,8 +463,8 @@
       <h4>Quick Links</h4>
 
       <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/project.html">Projects</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
       <a href="/contact.html">Contact</a>
       <a href="/contact.html#contact-form">Free Consultation</a>
 
@@ -488,7 +487,7 @@
       <h4>Company</h4>
 
       <a href="/about.html">About NanoRa</a>
-      <a href="/project.html">Our Projects</a>
+      <a href="/portfolio/project.html">Our Projects</a>
       <a href="/contact.html">Contact Us</a>
       <!-- <a href="/privacy.html">Privacy Policy</a>
       <a href="/terms.html">Terms &amp; Conditions</a> -->

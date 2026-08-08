@@ -80,34 +80,23 @@
 
 <main>
 <!-- ============ PROJECT HERO ============ -->
+<!-- ============ PROJECT HERO ============ -->
 <section class="project-hero" id="project-hero">
   <div class="project-hero-bg">
     <img src="../assets/img/portfolio/VoipFront1.png" alt="Telecom Business Website homepage on desktop and mobile" class="project-hero-img">
     <div class="project-hero-overlay"></div>
   </div>
 
-    <!-- ===== Breadcrumb ===== -->
-    <section class="nr-breadcrumb">
-        <div class="container">
-
-            <h1 class="nr-breadcrumb-title">About Us</h1>
-
-            <nav aria-label="Breadcrumb">
-                <ol class="nr-breadcrumb-list">
-                    <li><a href="/index.html">Home</a></li>
-
-                    <li>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </li>
-
-                    <li aria-current="page">
-                        About Us
-                    </li>
-                </ol>
-            </nav>
-
-        </div>
-    </section>
+  <!-- 👇 ADD THIS CONTAINER DIV -->
+  <div class="container project-hero-content">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li><a href="/index.html">Home</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li aria-current="page">Telecom Business Website</li>
+      </ol>
+    </nav>
 
     <div class="badge" data-reveal="fade-up">
       <span class="badge-dot"></span>
@@ -139,6 +128,7 @@
       </a>
     </div>
   </div>
+  <!-- 👆 END CONTAINER -->
 </section>
 
 <!-- ============ PROJECT HIGHLIGHTS ============ -->
@@ -718,8 +708,8 @@
       <h4>Quick Links</h4>
 
       <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/project.html">Projects</a>
+      <a href="/service/services.html">Services</a>
+      <a href="/portfolio/project.html">Projects</a>
       <a href="/contact.html">Contact</a>
       <a href="/contact.html#contact-form">Free Consultation</a>
 
@@ -742,7 +732,7 @@
       <h4>Company</h4>
 
       <a href="/about.html">About NanoRa</a>
-      <a href="/project.html">Our Projects</a>
+      <a href="/portfolio/project.html">Our Projects</a>
       <a href="/contact.html">Contact Us</a>
       <!-- <a href="/privacy.html">Privacy Policy</a>
       <a href="/terms.html">Terms &amp; Conditions</a> -->
