@@ -169,8 +169,8 @@
 
         <h3>Email Us</h3>
 
-        <a href="mailto:hello@nanoratech.com">
-          hello@nanoratech.com
+        <a href="mailto:support@nanoratech.com">
+          support@nanoratech.com
         </a>
 
       </div>
@@ -702,6 +702,136 @@
   </div>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("formSubmitBtn");
+    const btnLabel = submitBtn?.querySelector(".btn-label");
+    const spinner = submitBtn?.querySelector(".btn-spinner");
+
+    if (!form) {
+        console.error("Contact form not found");
+        return;
+    }
+
+    form.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        // Collect form data
+        const formData = new FormData(form);
+
+        const data = {
+            fullName: formData.get("fullName"),
+            company: formData.get("company"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            subject: formData.get("subject"),
+            budget: formData.get("budget"),
+            serviceInterest: formData.get("serviceInterest"),
+            message: formData.get("message")
+        };
+
+        console.log("Sending contact form:", data);
+
+        // Loading state
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.classList.add("loading");
+        }
+
+        if (btnLabel) {
+            btnLabel.textContent = "Sending...";
+        }
+
+        if (spinner) {
+            spinner.style.display = "inline-block";
+        }
+
+        if (status) {
+            status.textContent = "";
+            status.className = "form-status";
+        }
+
+        try {
+
+            // Send to Vercel backend
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            console.log("API response:", result);
+
+            if (response.ok && result.success) {
+
+                if (status) {
+                    status.textContent =
+                        "✓ Thank you! Your consultation request has been sent successfully.";
+
+                    status.classList.add("success");
+                }
+
+                form.reset();
+
+                // Reset character counter
+                const charCount = document.getElementById("charCount");
+
+                if (charCount) {
+                    charCount.textContent = "0";
+                }
+
+            } else {
+
+                if (status) {
+                    status.textContent =
+                        result.error || "Failed to send your message. Please try again.";
+
+                    status.classList.add("error");
+                }
+
+            }
+
+        } catch (error) {
+
+            console.error("Contact form error:", error);
+
+            if (status) {
+                status.textContent =
+                    "Unable to send your message. Please try again later.";
+
+                status.classList.add("error");
+            }
+
+        } finally {
+
+            // Restore button
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("loading");
+            }
+
+            if (btnLabel) {
+                btnLabel.textContent = "Request Free Consultation";
+            }
+
+            if (spinner) {
+                spinner.style.display = "none";
+            }
+
+        }
+
+    });
+
+});
+</script>
 <!-- Scripts: particles → animation → main, all deferred so DOM parsing isn't blocked -->
 <script src="assets/js/particles.js" defer></script>
 <script src="assets/js/animation.js" defer></script>

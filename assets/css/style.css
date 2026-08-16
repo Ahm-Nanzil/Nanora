@@ -942,3 +942,24 @@ section { padding: 120px 0; position: relative; }
   margin-bottom: 0;
 }
 
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-links a i {
+  display: block;
+  line-height: 1;
+}
