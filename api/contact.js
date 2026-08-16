@@ -58,10 +58,10 @@ export default async function handler(req, res) {
         error: `Missing required field(s): ${missingFields.join(", ")}`
       });
     }
-    
+
     await resend.emails.send({
     from: "NanoRa Support <support@nanoratech.com>",
-    to: ["support@nanoratech.com"],
+    to: ["ahmnanzilofficial@gmail.com"],
     reply_to: email,
     subject: `New Consultation Request: ${subject}`,
 
